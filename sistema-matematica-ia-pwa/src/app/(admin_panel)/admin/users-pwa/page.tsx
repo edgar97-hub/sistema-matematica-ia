@@ -90,16 +90,13 @@ function PwaUsersPage() {
         sorting,
         columnFilters,
       }),
-    keepPreviousData: true,
+    // keepPreviousData: true,
   });
 
   const users = data?.data || [];
   const totalRowCount = data?.total || 0;
 
-  const {
-    mutateAsync: toggleUserActivationMutation,
-    isLoading: isDeactivating,
-  } = useMutation({
+  const { mutateAsync: toggleUserActivationMutation } = useMutation({
     mutationFn: async (user: UserPwaFE) => {
       if (user.isActive) {
         return pwaUserService.deactivateUser(user.id); // Llama a la API para desactivar

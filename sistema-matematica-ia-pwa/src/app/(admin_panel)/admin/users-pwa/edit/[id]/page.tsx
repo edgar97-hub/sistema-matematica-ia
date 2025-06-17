@@ -115,7 +115,7 @@ export default function EditPwaUserPage() {
   });
 
   // Mutación para actualizar el paquete
-  const { mutateAsync: updateUserMutation, isLoading: isSaving } = useMutation({
+  const { mutateAsync: updateUserMutation } = useMutation({
     mutationFn: (
       formData: UserPwaFormData // El servicio espera UpdateCreditPackageData
     ) =>
@@ -219,7 +219,7 @@ export default function EditPwaUserPage() {
         <UserPwaFormComponent
           initialData={initialFormData}
           onSubmit={handleFormSubmit}
-          isSaving={isSaving}
+          isSaving={false}
           onCancel={() => router.push("/admin/users-pwa")}
         />
       )}

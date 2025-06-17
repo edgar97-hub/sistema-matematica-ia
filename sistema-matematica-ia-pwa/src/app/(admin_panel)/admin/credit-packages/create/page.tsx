@@ -30,27 +30,26 @@ function CreateCreditPackagePage() {
   const router = useRouter();
   const queryClientHook = useQueryClient();
 
-  const { mutateAsync: createPackageMutation, isLoading: isSaving } =
-    useMutation({
-      mutationFn: creditPackageService.createCreditPackage,
-      onSuccess: (newPackage) => {
-        notifications.show({
-          title: "Paquete Creado",
-          message: `El paquete "${newPackage.name}" ha sido creado exitosamente.`,
-          color: "green",
-        });
-        queryClientHook.invalidateQueries({ queryKey: ["credit-packages"] });
-        router.push("/admin/credit-packages");
-      },
-      onError: (error: any) => {
-        /* ... manejo de error ... */
-      },
-    });
+  const { mutateAsync: createPackageMutation } = useMutation({
+    mutationFn: creditPackageService.createCreditPackage,
+    onSuccess: (newPackage) => {
+      notifications.show({
+        title: "Paquete Creado",
+        message: `El paquete "${newPackage.name}" ha sido creado exitosamente.`,
+        color: "green",
+      });
+      queryClientHook.invalidateQueries({ queryKey: ["credit-packages"] });
+      router.push("/admin/credit-packages");
+    },
+    onError: (error: any) => {
+      /* ... manejo de error ... */
+    },
+  });
 
   const handleSubmit = async (formData: CreditPackageFormData) => {
     // El servicio espera CreateCreditPackageData, que incluye 'currency' si es necesario
     // Aquí asumimos que 'currency' es PEN por defecto y no está en el form.
-    await createPackageMutation({ ...formData, currency: "PEN" });
+    await createPackageMutation({ ...formData });
   };
 
   return (
@@ -68,7 +67,7 @@ function CreateCreditPackagePage() {
       </Group>
       <CreditPackageFormComponent
         onSubmit={handleSubmit}
-        isSaving={isSaving}
+        isSaving={false}
         onCancel={() => router.push("/admin/credit-packages")}
       />
     </Box>

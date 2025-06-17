@@ -5,11 +5,11 @@ import { apiClient } from "../apiClient"; // Asume que tienes un apiClient confi
 // (usando camelCase para el frontend)
 export interface CreditPackageFE {
   id: string; // o number si tu BaseEntity usa number
-  name: string;
+  name?: string;
   description?: string | null;
-  creditAmount: number; // Nota el camelCase
-  price: number;
-  isActive: boolean;
+  creditAmount?: number; // Nota el camelCase
+  price?: number;
+  isActive?: boolean;
   // createdAt?: string | Date; // Opcional si los necesitas en la tabla
   // updatedAt?: string | Date; // Opcional
 }

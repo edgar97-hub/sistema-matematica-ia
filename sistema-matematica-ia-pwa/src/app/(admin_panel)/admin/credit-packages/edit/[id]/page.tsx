@@ -56,32 +56,30 @@ export default function EditCreditPackagePage() {
     staleTime: 1000 * 60 * 5, // 5 minutos
   });
 
-  const { mutateAsync: updatePackageMutation, isLoading: isSaving } =
-    useMutation({
-      mutationFn: (
-        formData: UpdateCreditPackageData // El servicio espera UpdateCreditPackageData
-      ) => creditPackageService.updateCreditPackage(packageId, formData),
-      onSuccess: (updatedPackage) => {
-        notifications.show({
-          title: "Paquete Actualizado",
-          message: `El paquete "${updatedPackage.name}" ha sido actualizado exitosamente.`,
-          color: "green",
-          icon: <IconDeviceFloppy size={18} />,
-        });
-        queryClient.invalidateQueries({ queryKey: ["credit-packages"] }); // Invalida la lista
-        queryClient.setQueryData(["credit-package", packageId], updatedPackage); // Actualiza el caché de este item
-        router.push("/admin/credit-packages"); // Volver a la lista
-      },
-      onError: (err: any) => {
-        notifications.show({
-          title: "Error al Actualizar",
-          message:
-            err.message || "No se pudo actualizar el paquete de crédito.",
-          color: "red",
-          icon: <IconAlertCircle size={18} />,
-        });
-      },
-    });
+  const { mutateAsync: updatePackageMutation } = useMutation({
+    mutationFn: (
+      formData: UpdateCreditPackageData // El servicio espera UpdateCreditPackageData
+    ) => creditPackageService.updateCreditPackage(packageId, formData),
+    onSuccess: (updatedPackage) => {
+      notifications.show({
+        title: "Paquete Actualizado",
+        message: `El paquete "${updatedPackage.name}" ha sido actualizado exitosamente.`,
+        color: "green",
+        icon: <IconDeviceFloppy size={18} />,
+      });
+      queryClient.invalidateQueries({ queryKey: ["credit-packages"] }); // Invalida la lista
+      queryClient.setQueryData(["credit-package", packageId], updatedPackage); // Actualiza el caché de este item
+      router.push("/admin/credit-packages"); // Volver a la lista
+    },
+    onError: (err: any) => {
+      notifications.show({
+        title: "Error al Actualizar",
+        message: err.message || "No se pudo actualizar el paquete de crédito.",
+        color: "red",
+        icon: <IconAlertCircle size={18} />,
+      });
+    },
+  });
 
   const handleFormSubmit = async (formData: CreditPackageFormData) => {
     const dataToUpdate: UpdateCreditPackageData = {
@@ -161,7 +159,7 @@ export default function EditCreditPackagePage() {
       <CreditPackageFormComponent
         initialData={initialFormDataForForm} // Pasa los datos cargados
         onSubmit={handleFormSubmit}
-        isSaving={isSaving}
+        isSaving={false}
         onCancel={() => router.push("/admin/credit-packages")}
       />
     </Box>

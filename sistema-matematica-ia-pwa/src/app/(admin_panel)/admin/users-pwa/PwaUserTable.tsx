@@ -140,7 +140,7 @@ export function PwaUserTable({
   };
 
   const getFilterValue = (columnId: string): string => {
-    const filter = columnFilters.find((f) => f.id === columnId);
+    const filter = columnFilters.find((f: any) => f.id === columnId);
     return (filter?.value as string) || "";
   };
 
@@ -193,7 +193,7 @@ export function PwaUserTable({
                 {user.isActive ? (
                   <IconTrash size={18} />
                 ) : (
-                   <IconPlus size={18} />
+                  <IconPlus size={18} />
                 )}
               </ActionIcon>
             </Tooltip>

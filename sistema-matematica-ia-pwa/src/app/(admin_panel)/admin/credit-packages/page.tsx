@@ -19,7 +19,7 @@ import { notifications } from "@mantine/notifications";
 
 import {
   CreditPackageFE,
-  PaginatedCreditPackagesResponse,
+  // PaginatedCreditPackagesResponse,
 } from "../../../../types/credit-package.types"; // Ajusta ruta
 import { creditPackageService } from "../../../../lib/services/credit-package.service"; // Ajusta ruta
 import { CreditPackageTable } from "./CreditPackageTable"; // Ajusta ruta
@@ -47,7 +47,7 @@ function CreditPackagesPage() {
     isError,
     isLoading,
     refetch,
-  } = useQuery<PaginatedCreditPackagesResponse | CreditPackageFE[], Error>({
+  } = useQuery<any | CreditPackageFE[], Error>({
     // Ajusta el tipo de respuesta
     queryKey: ["credit-packages"],
     queryFn: creditPackageService.getCreditPackages,
@@ -61,25 +61,24 @@ function CreditPackagesPage() {
     ? packagesResponse.length
     : packagesResponse?.total || 0;
 
-  const { mutateAsync: deletePackageMutation, isLoading: isDeleting } =
-    useMutation({
-      mutationFn: creditPackageService.deleteCreditPackage,
-      onSuccess: (_, deletedPackageId) => {
-        notifications.show({
-          title: "Paquete Eliminado",
-          message: `El paquete de crédito ha sido eliminado.`,
-          color: "green",
-        });
-        queryClient.invalidateQueries({ queryKey: ["credit-packages"] });
-      },
-      onError: (error: any) => {
-        notifications.show({
-          title: "Error al Eliminar",
-          message: error.message || "No se pudo eliminar el paquete.",
-          color: "red",
-        });
-      },
-    });
+  const { mutateAsync: deletePackageMutation } = useMutation({
+    mutationFn: creditPackageService.deleteCreditPackage,
+    onSuccess: (_, deletedPackageId) => {
+      notifications.show({
+        title: "Paquete Eliminado",
+        message: `El paquete de crédito ha sido eliminado.`,
+        color: "green",
+      });
+      queryClient.invalidateQueries({ queryKey: ["credit-packages"] });
+    },
+    onError: (error: any) => {
+      notifications.show({
+        title: "Error al Eliminar",
+        message: error.message || "No se pudo eliminar el paquete.",
+        color: "red",
+      });
+    },
+  });
 
   const handleDeletePackage = async (pkg: CreditPackageFE) => {
     if (
@@ -87,7 +86,7 @@ function CreditPackagesPage() {
         `¿Está seguro de que desea eliminar el paquete "${pkg.name}"?`
       )
     ) {
-      await deletePackageMutation(pkg.id);
+      await deletePackageMutation(pkg.id || "");
     }
   };
 

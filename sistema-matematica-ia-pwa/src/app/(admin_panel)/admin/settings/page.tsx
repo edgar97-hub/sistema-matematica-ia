@@ -87,31 +87,30 @@ export default function SystemSettingsPage() {
   }, [currentSettings]); // Sin 'form' en las dependencias para evitar bucles
 
   // Mutación para actualizar la configuración
-  const { mutateAsync: updateSettingsMutation, isLoading: isSaving } =
-    useMutation({
-      mutationFn: settingsService.updateSettings,
-      onSuccess: (updatedSettings) => {
-        console.log("updatedSettings", updatedSettings);
-        notifications.show({
-          title: "Configuración Guardada",
-          message:
-            "La configuración del sistema ha sido actualizada exitosamente.",
-          color: "green",
-          icon: <IconDeviceFloppy size={18} />,
-        });
-        // Actualizar los datos en caché de la query para que reflejen los cambios
-        queryClient.setQueryData(["system-settings"], updatedSettings);
-        form.resetDirty(updatedSettings); // Marcar como no dirty después de guardar
-      },
-      onError: (err: any) => {
-        notifications.show({
-          title: "Error al Guardar",
-          message: err.message || "No se pudo guardar la configuración.",
-          color: "red",
-          icon: <IconAlertCircle size={18} />,
-        });
-      },
-    });
+  const { mutateAsync: updateSettingsMutation } = useMutation({
+    mutationFn: settingsService.updateSettings,
+    onSuccess: (updatedSettings) => {
+      console.log("updatedSettings", updatedSettings);
+      notifications.show({
+        title: "Configuración Guardada",
+        message:
+          "La configuración del sistema ha sido actualizada exitosamente.",
+        color: "green",
+        icon: <IconDeviceFloppy size={18} />,
+      });
+      // Actualizar los datos en caché de la query para que reflejen los cambios
+      queryClient.setQueryData(["system-settings"], updatedSettings);
+      form.resetDirty(updatedSettings); // Marcar como no dirty después de guardar
+    },
+    onError: (err: any) => {
+      notifications.show({
+        title: "Error al Guardar",
+        message: err.message || "No se pudo guardar la configuración.",
+        color: "red",
+        icon: <IconAlertCircle size={18} />,
+      });
+    },
+  });
 
   const handleSaveSettings = async (values: SystemSettingsData) => {
     await updateSettingsMutation(values);
@@ -228,14 +227,14 @@ export default function SystemSettingsPage() {
             <Button
               variant="default"
               onClick={handleDiscardChanges}
-              disabled={isSaving || !form.isDirty()}
+              disabled={false || !form.isDirty()}
             >
               Descartar
             </Button>
             <Button
               type="submit"
-              loading={isSaving}
-              disabled={!form.isDirty() || isSaving} // Deshabilitar si no hay cambios o está guardando
+              loading={false}
+              disabled={!form.isDirty() || false} // Deshabilitar si no hay cambios o está guardando
               leftSection={<IconDeviceFloppy size={18} />}
             >
               Guardar Configuración

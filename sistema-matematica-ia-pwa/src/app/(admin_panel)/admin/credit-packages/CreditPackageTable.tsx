@@ -51,7 +51,7 @@ export function CreditPackageTable({
       </Table.Td>
       <Table.Td style={{ textAlign: "center" }}>{pkg.credit_amount}</Table.Td>
       <Table.Td style={{ textAlign: "right" }}>
-        {pkg.price.toLocaleString("es-PE", {
+        {pkg.price?.toLocaleString("es-PE", {
           style: "currency",
           currency: "PEN",
         })}
