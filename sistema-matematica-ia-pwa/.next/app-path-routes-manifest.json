@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/(public_auth)/admin/login/page": "/admin/login",
+  "/page": "/",
+  "/(admin_panel)/admin/credit-packages/create/page": "/admin/credit-packages/create",
+  "/(admin_panel)/admin/credit-packages/edit/[id]/page": "/admin/credit-packages/edit/[id]",
+  "/(admin_panel)/admin/credit-packages/page": "/admin/credit-packages",
+  "/(admin_panel)/admin/dashboard/page": "/admin/dashboard",
+  "/(admin_panel)/admin/settings/page": "/admin/settings",
+  "/(admin_panel)/admin/users-pwa/edit/[id]/page": "/admin/users-pwa/edit/[id]",
+  "/(admin_panel)/admin/users-pwa/page": "/admin/users-pwa"
+}

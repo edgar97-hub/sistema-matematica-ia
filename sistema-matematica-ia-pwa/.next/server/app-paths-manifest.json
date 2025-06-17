@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(public_auth)/admin/login/page": "app/(public_auth)/admin/login/page.js",
+  "/page": "app/page.js",
+  "/(admin_panel)/admin/credit-packages/create/page": "app/(admin_panel)/admin/credit-packages/create/page.js",
+  "/(admin_panel)/admin/credit-packages/edit/[id]/page": "app/(admin_panel)/admin/credit-packages/edit/[id]/page.js",
+  "/(admin_panel)/admin/credit-packages/page": "app/(admin_panel)/admin/credit-packages/page.js",
+  "/(admin_panel)/admin/dashboard/page": "app/(admin_panel)/admin/dashboard/page.js",
+  "/(admin_panel)/admin/settings/page": "app/(admin_panel)/admin/settings/page.js",
+  "/(admin_panel)/admin/users-pwa/edit/[id]/page": "app/(admin_panel)/admin/users-pwa/edit/[id]/page.js",
+  "/(admin_panel)/admin/users-pwa/page": "app/(admin_panel)/admin/users-pwa/page.js"
+}
