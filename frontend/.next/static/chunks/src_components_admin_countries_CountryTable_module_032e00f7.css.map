@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/frontend/src/components/admin/countries/CountryTable.module.css"],"sourcesContent":["/* src/components/admin/countries/CountryTable.module.css */\n.tableWrapper {\n  border: 1px solid var(--mantine-color-gray-3);\n  border-radius: var(--mantine-radius-md);\n  overflow-x: auto;\n  background-color: var(--mantine-color-body);\n  margin-top: var(--mantine-spacing-md);\n}\n\n.tableHeader th {\n  background-color: var(--mantine-color-gray-0);\n  font-weight: 600;\n  font-size: var(--mantine-font-size-xs);\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  color: var(--mantine-color-gray-7);\n  position: sticky; /* Para cabeceras fijas si la tabla tiene scroll vertical */\n  top: 0;\n  z-index: 1;\n}\n"],"names":[],"mappings":"AACA;;;;;;;;AAQA","debugId":null}}]
+}

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  manim-service:
+    build:
+      context: .
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./manim_processing:/app/manim_processing
+      # Opcional: Montar el código fuente para desarrollo en vivo
+      # - .:/app
+    environment:
+      # Variables para Flask
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=3002
+      - FLASK_RUN_EXTRA_FILES=/app/app.py

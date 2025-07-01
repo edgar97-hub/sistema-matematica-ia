@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,937
+<speak>Presentamos el problema matemático original
+
+2
+00:00:03,037 --> 00:00:04,700
+que vamos a resolver.</speak>
+
+3
+00:00:04,800 --> 00:00:07,323
+<speak>Observamos que todas las fracciones
+
+4
+00:00:07,423 --> 00:00:09,572
+tienen el mismo denominador.</speak>
+
+5
+00:00:09,933 --> 00:00:12,892
+<speak>Sumamos los numeradores de las fracciones
+
+6
+00:00:12,992 --> 00:00:15,569
+y mantenemos el denominador común.</speak>
+
+7
+00:00:15,933 --> 00:00:19,169
+<speak>Realizamos la suma de los numeradores.</speak>
+
+8
+00:00:19,533 --> 00:00:21,976
+<speak>La respuesta final a la operación
+
+9
+00:00:22,076 --> 00:00:24,137
+es ochenta y tres octavos.</speak>
+

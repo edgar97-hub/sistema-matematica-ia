@@ -1,0 +1,23 @@
+/* [project]/src/components/admin/countries/CountryTable.module.css [app-client] (css) */
+.CountryTable-module__T5cmrq__tableWrapper {
+  border: 1px solid var(--mantine-color-gray-3);
+  border-radius: var(--mantine-radius-md);
+  background-color: var(--mantine-color-body);
+  margin-top: var(--mantine-spacing-md);
+  overflow-x: auto;
+}
+
+.CountryTable-module__T5cmrq__tableHeader th {
+  background-color: var(--mantine-color-gray-0);
+  font-weight: 600;
+  font-size: var(--mantine-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--mantine-color-gray-7);
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+
+/*# sourceMappingURL=src_components_admin_countries_CountryTable_module_032e00f7.css.map*/

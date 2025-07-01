@@ -1,0 +1,920 @@
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-16T17:48:33.283Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-16T17:48:41.503Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-16T17:49:32.493Z","trace":""}
+{"context":"CreditPackageService","level":"error","message":"Error creating credit package: Field 'credit_amount' doesn't have a default value","timestamp":"2025-06-17T05:50:03.851Z","trace":"QueryFailedError: Field 'credit_amount' doesn't have a default value\n    at Query.onResult (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error creating credit package: Field 'credit_amount' doesn't have a default value","timestamp":"2025-06-17T05:51:16.272Z","trace":"QueryFailedError: Field 'credit_amount' doesn't have a default value\n    at Query.onResult (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error creating credit package: Field 'credit_amount' doesn't have a default value","timestamp":"2025-06-17T05:52:31.509Z","trace":"QueryFailedError: Field 'credit_amount' doesn't have a default value\n    at Query.onResult (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 1","timestamp":"2025-06-17T05:54:10.024Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 1","timestamp":"2025-06-17T05:58:45.173Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 2","timestamp":"2025-06-17T06:14:04.863Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 2","timestamp":"2025-06-17T13:32:30.476Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 3","timestamp":"2025-06-17T13:34:38.911Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 4","timestamp":"2025-06-17T13:34:38.959Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 4","timestamp":"2025-06-17T13:34:47.402Z"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 3: Property \"creditAmount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-06-17T13:35:05.097Z","trace":"EntityPropertyNotFoundError: Property \"creditAmount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/src/credit-system/services/credit-package.service.ts:85:7)\n    at async /home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 3: Property \"creditAmount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-06-17T13:35:22.636Z","trace":"EntityPropertyNotFoundError: Property \"creditAmount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/src/credit-system/services/credit-package.service.ts:85:7)\n    at async /home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:37:49.162Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:44:34.875Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:44:41.280Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:44:47.976Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:45:00.455Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:52:07.578Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:57:01.222Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T13:57:06.426Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:00:08.547Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:00:14.233Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:00:28.441Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:00:57.454Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:01:03.834Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:01:11.497Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:01:16.820Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 3","timestamp":"2025-06-17T14:01:22.345Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 3","timestamp":"2025-06-17T14:01:29.389Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 5","timestamp":"2025-06-17T14:05:26.109Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-06-17T14:05:31.973Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-06-21T00:57:37.915Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-06-21T00:57:48.147Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:22:52.882Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:22:52.884Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {}","timestamp":"2025-06-21T04:22:55.095Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:22:55.097Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"purchase_success\"}","timestamp":"2025-06-21T04:23:51.996Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"purchase_success\"}, skip: 0, take: 10","timestamp":"2025-06-21T04:23:51.998Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"purchase_success\"}","timestamp":"2025-06-21T04:25:41.191Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"purchase_success\"}, skip: 0, take: 10","timestamp":"2025-06-21T04:25:41.192Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:30:48.817Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:30:48.818Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-05-28\"}","timestamp":"2025-06-21T04:30:58.707Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-05-28T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:30:58.708Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-05-27\",\"endDate\":\"2025-06-20\"}","timestamp":"2025-06-21T04:31:01.251Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-05-27T00:00:00.000Z\",\"2025-06-20T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:31:01.251Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:31:52.541Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:31:52.541Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-04\"}","timestamp":"2025-06-21T04:31:55.853Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-04T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:31:55.853Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-03\",\"endDate\":\"2025-06-28\"}","timestamp":"2025-06-21T04:31:57.304Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-03T00:00:00.000Z\",\"2025-06-28T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:31:57.304Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-03\",\"endDate\":\"2025-06-28\"}","timestamp":"2025-06-21T04:33:35.082Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-03T00:00:00.000Z\",\"2025-06-28T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:35.083Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:33:45.187Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:45.187Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-01\"}","timestamp":"2025-06-21T04:33:51.497Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-01T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:51.497Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-05-31\",\"endDate\":\"2025-06-13\"}","timestamp":"2025-06-21T04:33:52.701Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-05-31T00:00:00.000Z\",\"2025-06-13T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:52.701Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-13\"}","timestamp":"2025-06-21T04:33:52.780Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-13T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:52.780Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-12\",\"endDate\":\"2025-06-14\"}","timestamp":"2025-06-21T04:33:57.056Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-12T00:00:00.000Z\",\"2025-06-14T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:33:57.056Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-03\"}","timestamp":"2025-06-21T04:34:01.047Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-03T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:01.047Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-02\",\"endDate\":\"2025-06-03\"}","timestamp":"2025-06-21T04:34:01.101Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-02T00:00:00.000Z\",\"2025-06-03T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:01.101Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-04\"}","timestamp":"2025-06-21T04:34:05.523Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-04T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:05.523Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-03\",\"endDate\":\"2025-06-14\"}","timestamp":"2025-06-21T04:34:07.495Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-03T00:00:00.000Z\",\"2025-06-14T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:07.495Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-14\"}","timestamp":"2025-06-21T04:34:10.932Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-14T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:10.932Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-13\",\"endDate\":\"2025-06-15\"}","timestamp":"2025-06-21T04:34:14.199Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-13T00:00:00.000Z\",\"2025-06-15T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:14.199Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:34:38.460Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:34:38.460Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T04:35:40.861Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T04:35:40.862Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T16:14:18.560Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T16:14:18.563Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T16:17:24.164Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T16:17:24.165Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-21T16:22:53.401Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-21T16:22:53.401Z"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:15.298Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:16.321Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:18.337Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:22.360Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:49.068Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:49.532Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:50.560Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:52.591Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:41:56.653Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:43:00.999Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:43:12.408Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:43:52.850Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"CreditPackageService","level":"error","message":"Error fetching credit package with id NaN: Unknown column 'NaN' in 'where clause'","timestamp":"2025-06-23T20:45:31.098Z","trace":"QueryFailedError: Unknown column 'NaN' in 'where clause'\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"StripeService","level":"error","message":"Error creating checkout session: Cannot read properties of undefined (reading 'checkout')","timestamp":"2025-06-23T20:48:36.843Z","trace":"TypeError: Cannot read properties of undefined (reading 'checkout')\n    at StripeService.createStripeCheckoutSession (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/stripe.service.ts:44:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditTransactionController.createCheckoutSession (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:97:21)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"StripeService","level":"error","message":"Error creating checkout session: Cannot read properties of undefined (reading 'checkout')","timestamp":"2025-06-23T20:52:22.129Z","trace":"TypeError: Cannot read properties of undefined (reading 'checkout')\n    at StripeService.createStripeCheckoutSession (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/stripe.service.ts:49:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditTransactionController.createCheckoutSession (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:97:21)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T20:53:55.845Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:05:26.979Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:05:31.487Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:33:53.546Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:33:57.065Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:33:59.187Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:36:45.522Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:38:53.688Z","trace":""}
+{"context":"StripeService","level":"error","message":"STRIPE_SECRET_KEY is not defined in the environment variables","timestamp":"2025-06-23T21:39:47.780Z","trace":""}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:44:43.704Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:44:43.707Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1agC1snwKcJC1XTC1c0J1muK3THbGdWpCHTFH94J6X1XmPvIo2BKyoWir","timestamp":"2025-06-23T21:44:50.625Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1QYWvMVNLxgn61ysiRjBhUbZQmdVLCU8B3TeSAkzzRFnReVlWSQluxsBm","timestamp":"2025-06-23T21:45:05.686Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:45:22.809Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:45:22.811Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:45:56.649Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:45:56.652Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a16lRmXc3F0ezZ5IwM9ahRJqOQz7Y7dhPiBIJyk7QAIzaGisPelO8DDFDG","timestamp":"2025-06-23T21:46:02.574Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:47:02.568Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:47:02.571Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a125gyQGuPBBau7CJhJaXCvgnhXHUtWmfZrrAbcBE1jKZ3JezIZdINSWRJ","timestamp":"2025-06-23T21:47:07.678Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:47:17.357Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:47:17.359Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:49:47.191Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:49:47.194Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:05.224Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:05.227Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:14.075Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:14.077Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:20.208Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:20.210Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a100odiVAVIVWFoxk98SBSJRemzwXrlBMcDwyyyTVvrOhbtOKy4oZvsYZ1","timestamp":"2025-06-23T21:50:25.818Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:41.603Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:41.606Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:43.525Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:50:43.527Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1sW4EH1xrhs5199QBiMeaq6RHOLWPctKfGdhfLOmj6zTaTD1Jfk3fnfYJ","timestamp":"2025-06-23T21:50:46.485Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:51:53.109Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T21:51:53.112Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a14MS7UERjvjTs148jHNCIIgbQKmKHjPepvJrcTQ7LfsWFju7gsoQEXVxU","timestamp":"2025-06-23T21:53:06.970Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T22:10:46.515Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T22:10:46.517Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T22:11:01.880Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-23T22:11:01.882Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1KkuqEMza8ppYYneeBbrksU4JcH7FoLNMOs1qua4cPcJ2zPUcdyoqVctm","timestamp":"2025-06-23T22:15:31.598Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:37:35.103Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:37:35.105Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:07.285Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:07.288Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:24.047Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:24.050Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:34.415Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:34.417Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:42.850Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:39:42.852Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:48:45.885Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T02:48:45.887Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1tqF4ycgKUQbOWHS7coplAqDFoaUJFOBAMcxs4YxsEpQCTYheM8y3sMHw","timestamp":"2025-06-24T02:48:58.276Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a16j5rcHnAKJYOAngBzVxHpRmEhERzJ1lSyFkURlGGUPWMp5h064IQpj88","timestamp":"2025-06-24T02:49:56.426Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T02:54:45.818Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T02:54:45.819Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"purchase_success\"}","timestamp":"2025-06-24T02:55:02.839Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"purchase_success\"}, skip: 0, take: 10","timestamp":"2025-06-24T02:55:02.839Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"usage_resolution\"}","timestamp":"2025-06-24T02:55:05.533Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"usage_resolution\"}, skip: 0, take: 10","timestamp":"2025-06-24T02:55:05.533Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"welcome_bonus\"}","timestamp":"2025-06-24T02:55:07.677Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"welcome_bonus\"}, skip: 0, take: 10","timestamp":"2025-06-24T02:55:07.677Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-04\"}","timestamp":"2025-06-24T02:55:13.765Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"moreThanOrEqual\",\"_value\":\"2025-06-04T00:00:00.000Z\",\"_useParameter\":true,\"_multipleParameters\":false}}, skip: 0, take: 10","timestamp":"2025-06-24T02:55:13.765Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"startDate\":\"2025-06-03\",\"endDate\":\"2025-06-07\"}","timestamp":"2025-06-24T02:55:15.743Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"createdAt\":{\"_type\":\"between\",\"_value\":[\"2025-06-03T00:00:00.000Z\",\"2025-06-07T23:59:59.999Z\"],\"_useParameter\":true,\"_multipleParameters\":true}}, skip: 0, take: 10","timestamp":"2025-06-24T02:55:15.743Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:42:46.276Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:42:46.278Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:43:44.385Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:43:44.388Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:53:46.721Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:53:46.723Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:54:25.094Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:54:25.097Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:55:01.125Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:55:01.128Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:55:07.400Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T03:55:07.402Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:03:13.483Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:03:13.485Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1yeoavxpOCCye1jIW5Gs2h9YL4rXy0OKv4dFLwDk0yWdiMJIpGu7X4qnn","timestamp":"2025-06-24T04:08:51.939Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T04:09:55.117Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T04:09:55.117Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T04:09:58.704Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T04:09:58.704Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:12:40.941Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:12:40.943Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1EoZmC7spCCi5LYhyemBIgs8wMy3PrWX4YsO0DvaWsGOViXpE1P5VZOFd","timestamp":"2025-06-24T04:12:44.252Z"}
+{"context":"CreditTransactionController","level":"error","message":"Webhook Error: stream is not readable","timestamp":"2025-06-24T04:13:18.528Z","trace":"InternalServerError: stream is not readable\n    at readStream (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:185:17)\n    at executor (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:120:5)\n    at new Promise (<anonymous>)\n    at getRawBody (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:119:10)\n    at CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:144:26)\n    at /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditTransactionController","level":"error","message":"Webhook Error: stream is not readable","timestamp":"2025-06-24T04:13:18.543Z","trace":"InternalServerError: stream is not readable\n    at readStream (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:185:17)\n    at executor (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:120:5)\n    at new Promise (<anonymous>)\n    at getRawBody (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:119:10)\n    at CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:144:26)\n    at /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditTransactionController","level":"error","message":"Webhook Error: stream is not readable","timestamp":"2025-06-24T04:13:18.662Z","trace":"InternalServerError: stream is not readable\n    at readStream (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:185:17)\n    at executor (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:120:5)\n    at new Promise (<anonymous>)\n    at getRawBody (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:119:10)\n    at CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:144:26)\n    at /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditTransactionController","level":"error","message":"Webhook Error: stream is not readable","timestamp":"2025-06-24T04:13:18.691Z","trace":"InternalServerError: stream is not readable\n    at readStream (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:185:17)\n    at executor (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:120:5)\n    at new Promise (<anonymous>)\n    at getRawBody (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:119:10)\n    at CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:144:26)\n    at /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditTransactionController","level":"error","message":"Webhook Error: stream is not readable","timestamp":"2025-06-24T04:13:20.773Z","trace":"InternalServerError: stream is not readable\n    at readStream (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:185:17)\n    at executor (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:120:5)\n    at new Promise (<anonymous>)\n    at getRawBody (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/raw-body/index.js:119:10)\n    at CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:144:26)\n    at /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:38:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:17:49.487Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:17:49.490Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:24:20.441Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:24:20.443Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:24:24.079Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:24:24.082Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1AZk3i7S0HkWrRLJLKBnyB1bgRzJjGxkn9XOJKbBE5bV9qEJaWBRzmUuP","timestamp":"2025-06-24T04:25:04.801Z"}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:25:23.359Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:25:23.378Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:25:23.551Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:25:23.552Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:25:25.769Z","trace":""}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T04:29:15.858Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T04:29:15.858Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:21.514Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:21.518Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:22.399Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:22.402Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:24.574Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:32:24.576Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:41:07.998Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:41:08.000Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1edaWYXJQcS8tjOVp5n8PH2oyo3J34TqpEo6CGVAe3GbDqcdo1DEw6VFg","timestamp":"2025-06-24T04:41:33.902Z"}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:42:24.324Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:42:24.378Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:42:24.451Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:42:24.506Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:42:26.572Z","trace":""}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:46:41.036Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:46:41.040Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:46:43.561Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:46:43.565Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1w4NPoHrCoOcUeyBK9gs7TkJngcBkM2ndolRIHDfL8GlC7piIFxuHlIhc","timestamp":"2025-06-24T04:47:02.093Z"}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:47:17.469Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:47:17.564Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:47:17.678Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:47:17.709Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:47:20.067Z","trace":""}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:05.665Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:05.667Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:17.222Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:17.224Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:54.121Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:49:54.123Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:50:02.007Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:50:02.009Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:50:04.279Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:50:04.282Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1X9Jx1c9PqAjcoy7xY3oah0yrhtuA8ZWCuahS39tZaxeIu2M2OCqMSBJr","timestamp":"2025-06-24T04:50:22.489Z"}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:50:38.708Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:50:38.735Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:50:38.815Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:50:38.906Z","trace":""}
+{"context":"CreditTransactionController","level":"error","message":"Raw body is not available for Stripe webhook verification.","timestamp":"2025-06-24T04:50:41.130Z","trace":""}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:52:30.017Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T04:52:30.019Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1QHr2UnWZLYuGWz8B96RN1hUe8cfMp8eU5Pyigfs7dPreOshcXqmNAFB3","timestamp":"2025-06-24T04:52:54.335Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOopQjr3XYfKQ61zUG60oQ, type: payment_intent.succeeded","timestamp":"2025-06-24T04:53:14.328Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T04:53:14.328Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOopQjr3XYfKQ61Gyut3Zr, type: charge.succeeded","timestamp":"2025-06-24T04:53:14.330Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T04:53:14.331Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdOoqQjr3XYfKQ6qACHfmBK, type: checkout.session.completed","timestamp":"2025-06-24T04:53:14.392Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1QHr2UnWZLYuGWz8B96RN1hUe8cfMp8eU5Pyigfs7dPreOshcXqmNAFB3","timestamp":"2025-06-24T04:53:14.393Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1QHr2UnWZLYuGWz8B96RN1hUe8cfMp8eU5Pyigfs7dPreOshcXqmNAFB3, Payment Status: paid","timestamp":"2025-06-24T04:53:14.393Z"}
+{"context":"CreditService","level":"error","message":"Missing metadata (userId, packageId, or creditsAmount) in Stripe session: cs_test_a1QHr2UnWZLYuGWz8B96RN1hUe8cfMp8eU5Pyigfs7dPreOshcXqmNAFB3","timestamp":"2025-06-24T04:53:14.395Z","trace":"{\"packageId\":\"5\"}"}
+{"context":"CreditTransactionController","level":"error","message":"Error processing checkout session cs_test_a1QHr2UnWZLYuGWz8B96RN1hUe8cfMp8eU5Pyigfs7dPreOshcXqmNAFB3 in CreditService: Stripe session metadata incomplete.","timestamp":"2025-06-24T04:53:14.399Z","trace":"BadRequestException: Stripe session metadata incomplete.\n    at CreditService.handleSuccessfulCheckoutSession (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/credit.service.ts:245:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditTransactionController.handleStripeWebhook (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/controllers/credit-transaction.controller.ts:192:11)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOopQjr3XYfKQ61yBDqiPP, type: payment_intent.created","timestamp":"2025-06-24T04:53:14.401Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T04:53:14.401Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOopQjr3XYfKQ61vGDZlTV, type: charge.updated","timestamp":"2025-06-24T04:53:16.670Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T04:53:16.670Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:02:53.812Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:02:53.815Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1sAvKAxl2uijM1LCkUYXgR17FiryoSvwRtaudJtlmYNVTlcsLQLWGYZAz","timestamp":"2025-06-24T05:03:12.205Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOyqQjr3XYfKQ60K7ZEr4y, type: charge.succeeded","timestamp":"2025-06-24T05:03:35.311Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T05:03:35.311Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOyqQjr3XYfKQ60cReb867, type: payment_intent.succeeded","timestamp":"2025-06-24T05:03:35.352Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T05:03:35.352Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOyqQjr3XYfKQ60lNBTm4h, type: payment_intent.created","timestamp":"2025-06-24T05:03:35.398Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T05:03:35.398Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdOyrQjr3XYfKQ6x2cqxT18, type: checkout.session.completed","timestamp":"2025-06-24T05:03:35.578Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1sAvKAxl2uijM1LCkUYXgR17FiryoSvwRtaudJtlmYNVTlcsLQLWGYZAz","timestamp":"2025-06-24T05:03:35.579Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1sAvKAxl2uijM1LCkUYXgR17FiryoSvwRtaudJtlmYNVTlcsLQLWGYZAz, Payment Status: paid","timestamp":"2025-06-24T05:03:35.579Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1sAvKAxl2uijM1LCkUYXgR17FiryoSvwRtaudJtlmYNVTlcsLQLWGYZAz","timestamp":"2025-06-24T05:03:35.612Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1sAvKAxl2uijM1LCkUYXgR17FiryoSvwRtaudJtlmYNVTlcsLQLWGYZAz","timestamp":"2025-06-24T05:03:35.619Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdOyqQjr3XYfKQ60qFnEowM, type: charge.updated","timestamp":"2025-06-24T05:03:37.655Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T05:03:37.655Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:08:18.241Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:08:18.241Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:09:27.319Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:09:27.321Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"welcome_bonus\"}","timestamp":"2025-06-24T05:09:50.613Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"welcome_bonus\"}, skip: 0, take: 10","timestamp":"2025-06-24T05:09:50.614Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"purchase_success\"}","timestamp":"2025-06-24T05:09:55.005Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"purchase_success\"}, skip: 0, take: 10","timestamp":"2025-06-24T05:09:55.005Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:09:57.310Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:09:57.310Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:29:22.646Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:29:22.647Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1GbKebm3lOIbURTdXHvHELlRpMDL6n6rw5mZaJ2Dit4MmsPk2iyv4il1o","timestamp":"2025-06-24T05:29:34.864Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPOOQjr3XYfKQ61aliu8Lo, type: charge.succeeded","timestamp":"2025-06-24T05:29:59.747Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T05:29:59.747Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPOOQjr3XYfKQ613EYpRTc, type: payment_intent.succeeded","timestamp":"2025-06-24T05:29:59.776Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T05:29:59.776Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdPOPQjr3XYfKQ6XBBfSezh, type: checkout.session.completed","timestamp":"2025-06-24T05:29:59.950Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1GbKebm3lOIbURTdXHvHELlRpMDL6n6rw5mZaJ2Dit4MmsPk2iyv4il1o","timestamp":"2025-06-24T05:29:59.950Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1GbKebm3lOIbURTdXHvHELlRpMDL6n6rw5mZaJ2Dit4MmsPk2iyv4il1o, Payment Status: paid","timestamp":"2025-06-24T05:29:59.950Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPOOQjr3XYfKQ61VzrDTUL, type: payment_intent.created","timestamp":"2025-06-24T05:29:59.960Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T05:29:59.961Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1GbKebm3lOIbURTdXHvHELlRpMDL6n6rw5mZaJ2Dit4MmsPk2iyv4il1o","timestamp":"2025-06-24T05:29:59.970Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1GbKebm3lOIbURTdXHvHELlRpMDL6n6rw5mZaJ2Dit4MmsPk2iyv4il1o","timestamp":"2025-06-24T05:29:59.977Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPOOQjr3XYfKQ618urddfa, type: charge.updated","timestamp":"2025-06-24T05:30:02.026Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T05:30:02.026Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:30:28.297Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:30:28.297Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:37:28.425Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:37:28.427Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:38:02.210Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T05:38:02.212Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:40:29.109Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:40:29.110Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:41:34.116Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:41:34.116Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:45:16.317Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:45:16.317Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1PtKrt8H10GIU3FYxViNYOVRldjeY0Hzo4b5UBgkb0gTU8dOye8oVw6vs","timestamp":"2025-06-24T05:58:50.465Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPqZQjr3XYfKQ61tD5xflw, type: payment_intent.succeeded","timestamp":"2025-06-24T05:59:07.012Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T05:59:07.014Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPqZQjr3XYfKQ61XqTpJYi, type: payment_intent.created","timestamp":"2025-06-24T05:59:07.056Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T05:59:07.056Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPqZQjr3XYfKQ61lT6UIxR, type: charge.succeeded","timestamp":"2025-06-24T05:59:07.116Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T05:59:07.116Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdPqaQjr3XYfKQ6lWYpoxfX, type: checkout.session.completed","timestamp":"2025-06-24T05:59:07.139Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1PtKrt8H10GIU3FYxViNYOVRldjeY0Hzo4b5UBgkb0gTU8dOye8oVw6vs","timestamp":"2025-06-24T05:59:07.139Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1PtKrt8H10GIU3FYxViNYOVRldjeY0Hzo4b5UBgkb0gTU8dOye8oVw6vs, Payment Status: paid","timestamp":"2025-06-24T05:59:07.139Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1PtKrt8H10GIU3FYxViNYOVRldjeY0Hzo4b5UBgkb0gTU8dOye8oVw6vs","timestamp":"2025-06-24T05:59:07.158Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1PtKrt8H10GIU3FYxViNYOVRldjeY0Hzo4b5UBgkb0gTU8dOye8oVw6vs","timestamp":"2025-06-24T05:59:07.165Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPqZQjr3XYfKQ61em7YSfM, type: charge.updated","timestamp":"2025-06-24T05:59:09.265Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T05:59:09.265Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T05:59:51.614Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T05:59:51.614Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T06:02:56.371Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T06:02:56.371Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T06:03:57.490Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T06:03:57.492Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T06:04:07.871Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T06:04:07.874Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4","timestamp":"2025-06-24T06:04:33.204Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPw5Qjr3XYfKQ605vI2CI9, type: charge.succeeded","timestamp":"2025-06-24T06:04:49.018Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T06:04:49.019Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPw5Qjr3XYfKQ60fzFPbMM, type: payment_intent.succeeded","timestamp":"2025-06-24T06:04:49.035Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T06:04:49.035Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPw5Qjr3XYfKQ60Lbui3uK, type: payment_intent.created","timestamp":"2025-06-24T06:04:49.195Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T06:04:49.195Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdPw6Qjr3XYfKQ6eikQgC45, type: checkout.session.completed","timestamp":"2025-06-24T06:04:49.198Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4","timestamp":"2025-06-24T06:04:49.198Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4, Payment Status: paid","timestamp":"2025-06-24T06:04:49.199Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4","timestamp":"2025-06-24T06:04:49.218Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4","timestamp":"2025-06-24T06:04:49.226Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdPw5Qjr3XYfKQ60esvU8Zs, type: charge.updated","timestamp":"2025-06-24T06:04:51.280Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T06:04:51.281Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:05:01.141Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:09:25.674Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:09:28.960Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:09:35.340Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:12:24.167Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:12:33.575Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:12:37.564Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:13:18.973Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:13:34.787Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:14:07.912Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:14:59.032Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:13.122Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:22.850Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:28.999Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:39.456Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:52.797Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:56.027Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:15:58.526Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:16:12.132Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:16:15.369Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:16:19.368Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1DLbSRZqwQdi1yhyd2IZEglN0RyN54BeJjTpAh1kqpPYPWMqD9Lrn7cN4 for user: 4","timestamp":"2025-06-24T06:16:21.331Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0","timestamp":"2025-06-24T06:16:28.452Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdQ7fQjr3XYfKQ61aGLGyVx, type: charge.succeeded","timestamp":"2025-06-24T06:16:46.460Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T06:16:46.460Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdQ7fQjr3XYfKQ61rcw3j7a, type: payment_intent.succeeded","timestamp":"2025-06-24T06:16:46.509Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T06:16:46.509Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdQ7fQjr3XYfKQ613xXTFy7, type: payment_intent.created","timestamp":"2025-06-24T06:16:46.682Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T06:16:46.682Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdQ7gQjr3XYfKQ6dV4T3naW, type: checkout.session.completed","timestamp":"2025-06-24T06:16:46.688Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0","timestamp":"2025-06-24T06:16:46.689Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0, Payment Status: paid","timestamp":"2025-06-24T06:16:46.689Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0","timestamp":"2025-06-24T06:16:46.714Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0","timestamp":"2025-06-24T06:16:46.721Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdQ7fQjr3XYfKQ618YCfWHo, type: charge.updated","timestamp":"2025-06-24T06:16:48.746Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T06:16:48.746Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1B3l1d2ynolwuvN6fmpq3lS4B1lTIwiqsVsQ2LBQCOt4jkgMSJKZ871a0 for user: 4","timestamp":"2025-06-24T06:16:58.185Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T06:17:06.444Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T06:17:06.445Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T06:17:58.614Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T06:17:58.614Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T06:17:58.722Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T06:17:58.722Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T14:40:45.343Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T14:40:45.346Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T15:23:34.735Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T15:23:34.735Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 6","timestamp":"2025-06-24T15:24:01.963Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 7","timestamp":"2025-06-24T15:24:02.097Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 7","timestamp":"2025-06-24T15:24:06.031Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv","timestamp":"2025-06-24T15:24:16.171Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:24:58.754Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:03.784Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:08.832Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:13.901Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:18.934Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:23.982Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1qe5pjsahT0z5phuYefIRih8huUoKKxuThLrHPmoke9z5wAVn12PvoZgv for user: 4","timestamp":"2025-06-24T15:25:29.036Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N","timestamp":"2025-06-24T15:25:43.531Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdYh6Qjr3XYfKQ60rpWg4tu, type: charge.succeeded","timestamp":"2025-06-24T15:25:55.774Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-06-24T15:25:55.774Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RdYh7Qjr3XYfKQ617oRJVlx, type: checkout.session.completed","timestamp":"2025-06-24T15:25:55.867Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N","timestamp":"2025-06-24T15:25:55.867Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N, Payment Status: paid","timestamp":"2025-06-24T15:25:55.867Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdYh6Qjr3XYfKQ60FcTSSTw, type: payment_intent.succeeded","timestamp":"2025-06-24T15:25:55.869Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-06-24T15:25:55.870Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 4 from Stripe session cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N","timestamp":"2025-06-24T15:25:55.880Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N","timestamp":"2025-06-24T15:25:55.885Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdYh6Qjr3XYfKQ60Wwtzuea, type: payment_intent.created","timestamp":"2025-06-24T15:25:56.000Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-06-24T15:25:56.000Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RdYh6Qjr3XYfKQ60OezoT31, type: charge.updated","timestamp":"2025-06-24T15:25:58.029Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-06-24T15:25:58.029Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1amamGFKkIaqZ4R8tFoSaKhsDCRm5fegeKBaFJmAF6pl5a4KlhpXW730N for user: 4","timestamp":"2025-06-24T15:26:07.585Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T15:31:44.379Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T15:31:44.379Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:44:24.437Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:44:24.440Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:45:22.030Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:45:22.033Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:19.360Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:19.362Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:56.990Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:56.994Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:58.460Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:54:58.463Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:55:14.447Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:55:14.449Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T16:55:29.134Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T16:55:29.135Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T16:57:20.545Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T16:57:20.545Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-24T16:57:43.967Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-24T16:57:43.967Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:58:36.329Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:58:36.332Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:59:14.339Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T16:59:14.341Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:07:59.770Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:07:59.773Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:10.403Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:10.407Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:15.600Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:15.604Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:22.743Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:22.745Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:25.927Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:25.929Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:28.452Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:28.454Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:30.009Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:30.011Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:36.208Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:36.210Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:38.465Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:38.467Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:41.983Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:41.986Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:45.247Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:45.249Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:47.852Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:47.854Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:51.743Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:51.745Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:56.905Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:08:56.907Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:09:50.031Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:09:50.033Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:10:01.944Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:10:01.946Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:10:04.204Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:10:04.207Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:12:44.912Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:12:44.914Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:12.248Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:12.250Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:23.611Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:23.613Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:26.704Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:26.708Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:54.538Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:13:54.540Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:14:59.606Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:14:59.608Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:11.408Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:11.411Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:21.240Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:21.243Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:29.001Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:29.004Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:34.905Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:34.907Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:40.544Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:15:40.546Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:51:24.177Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T17:51:24.179Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:01:08.263Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:01:08.265Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:01:25.513Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:01:25.515Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:09:17.400Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T18:09:17.403Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:22:51.082Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:22:51.086Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:23:00.567Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:23:00.570Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:23:08.665Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:23:08.667Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:24.865Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:24.867Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:27.925Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:27.928Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:59.040Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:30:59.042Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:31:15.070Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T20:31:15.073Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:31:43.293Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:31:43.296Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:04.332Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:04.334Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:16.472Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:16.474Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:22.109Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:22.111Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:28.769Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:32:28.772Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:05.979Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:05.981Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:12.734Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:12.736Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:16.353Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:16.355Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:20.163Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:33:20.166Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:34:06.469Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:34:06.472Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:08.432Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:08.434Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:10.833Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:10.830Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:15.000Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:15.002Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:16.911Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:40:16.914Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:15.585Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:15.588Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:35.974Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:35.977Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:39.355Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T21:42:39.357Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:03:34.745Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:03:34.747Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:07:36.151Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:07:36.153Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:10:16.502Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:10:16.505Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:13.464Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:13.466Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:41.215Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:41.218Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:42.657Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:42.659Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:44.315Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:44.317Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:54.444Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:54.446Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:55.431Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:12:55.433Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:14:17.669Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:14:17.671Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:05.185Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:05.188Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:09.600Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:09.602Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:28.693Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:28.695Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:44.781Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:15:44.783Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:16:42.176Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-24T22:16:42.178Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:39.575Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:39.577Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:42.611Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:42.613Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:54.710Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:47:54.713Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:49:21.192Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:49:21.194Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:51:08.128Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:51:08.131Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:51:46.179Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:51:46.182Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:53:41.502Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T02:53:41.505Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:04:14.857Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:04:14.859Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:04:18.800Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:04:18.803Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:10:12.967Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:10:12.969Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:10:36.379Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T03:10:36.381Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:30:52.324Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:30:52.326Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:30:59.091Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:30:59.094Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:31:09.288Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:31:09.291Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:31:54.837Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:31:54.839Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:32:01.341Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:32:01.344Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:34:21.755Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:34:21.757Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:34:42.629Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:34:42.631Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:35:12.670Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:35:12.672Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:49:10.463Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T04:49:10.465Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:21:43.638Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:21:43.640Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:22:22.844Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:22:22.846Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:23:54.855Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:23:54.858Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:39:02.493Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:39:02.496Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:47:59.830Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:47:59.833Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:48:02.218Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:48:02.220Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:48:06.884Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:48:06.887Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:50:21.369Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:50:21.371Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:51:07.187Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:51:07.190Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:51:56.548Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:51:56.550Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:52:10.844Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:52:10.846Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:52:59.597Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:52:59.599Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:53:48.709Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:53:48.712Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:53:54.103Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:53:54.105Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:01.267Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:01.270Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:24.942Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:24.944Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:28.167Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:28.169Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:32.893Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:32.896Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:40.635Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:40.637Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:46.995Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:46.997Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:52.707Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:52.709Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:55.125Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:55.127Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:58.588Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:54:58.590Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:03.500Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:03.502Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:09.682Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:09.684Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:21.418Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T05:55:21.420Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T06:02:43.034Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T06:02:43.038Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T23:59:14.037Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-25T23:59:14.041Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:11:40.560Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:11:40.562Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:11:45.056Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:11:45.058Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:13:54.647Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T00:13:54.649Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T03:40:22.012Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T03:40:22.015Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T03:42:45.597Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T03:42:45.600Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T04:56:07.696Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T04:56:07.699Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T19:43:12.919Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-26T19:43:12.921Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:16.497Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:16.502Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:23.756Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:23.759Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:53.507Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:05:53.510Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:08:07.418Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:08:07.420Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:08:44.858Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:08:44.861Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:09.138Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:09.141Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:30.711Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:30.713Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:45.365Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:09:45.367Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:06.949Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:06.951Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:21.973Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:21.976Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:50.980Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:10:50.983Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:23:59.939Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:23:59.942Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:29:22.969Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T04:29:22.971Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:02:54.546Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:02:54.549Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:16:00.009Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:16:00.012Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:17:16.361Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:17:16.364Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:17:18.744Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:17:18.747Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:19:24.731Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:19:24.733Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:23:51.759Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:23:51.761Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:24:02.050Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:24:02.052Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:27:44.213Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:27:44.216Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:27:55.963Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:27:55.965Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:16.575Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:16.577Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:34.826Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:34.828Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:43.805Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:28:43.808Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:30:57.336Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:30:57.338Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:11.186Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:11.188Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:12.722Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:12.724Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:21.058Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:21.060Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:27.581Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:27.583Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:33.230Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T05:31:33.232Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:07:33.173Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:07:33.176Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:11:41.401Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:11:41.404Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:11:46.478Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:11:46.480Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:25.564Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:25.566Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:28.698Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:28.700Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:40.403Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T15:13:40.405Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T19:28:18.983Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T19:28:18.985Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T19:57:59.840Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T19:57:59.842Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T20:06:02.154Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T20:06:02.157Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T20:06:18.865Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-27T20:06:18.867Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:06.387Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:06.393Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:28.414Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:28.416Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:31.487Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:31.490Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:36.789Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:38:36.791Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:12.662Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:12.664Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:25.801Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:25.803Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:34.425Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:39:34.427Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:52:07.589Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T04:52:07.592Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:14:41.274Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:14:41.276Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:17:22.748Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:17:22.750Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:17:52.596Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:17:52.599Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:21:44.883Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:21:44.885Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:25:21.277Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:25:21.280Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:25:23.538Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:25:23.540Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:26:37.622Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:26:37.625Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:29:53.889Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:29:53.891Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:00.552Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:00.554Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:02.695Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:02.697Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:04.593Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:30:04.595Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:31:47.412Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-28T05:31:47.414Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T04:05:39.688Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T04:05:39.691Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T04:39:23.100Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T04:39:23.102Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T16:57:26.173Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-06-30T16:57:26.176Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-06-30T17:05:18.868Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-06-30T17:05:18.869Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T02:28:33.836Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T02:28:33.838Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:39:44.879Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:39:44.881Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:43.327Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:43.329Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:44.487Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:44.490Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:53.216Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:44:53.218Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:20.573Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:20.575Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:28.638Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:28.640Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:58.750Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:46:58.752Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:47:27.485Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:47:27.487Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:49:35.412Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:49:35.414Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:52:48.391Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T05:52:48.393Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T15:52:26.465Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T15:52:26.468Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:51:36.086Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:51:36.094Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:20.247Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:20.250Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:22.829Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:22.831Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:23.914Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T16:52:23.916Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:58:58.833Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:58:58.840Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:00.357Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:00.359Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:02.278Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:02.280Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:07.836Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T18:59:07.838Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:47:13.355Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:47:13.357Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:56:52.834Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:56:52.836Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:59:34.020Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T19:59:34.022Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:17.951Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:17.953Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:34.544Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:34.546Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:37.719Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:05:37.721Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:10:34.239Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:10:34.241Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:12:08.013Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:12:08.015Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:12:10.696Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:12:10.698Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:15:45.266Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:15:45.268Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:20:54.006Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:20:54.008Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:16.252Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:16.255Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:17.377Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:17.379Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:54.555Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T20:59:54.557Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:00:29.941Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:00:29.944Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:20:59.056Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:20:59.058Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:44.823Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:44.825Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:47.363Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:47.366Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:52.607Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:52.610Z"}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/frontend/src/components/admin/countries/CountryFormComponent.module.css"],"sourcesContent":[".formPaper {\n  background-color: var(--mantine-color-body);\n}\n"],"names":[],"mappings":"AAAA","debugId":null}}]
+}

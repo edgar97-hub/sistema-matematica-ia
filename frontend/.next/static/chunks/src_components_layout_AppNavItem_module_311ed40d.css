@@ -1,0 +1,108 @@
+/* [project]/src/components/layout/AppNavItem.module.css [app-client] (css) */
+.AppNavItem-module__lJ3odq__navLink, .AppNavItem-module__lJ3odq__navControl {
+  border-radius: var(--mantine-radius-sm);
+  width: 100%;
+  color: var(--mantine-color-gray-7);
+  align-items: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background-color .15s, color .15s;
+  display: flex;
+}
+
+.AppNavItem-module__lJ3odq__navLink:hover, .AppNavItem-module__lJ3odq__navControl:hover {
+  background-color: var(--mantine-color-gray-0);
+  color: var(--mantine-color-black);
+}
+
+.AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, .AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg, .AppNavItem-module__lJ3odq__navControl.AppNavItem-module__lJ3odq__activeParent .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, .AppNavItem-module__lJ3odq__navControl.AppNavItem-module__lJ3odq__activeParent .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg {
+  font-weight: 500;
+  color: var(--mantine-color-blue-6) !important;
+}
+
+.AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  background-color: var(--mantine-color-blue-0);
+  color: var(--mantine-color-blue-6);
+}
+
+.AppNavItem-module__lJ3odq__linkContent {
+  width: 100%;
+}
+
+.AppNavItem-module__lJ3odq__chevron {
+  color: var(--mantine-color-gray-6);
+  margin-left: auto;
+  transition: transform .2s;
+}
+
+.AppNavItem-module__lJ3odq__navControl:has( + .AppNavItem-module__lJ3odq__mantine-Collapse-root[data-state="opened"]) .AppNavItem-module__lJ3odq__chevron svg {
+  transform: rotate(90deg);
+}
+
+.AppNavItem-module__lJ3odq__subItemsContainer {
+  margin-top: var(--mantine-spacing-xs);
+  margin-bottom: var(--mantine-spacing-xs);
+  padding-left: 20px;
+}
+
+.AppNavItem-module__lJ3odq__subItem .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  color: var(--mantine-color-gray-6);
+  background-color: #0000;
+}
+
+.AppNavItem-module__lJ3odq__subItem .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel {
+  font-size: calc(var(--mantine-font-size-sm) * .95);
+  color: var(--mantine-color-gray-7);
+}
+
+.AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, .AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg {
+  font-weight: 500;
+  color: var(--mantine-color-blue-6) !important;
+}
+
+.AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  background-color: var(--mantine-color-blue-0);
+  color: var(--mantine-color-blue-6);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__navLink, body.dark-theme .AppNavItem-module__lJ3odq__navControl {
+  color: var(--mantine-color-dark-0);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__navLink:hover, body.dark-theme .AppNavItem-module__lJ3odq__navControl:hover {
+  background-color: var(--mantine-color-dark-6);
+  color: var(--mantine-color-white);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, body.dark-theme .AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg, body.dark-theme .AppNavItem-module__lJ3odq__navControl.AppNavItem-module__lJ3odq__activeParent .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, body.dark-theme .AppNavItem-module__lJ3odq__navControl.AppNavItem-module__lJ3odq__activeParent .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg {
+  color: var(--mantine-color-blue-4) !important;
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__navLink.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  background-color: var(--mantine-color-dark-5);
+  color: var(--mantine-color-blue-4);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__subItem .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  color: var(--mantine-color-dark-2);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__subItem .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel {
+  color: var(--mantine-color-dark-1);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__linkLabel, body.dark-theme .AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__linkContent .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root svg {
+  color: var(--mantine-color-blue-4) !important;
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__subItem.AppNavItem-module__lJ3odq__active .AppNavItem-module__lJ3odq__mantine-ThemeIcon-root {
+  background-color: var(--mantine-color-dark-5);
+  color: var(--mantine-color-blue-4);
+}
+
+body.dark-theme .AppNavItem-module__lJ3odq__chevron {
+  color: var(--mantine-color-dark-2);
+}
+
+
+/*# sourceMappingURL=src_components_layout_AppNavItem_module_311ed40d.css.map*/

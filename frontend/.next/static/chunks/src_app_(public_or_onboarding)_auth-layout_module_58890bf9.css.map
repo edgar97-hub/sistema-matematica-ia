@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-pwa/src/app/%28public_or_onboarding%29/auth-layout.module.css"],"sourcesContent":["/* src/app/(public_auth)/auth-layout.module.css */\n.wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  padding: var(\n    --mantine-spacing-md\n  ); /* Usar variables de Mantine para espaciado */\n  background-color: var(\n    --mantine-color-gray-0\n  ); /* Color de fondo claro de Mantine */\n}\n\n/* Para tema oscuro, si tu RootLayout aplica .dark-theme al body o html */\n:global(body.dark-theme) .wrapper {\n  background-color: var(--mantine-color-dark-8); /* Un gris oscuro de Mantine */\n}\n\n.content {\n  width: 100%;\n  max-width: 450px; /* Ancho máximo para el contenido de auth (ej. login card) */\n}\n"],"names":[],"mappings":"AACA;;;;;;;;;;AAeA;;;;AAIA","debugId":null}}]
+}

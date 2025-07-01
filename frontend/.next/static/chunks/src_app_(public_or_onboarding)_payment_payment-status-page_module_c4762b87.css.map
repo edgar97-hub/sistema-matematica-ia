@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/frontend/src/app/%28public_or_onboarding%29/payment/payment-status-page.module.css"],"sourcesContent":["/* src/app/payment/payment-status-page.module.css */\n.statusCard {\n  width: 100%;\n  max-width: 550px; /* Un buen ancho para mensajes de estado */\n  text-align: center;\n}\n\n.title {\n  font-size: 1.8rem; /* Título más grande */\n  font-weight: 600;\n  margin-bottom: var(--mantine-spacing-sm);\n}\n\n/* Estilos para tema oscuro si tu layout padre los aplica */\n:global(body.dark-theme) .statusCard {\n  background-color: var(--mantine-color-dark-6);\n}\n:global(body.dark-theme) .title {\n  color: var(--mantine-color-dark-0);\n}\n"],"names":[],"mappings":"AACA;;;;;;AAMA;;;;;;AAOA;;;;AAGA","debugId":null}}]
+}

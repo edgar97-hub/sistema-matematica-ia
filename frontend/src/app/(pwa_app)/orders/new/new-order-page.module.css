@@ -1,0 +1,123 @@
+
+.newOrderContainer {
+  padding: 16px; /* Reemplaza var(--mantine-spacing-md) */
+  max-width: 900px; /* Limita el ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.pageTitle {
+  font-size: 24px; /* Reemplaza var(--mantine-font-size-xl) */
+  color: #228be6; /* Reemplaza var(--mantine-color-blue-7) */
+  text-align: center;
+  margin-bottom: 32px; /* Reemplaza var(--mantine-spacing-xl) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Reemplaza var(--mantine-spacing-sm) */
+}
+
+.pageTitle svg {
+  color: #12b886; /* Reemplaza var(--mantine-color-teal-6) */
+}
+
+/* Estilos para el Paper que contiene el formulario */
+.mantine-Paper-root {
+  background-color: #ffffff; /* Reemplaza var(--mantine-color-body) - asumiendo modo claro */
+  border-radius: 8px; /* Reemplaza var(--mantine-radius-md) */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1); /* Reemplaza var(--mantine-shadow-sm) */
+  padding: 24px; /* Reemplaza var(--mantine-spacing-lg) */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.mantine-Paper-root:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Reemplaza var(--mantine-shadow-md) */
+}
+
+/* Ajustes para FileInput */
+.mantine-FileInput-root {
+  margin-bottom: 16px; /* Reemplaza var(--mantine-spacing-md) */
+}
+
+/* Ajustes para Select y Textarea */
+.mantine-Select-root,
+.mantine-Textarea-root {
+  margin-bottom: 16px; /* Reemplaza var(--mantine-spacing-md) */
+}
+
+/* Botones de acción */
+.mantine-Button-root {
+  border-radius: 8px; /* Reemplaza var(--mantine-radius-md) */
+  font-weight: 600;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.mantine-Button-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Estilos para la vista previa de la imagen */
+.imagePreviewContainer {
+  border: 1px solid #ced4da; /* Reemplaza var(--mantine-color-gray-3) */
+  padding: 8px; /* Reemplaza var(--mantine-spacing-sm) */
+  border-radius: 4px; /* Reemplaza var(--mantine-radius-sm) */
+  text-align: center;
+  margin-bottom: 16px; /* Reemplaza var(--mantine-spacing-md) */
+  background-color: #f8f9fa; /* Reemplaza var(--mantine-color-gray-0) */
+}
+
+.imagePreviewContainer img {
+  max-height: 200px; /* Ajusta la altura máxima para la vista previa */
+  width: auto;
+  border-radius: 4px; /* Reemplaza var(--mantine-radius-sm) */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); /* Reemplaza var(--mantine-shadow-xs) - aproximado */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .newOrderContainer {
+    padding: 8px; /* Reemplaza var(--mantine-spacing-sm) */
+  }
+
+  .pageTitle {
+    font-size: 20px; /* Reemplaza var(--mantine-font-size-lg) */
+    flex-direction: column; /* Apila el icono y el título en móvil */
+    text-align: center;
+    gap: 4px; /* Reemplaza var(--mantine-spacing-xs) */
+  }
+
+  .pageTitle svg {
+    margin-right: 0 !important; /* Elimina el margen a la derecha en móvil */
+  }
+
+  .mantine-Paper-root {
+    padding: 16px; /* Reemplaza var(--mantine-spacing-md) */
+  }
+
+  /* Ajustes para campos de formulario en móvil */
+  .mantine-FileInput-root,
+  .mantine-Select-root,
+  .mantine-Textarea-root {
+    margin-bottom: 8px; /* Reemplaza var(--mantine-spacing-sm) */
+  }
+
+  .mantine-Button-root {
+    width: 100%; /* Botones de ancho completo en móvil */
+  }
+
+  .mantine-Group-root {
+    flex-direction: column; /* Apila los botones de grupo en móvil */
+    gap: 8px; /* Reemplaza var(--mantine-spacing-sm) */
+  }
+
+  .imagePreviewContainer img {
+    max-height: 150px; /* Ajusta la altura máxima para la vista previa en móvil */
+  }
+}
+
+/* Estilos específicos para la vista de cámara */
+.mantine-Stack-root video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que el video llene el contenedor sin distorsión */
+}

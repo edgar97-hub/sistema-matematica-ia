@@ -1,0 +1,111 @@
+/* [project]/src/app/(pwa_app)/orders/new/new-order-page.module.css [app-client] (css) */
+.new-order-page-module__RcyY7a__newOrderContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.new-order-page-module__RcyY7a__pageTitle {
+  color: #228be6;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 24px;
+  display: flex;
+}
+
+.new-order-page-module__RcyY7a__pageTitle svg {
+  color: #12b886;
+}
+
+.new-order-page-module__RcyY7a__mantine-Paper-root {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  transition: box-shadow .2s ease-in-out;
+  box-shadow: 0 1px 3px #0000000d, 0 1px 2px #0000001a;
+}
+
+.new-order-page-module__RcyY7a__mantine-Paper-root:hover {
+  box-shadow: 0 4px 6px #0000001a, 0 2px 4px #0000000f;
+}
+
+.new-order-page-module__RcyY7a__mantine-FileInput-root, .new-order-page-module__RcyY7a__mantine-Select-root, .new-order-page-module__RcyY7a__mantine-Textarea-root {
+  margin-bottom: 16px;
+}
+
+.new-order-page-module__RcyY7a__mantine-Button-root {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.new-order-page-module__RcyY7a__mantine-Button-root:hover {
+  transform: translateY(-2px);
+}
+
+.new-order-page-module__RcyY7a__imagePreviewContainer {
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.new-order-page-module__RcyY7a__imagePreviewContainer img {
+  border-radius: 4px;
+  width: auto;
+  max-height: 200px;
+  box-shadow: 0 1px 2px #0000000a;
+}
+
+@media (width <= 768px) {
+  .new-order-page-module__RcyY7a__newOrderContainer {
+    padding: 8px;
+  }
+
+  .new-order-page-module__RcyY7a__pageTitle {
+    text-align: center;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 20px;
+  }
+
+  .new-order-page-module__RcyY7a__pageTitle svg {
+    margin-right: 0 !important;
+  }
+
+  .new-order-page-module__RcyY7a__mantine-Paper-root {
+    padding: 16px;
+  }
+
+  .new-order-page-module__RcyY7a__mantine-FileInput-root, .new-order-page-module__RcyY7a__mantine-Select-root, .new-order-page-module__RcyY7a__mantine-Textarea-root {
+    margin-bottom: 8px;
+  }
+
+  .new-order-page-module__RcyY7a__mantine-Button-root {
+    width: 100%;
+  }
+
+  .new-order-page-module__RcyY7a__mantine-Group-root {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .new-order-page-module__RcyY7a__imagePreviewContainer img {
+    max-height: 150px;
+  }
+}
+
+.new-order-page-module__RcyY7a__mantine-Stack-root video {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/*# sourceMappingURL=src_app_%28pwa_app%29_orders_new_new-order-page_module_601ca84c.css.map*/

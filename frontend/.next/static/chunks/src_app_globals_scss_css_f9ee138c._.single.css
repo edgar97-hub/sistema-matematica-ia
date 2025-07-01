@@ -1,0 +1,86 @@
+/* [project]/src/app/globals.scss.css [app-client] (css) */
+:root {
+  --sys-primary: #365e9d;
+  --sys-on-primary: #fff;
+  --sys-primary-container: #d6e3ff;
+  --sys-on-primary-container: #001b3e;
+  --sys-secondary: #515f79;
+  --sys-on-secondary: #fff;
+  --sys-secondary-container: #d9e4ff;
+  --sys-on-secondary-container: #3c4962;
+  --sys-tertiary: #814a87;
+  --sys-on-tertiary: #fff;
+  --sys-tertiary-container: #d091d4;
+  --sys-on-tertiary-container: #36013f;
+  --sys-error: #ba1a1a;
+  --sys-on-error: #fff;
+  --sys-error-container: #ffdad6;
+  --sys-on-error-container: #410002;
+  --sys-background: #f4f6f8;
+  --sys-on-background: #1a1c20;
+  --sys-surface: #fff;
+  --sys-on-surface: #1a1c20;
+  --sys-surface-variant: #dfe2ee;
+  --sys-on-surface-variant: #434750;
+  --sys-outline: #737781;
+  --sys-outline-variant: #c3c6d2;
+  --sys-surface-container-lowest: #fff;
+  --sys-surface-container-low: #f3f3f9;
+  --sys-surface-container: #eeedf3;
+  --sys-surface-container-high: #e8e7ed;
+  --sys-surface-container-highest: #e2e2e8;
+  --color-primary: var(--sys-primary);
+  --color-background: var(--sys-background);
+  --color-surface: var(--sys-surface);
+  --color-gray-50: #f9fafb;
+}
+
+body.dark-theme, html.dark-theme {
+  --sys-primary: #aac7ff;
+  --sys-on-primary: #002f64;
+  --sys-primary-container: #6e94d6;
+  --sys-on-primary-container: #000;
+  --sys-secondary: #b9c7e5;
+  --sys-on-secondary: #233148;
+  --sys-background: #1e2c3c;
+  --sys-on-background: #e2e2e8;
+  --sys-surface: #1e2024;
+  --sys-on-surface: #e2e2e8;
+  --sys-surface-variant: #434750;
+  --sys-on-surface-variant: #c3c6d2;
+  --sys-outline: #8d909b;
+  --sys-outline-variant: #434750;
+  --sys-surface-container-lowest: #0c0e12;
+  --sys-surface-container-low: #1a1c20;
+  --sys-surface-container: #1e2024;
+  --sys-surface-container-high: #282a2e;
+  --sys-surface-container-highest: #333539;
+  --color-primary: var(--sys-primary);
+  --color-background: var(--sys-background);
+  --color-surface: var(--sys-surface);
+  --color-gray-50: #030712;
+  --mantine-color-body: #1f2937;
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--sys-background);
+  color: var(--sys-on-background);
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  transition: background-color .3s, color .3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sys-on-background);
+  font-family: Avantt, Arial Narrow, sans-serif;
+}
+
+/*# sourceMappingURL=src_app_globals_scss_css_f9ee138c._.single.css.map*/

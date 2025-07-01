@@ -1,0 +1,3 @@
+{
+  "/(public_or_onboarding)/login/page": "app/(public_or_onboarding)/login/page.js"
+}

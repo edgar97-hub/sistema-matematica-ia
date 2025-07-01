@@ -1,0 +1,10 @@
+{
+  "/(admin_panel)/admin/settings/page": "app/(admin_panel)/admin/settings/page.js",
+  "/(public_or_onboarding)/admin/login/page": "app/(public_or_onboarding)/admin/login/page.js",
+  "/(public_or_onboarding)/auth/google/callback/page": "app/(public_or_onboarding)/auth/google/callback/page.js",
+  "/(public_or_onboarding)/login/page": "app/(public_or_onboarding)/login/page.js",
+  "/(pwa_app)/credits/page": "app/(pwa_app)/credits/page.js",
+  "/(pwa_app)/orders/new/page": "app/(pwa_app)/orders/new/page.js",
+  "/(pwa_app)/orders/page": "app/(pwa_app)/orders/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
+}

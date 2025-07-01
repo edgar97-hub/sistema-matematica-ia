@@ -1,0 +1,142 @@
+// src/app/(admin_panel)/admin/educational-content/countries/page.tsx
+"use client";
+
+import { useState } from "react";
+import { Box, Title, Button, Group, Alert, Text } from "@mantine/core";
+import {
+  IconWorldPlus,
+  IconRefresh,
+  IconAlertCircle,
+  IconTrash,
+  IconEdit,
+  IconWorld,
+} from "@tabler/icons-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
+import { notifications } from "@mantine/notifications";
+
+import {
+  CountryFE,
+  PaginatedCountriesResponse,
+} from "../../../../../types/country.types"; // Ajusta ruta
+import { countryService } from "../../../../../lib/services/country.service"; // Ajusta ruta
+import { CountryTable } from "../../../../../components/admin/countries/CountryTable"; // Ajusta ruta
+
+// No necesitamos un QueryClientProvider aquí si ya está en (admin_panel)/layout.tsx
+
+export default function CountriesListPage() {
+  const router = useRouter();
+  const queryClient = useQueryClient();
+
+  // Para este ejemplo, asumimos que getCountries no toma paginación/filtros complejos por ahora
+  // Puedes añadir estado para eso si tu servicio y backend lo soportan.
+  const {
+    data: countriesResponse, // Podría ser PaginatedCountriesResponse o CountryFE[]
+    isError,
+    isLoading,
+    refetch,
+  } = useQuery<PaginatedCountriesResponse | CountryFE[], Error>({
+    queryKey: ["countries"],
+    queryFn: () => countryService.getCountries(), // Llama sin paginación por simplicidad inicial
+  });
+
+  const countries = Array.isArray(countriesResponse)
+    ? countriesResponse
+    : countriesResponse?.data || [];
+  const totalCountries = Array.isArray(countriesResponse)
+    ? countriesResponse.length
+    : countriesResponse?.total || 0;
+
+  const { mutateAsync: deleteCountryMutation } = useMutation({
+    mutationFn: countryService.deleteCountry,
+    onSuccess: (_, deletedCountryId) => {
+      notifications.show({
+        title: "País Eliminado",
+        message: `El país ha sido eliminado correctamente.`,
+        color: "green",
+        icon: <IconTrash size={18} />,
+      });
+      queryClient.invalidateQueries({ queryKey: ["countries"] });
+    },
+    onError: (error: any) => {
+      notifications.show({
+        title: "Error al Eliminar",
+        message: error.message || "No se pudo eliminar el país.",
+        color: "red",
+        icon: <IconAlertCircle size={18} />,
+      });
+    },
+  });
+
+  const handleDeleteCountry = async (country: CountryFE) => {
+    if (
+      window.confirm(
+        `¿Está seguro de que desea eliminar el país "${country.name}"? Se eliminarán también sus etapas y subdivisiones asociadas.`
+      )
+    ) {
+      await deleteCountryMutation(country.id);
+    }
+  };
+
+  const handleEditCountry = (country: CountryFE) => {
+    router.push(`/admin/educational-content/countries/edit/${country.id}`);
+  };
+
+  return (
+    <Box p="lg">
+      <Group justify="space-between" mb="xl">
+        <Title order={2} className="page-main-title">
+          <IconWorld
+            size={28}
+            style={{ marginRight: "10px", verticalAlign: "bottom" }}
+          />
+          Gestión de Países
+        </Title>
+        <Group>
+          <Button
+            onClick={() =>
+              router.push("/admin/educational-content/countries/create")
+            }
+            leftSection={<IconWorldPlus size={18} />}
+            variant="filled"
+            color="blue"
+          >
+            Nuevo País
+          </Button>
+          <Button
+            onClick={() => refetch()}
+            leftSection={<IconRefresh size={18} />}
+            variant="default"
+            loading={isLoading && countries.length > 0}
+            disabled={isLoading && countries.length > 0}
+          >
+            Refrescar
+          </Button>
+        </Group>
+      </Group>
+
+      {isError && !isLoading && (
+        <Alert
+          icon={<IconAlertCircle size="1rem" />}
+          title="Error de Carga"
+          color="red"
+          withCloseButton
+          mb="md"
+        >
+          No se pudieron cargar los países.
+        </Alert>
+      )}
+
+      <CountryTable
+        countries={countries}
+        isLoading={isLoading}
+        onEdit={handleEditCountry}
+        onDelete={handleDeleteCountry}
+        // Pasa props de paginación si tu tabla y servicio los manejan
+        // totalRowCount={totalCountries}
+        // pagination={...}
+        // onPaginationChange={...}
+      />
+    </Box>
+  );
+}

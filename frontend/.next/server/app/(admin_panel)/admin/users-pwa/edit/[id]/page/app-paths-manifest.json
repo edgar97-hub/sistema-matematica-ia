@@ -1,0 +1,3 @@
+{
+  "/(admin_panel)/admin/users-pwa/edit/[id]/page": "app/(admin_panel)/admin/users-pwa/edit/[id]/page.js"
+}

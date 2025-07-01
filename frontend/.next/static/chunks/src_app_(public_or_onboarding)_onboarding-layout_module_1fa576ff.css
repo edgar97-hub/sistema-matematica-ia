@@ -1,0 +1,22 @@
+/* [project]/src/app/(public_or_onboarding)/onboarding-layout.module.css [app-client] (css) */
+.onboarding-layout-module__NKJK0a__wrapper {
+  min-height: 100vh;
+  padding: var(--mantine-spacing-md);
+  background-color: var(--mantine-color-gray-0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+body.dark-theme .onboarding-layout-module__NKJK0a__wrapper {
+  background-color: var(--mantine-color-dark-8);
+}
+
+.onboarding-layout-module__NKJK0a__content {
+  width: 100%;
+  max-width: 500px;
+}
+
+
+/*# sourceMappingURL=src_app_%28public_or_onboarding%29_onboarding-layout_module_1fa576ff.css.map*/
