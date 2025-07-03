@@ -5,12 +5,25 @@ import { join } from 'path';
 import { CORS } from './constants';
 import * as morgan from 'morgan';
 import * as bodyParser from 'body-parser';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  const certPath = './cert';
+  // const key = fs.readFileSync("./cert/private.key");
+  // const cert = fs.readFileSync("./cert/certificate.crt");
+  const httpsOptions = {
+    key: fs.readFileSync(path.resolve(certPath, 'private.key')),
+    cert: fs.readFileSync(path.resolve(certPath, 'certificate.crt')),
+  };
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    httpsOptions,
+  });
+
+  // const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.use(
-    '/api/credit-transactions/stripe-webhook', 
-    bodyParser.raw({ type: 'application/json' }), 
+    '/api/credit-transactions/stripe-webhook',
+    bodyParser.raw({ type: 'application/json' }),
   );
   app.useStaticAssets(join(__dirname, '..', 'uploads'), {
     prefix: '/uploads/',

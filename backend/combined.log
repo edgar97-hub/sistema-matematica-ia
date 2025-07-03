@@ -1420,3 +1420,17 @@
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:05:28.275Z"}
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:09:34.693Z"}
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:09:34.695Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:22:14.897Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:22:14.899Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T16:25:04.573Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T16:25:04.573Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T19:32:54.957Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T19:32:54.959Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T19:34:07.737Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T19:34:07.740Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T19:37:24.215Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T19:37:24.216Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T23:08:18.633Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T23:08:18.639Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T23:08:28.571Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T23:08:28.573Z"}
