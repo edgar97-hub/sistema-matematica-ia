@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Downloads/_DOWNLOADS/projectoIA/sistema-matematica-ia-pwa/src/app/%28public_or_onboarding%29/layout.tsx"],"sourcesContent":["// // src/app/(public_auth)/layout.tsx\n// \"use client\"; // Si usas algún hook o interactividad, aunque para uno simple puede ser server\n// import React from \"react\";\n// import classes from \"./auth-layout.module.css\"; // Usaremos CSS Modules\n\n// export default function AuthPagesLayout({\n//   children,\n// }: {\n//   children: React.ReactNode;\n// }) {\n//   return (\n//     <div className={classes.wrapper}>\n//       <main className={classes.content}>{children}</main>\n//     </div>\n//   );\n// }\n"],"names":[],"mappings":"AAAA,sCAAsC;AACtC,gGAAgG;AAChG,6BAA6B;AAC7B,0EAA0E;AAE1E,4CAA4C;AAC5C,cAAc;AACd,OAAO;AACP,+BAA+B;AAC/B,OAAO;AACP,aAAa;AACb,wCAAwC;AACxC,4DAA4D;AAC5D,aAAa;AACb,OAAO;AACP,IAAI","debugId":null}}]
-}

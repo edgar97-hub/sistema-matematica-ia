@@ -1,3 +1,0 @@
-{
-  "/(pwa_app)/orders/[orderId]/status/page": "app/(pwa_app)/orders/[orderId]/status/page.js"
-}

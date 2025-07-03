@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/frontend/src/app/%28public_or_onboarding%29/payment/layout.tsx"],"sourcesContent":["// src/app/payment/layout.tsx\n\"use client\";\nimport React from \"react\";\nimport { Box, Center } from \"@mantine/core\";\n// Puedes crear un classes.paymentLayoutWrapper si necesitas estilos específicos\n// import classes from './payment-layout.module.css';\n\nexport default function PaymentPagesLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <Box\n      style={{\n        display: \"flex\",\n        flexDirection: \"column\",\n        alignItems: \"center\",\n        justifyContent: \"center\",\n        minHeight: \"100vh\",\n        padding: \"20px\",\n        backgroundColor: \"var(--mantine-color-gray-0)\",\n      }}\n    >\n      {/* :global(body.dark-theme) & { background-color: var(--mantine-color-dark-8); } */}\n      {children}\n    </Box>\n  );\n}\n"],"names":[],"mappings":"AAAA,6BAA6B;;;;;AAG7B;AAFA;;;AAMe,SAAS,mBAAmB,EACzC,QAAQ,EAGT;IACC,qBACE,8OAAC,+JAAA,CAAA,MAAG;QACF,OAAO;YACL,SAAS;YACT,eAAe;YACf,YAAY;YACZ,gBAAgB;YAChB,WAAW;YACX,SAAS;YACT,iBAAiB;QACnB;kBAGC;;;;;;AAGP","debugId":null}}]
-}

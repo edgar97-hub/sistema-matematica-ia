@@ -238,7 +238,6 @@ def render_full_video():
     manim_output_scene_dir = "full_scene" 
 
     try:
-        # Pasamos solution_json a generate_full_voiceover_script para que lo incruste.
         manim_script_content = generate_full_voiceover_script(solution_json)
 
         with open(script_path, "w", encoding="utf-8") as f:

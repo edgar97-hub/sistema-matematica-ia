@@ -1416,3 +1416,7 @@
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:44:26.512Z"}
 {"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T04:44:36.708Z"}
 {"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T04:44:36.708Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:05:28.273Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:05:28.275Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:09:34.693Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T16:09:34.695Z"}
