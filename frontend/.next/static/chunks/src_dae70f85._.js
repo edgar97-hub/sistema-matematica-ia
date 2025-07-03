@@ -562,7 +562,7 @@ function EducationalSubdivisionsPage() {
     };
     const handleCountryChange = (countryId)=>{
         setSelectedCountryId(countryId);
-        setSelectedStageId(null); // Resetear etapa al cambiar país
+        setSelectedStageId(null);
     };
     const isLoading = isLoadingCountries || isLoadingStages || isLoadingSubdivisions;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Box"], {
@@ -619,7 +619,7 @@ function EducationalSubdivisionsPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 170,
                                     columnNumber: 26
                                 }, void 0),
                                 variant: "default",
@@ -627,7 +627,7 @@ function EducationalSubdivisionsPage() {
                                 children: "Refrescar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                                lineNumber: 169,
+                                lineNumber: 168,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -657,7 +657,7 @@ function EducationalSubdivisionsPage() {
                         searchable: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                        lineNumber: 181,
+                        lineNumber: 180,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Select$2f$Select$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -671,25 +671,25 @@ function EducationalSubdivisionsPage() {
                         searchable: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                        lineNumber: 191,
+                        lineNumber: 190,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                lineNumber: 180,
+                lineNumber: 179,
                 columnNumber: 7
             }, this),
             isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Center$2f$Center$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Center"], {
                 p: "xl",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Loader$2f$Loader$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Loader"], {}, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                    lineNumber: 205,
+                    lineNumber: 204,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                lineNumber: 204,
+                lineNumber: 203,
                 columnNumber: 9
             }, this),
             !isLoading && isError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Alert$2f$Alert$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Alert"], {
@@ -698,7 +698,7 @@ function EducationalSubdivisionsPage() {
                 children: "No se pudieron cargar las subdivisiones."
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                lineNumber: 209,
+                lineNumber: 208,
                 columnNumber: 9
             }, this),
             !isLoading && !isError && selectedStageId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$subdivisions$2f$EducationalSubdivisionTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EducationalSubdivisionTable"], {
@@ -708,8 +708,8 @@ function EducationalSubdivisionsPage() {
                 onDelete: handleDeleteSubdivision
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                lineNumber: 217,
-                columnNumber: 11
+                lineNumber: 214,
+                columnNumber: 9
             }, this),
             !isLoading && !isError && !selectedStageId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Center$2f$Center$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Center"], {
                 p: "xl",
@@ -718,12 +718,12 @@ function EducationalSubdivisionsPage() {
                     children: "Seleccione un país y una etapa para ver las subdivisiones."
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                    lineNumber: 226,
+                    lineNumber: 223,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/subdivisions/page.tsx",
-                lineNumber: 225,
+                lineNumber: 222,
                 columnNumber: 9
             }, this)
         ]

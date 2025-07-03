@@ -15,9 +15,7 @@ let FileStorageModule = class FileStorageModule {
 exports.FileStorageModule = FileStorageModule;
 exports.FileStorageModule = FileStorageModule = __decorate([
     (0, common_1.Module)({
-        imports: [
-            config_1.ConfigModule,
-        ],
+        imports: [config_1.ConfigModule],
         providers: [file_storage_service_1.FileStorageService],
         exports: [file_storage_service_1.FileStorageService],
     })

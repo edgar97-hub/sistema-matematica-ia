@@ -41,6 +41,22 @@ let EducationalStageService = class EducationalStageService {
         });
         return { data, total };
     }
+    async findActiveStagesByCountry(countryId) {
+        let test = await this.educationalStageRepository
+            .createQueryBuilder('stage')
+            .leftJoinAndSelect('stage.country', 'country')
+            .where('stage.country_id = :countryId', { countryId })
+            .getMany();
+        return test;
+    }
+    async findActiveStagesByCountryName(countryName) {
+        let test = await this.educationalStageRepository
+            .createQueryBuilder('stage')
+            .leftJoinAndSelect('stage.country', 'country')
+            .where('country.name = :countryName', { countryName })
+            .getMany();
+        return test;
+    }
     async findOne(id) {
         const stage = await this.educationalStageRepository.findOne({
             where: { id },
@@ -69,22 +85,6 @@ let EducationalStageService = class EducationalStageService {
         if (result.affected === 0) {
             throw new common_1.NotFoundException(`Educational Stage with ID "${id}" not found`);
         }
-    }
-    async findActiveStagesByCountry(countryId) {
-        let test = await this.educationalStageRepository
-            .createQueryBuilder('stage')
-            .leftJoinAndSelect('stage.country', 'country')
-            .where('stage.country_id = :countryId', { countryId })
-            .getMany();
-        return test;
-    }
-    async findActiveStagesByCountryName(countryName) {
-        let test = await this.educationalStageRepository
-            .createQueryBuilder('stage')
-            .leftJoinAndSelect('stage.country', 'country')
-            .where('country.name = :countryName', { countryName })
-            .getMany();
-        return test;
     }
 };
 exports.EducationalStageService = EducationalStageService;

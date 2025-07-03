@@ -1,4 +1,3 @@
-// src/app/admin/login/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -19,14 +18,12 @@ import {
 import { useForm, zodResolver } from "@mantine/form";
 import { z } from "zod";
 import { IconAlertCircle, IconLogin } from "@tabler/icons-react";
-
 import {
   useAuthStore,
   UserPwa as AuthUser,
-} from "../../../../store/auth.store"; // Ajusta ruta
-import { apiClient } from "../../../../lib/apiClient"; // Ajusta ruta
+} from "../../../../store/auth.store";
+import { apiClient } from "../../../../lib/apiClient";
 import { AuthAdminResponse } from "project/types/auth.types";
-// Asume que tu backend devuelve algo como AuthResponse que tiene token y datos del usuario
 
 const loginSchema = z.object({
   username: z.string().min(3, {
@@ -54,14 +51,13 @@ export default function AdminLoginPage() {
     validate: zodResolver(loginSchema),
   });
 
-  // Redirigir si ya está logueado como admin
   useEffect(() => {
     if (
       isAuthenticated &&
       (currentUserFromStore as AuthUser & { role?: string })?.role ===
         "ADMINISTRATOR"
     ) {
-      router.replace("/admin/dashboard");
+      router.replace("/admin/credit-transactions");
     }
   }, [isAuthenticated, currentUserFromStore, router]);
 
@@ -78,19 +74,17 @@ export default function AdminLoginPage() {
       );
 
       const { accessToken, user: adminUserDataBackend } = response.data;
-      // Adapta la respuesta del backend a la estructura UserPwa de tu store
-      // o crea una interfaz AdminUser y ajústala en el store.
       const adminUserForStore: AuthUser = {
         id: adminUserDataBackend.id,
         name: adminUserDataBackend.name,
         email: adminUserDataBackend.email || null,
-        role: adminUserDataBackend.role, // Asegúrate que esto sea 'ADMINISTRATOR'
-        pictureUrl: null, // Admin no tiene esto
-        countryOfOrigin: null, // Admin no tiene esto
-        credits: 0, // Admin no tiene esto
+        role: adminUserDataBackend.role,
+        pictureUrl: null,
+        countryOfOrigin: null,
+        credits: 0,
       };
       setUser(adminUserForStore, accessToken);
-      router.push("/admin/dashboard");
+      router.push("/admin/credit-transactions");
     } catch (err: any) {
       const apiErrorMessage =
         err.response?.data?.message || err.message || "Error de autenticación.";
@@ -107,7 +101,7 @@ export default function AdminLoginPage() {
   ) {
     return (
       <Center mih="100vh">
-        <LoadingOverlay visible={true} /> {/* O un mensaje "Redirigiendo..." */}
+        <LoadingOverlay visible={true} />
       </Center>
     );
   }

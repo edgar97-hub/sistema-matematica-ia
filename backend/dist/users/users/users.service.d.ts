@@ -10,6 +10,7 @@ export declare class UsersService {
     private readonly userRepository;
     private readonly countryService;
     constructor(userRepository: Repository<UserEntity>, countryService: CountryService);
+    create(createUserDto: CreateUserPwaDto): Promise<UserEntity>;
     findAll(queryDto: FindAllUsersQueryDto): Promise<{
         data: UserEntity[];
         total: number;
@@ -17,13 +18,10 @@ export declare class UsersService {
     findById(id: number): Promise<any>;
     findByEmail(email: string): Promise<UserEntity | null>;
     findByGoogleId(googleId: string): Promise<UserEntity | null>;
-    create(createUserDto: CreateUserPwaDto): Promise<UserEntity>;
-    updateProfile(userId: number, updateProfileDto: UpdateUserPwaProfileDto): Promise<UserEntity>;
     updateByAdmin(userId: number, updateUserDto: UpdateUserByAdminDto): Promise<UserEntity>;
-    updateUserCredits(userId: number, newCreditBalance: number): Promise<UserEntity>;
-    remove(id: number): Promise<void>;
-    findOrCreateFromGoogle(profile: CreateUserPwaDto): Promise<UserEntity>;
+    updateProfileByUserStandar(userId: number, updateProfileDto: UpdateUserPwaProfileDto): Promise<UserEntity>;
     updateEmail(userId: number, newEmail: string): Promise<UserEntity>;
-    deductCredits(userId: number, amountToDeduct: number, reason: string, transactionalEntityManager: EntityManager): Promise<UserEntity>;
+    remove(id: number): Promise<UserEntity>;
+    findOrCreateFromGoogle(profile: CreateUserPwaDto): Promise<UserEntity>;
     internalRecordTransaction(data: Partial<CreditTransactionEntity>, manager: EntityManager): Promise<CreditTransactionEntity>;
 }

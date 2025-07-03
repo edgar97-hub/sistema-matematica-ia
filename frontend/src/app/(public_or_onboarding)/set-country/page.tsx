@@ -50,34 +50,32 @@ export default function SetCountryPage() {
       router.replace("/login");
       return;
     }
+    console.log("user.countryOfOrigin", user.countryOfOrigin);
     if (user.countryOfOrigin) {
-      // LEER LA URL DE REDIRECCIÓN GUARDADA O EL QUERY PARAM
       const redirectUrlFromQuery = searchParams.get("redirect"); // De /auth/google/callback
       const intendedUrlFromStorage = sessionStorage.getItem(INTENDED_URL_KEY); // Si se guardó antes de /set-country
       sessionStorage.removeItem(INTENDED_URL_KEY); // Limpiar
 
       const finalRedirectUrl =
-        redirectUrlFromQuery || intendedUrlFromStorage || "/dashboard";
+        redirectUrlFromQuery || intendedUrlFromStorage || "/orders";
       console.log("SetCountryPage: Redirecting to:", finalRedirectUrl);
       router.push(finalRedirectUrl); // USAR PUSH para que el usuario pueda volver si quiere
       // router.replace("/dashboard"); // Ya tiene país, ir al dashboard
     }
   }, [user, router]);
 
-  // Cargar la lista de países activos con contenido educativo
   const {
     data: countries,
     isLoading: isLoadingCountries,
     isError: isCountriesError,
   } = useQuery<CountryFE[], Error>({
     queryKey: ["active-countries-for-set-country"],
-    queryFn: () => countryService.getActiveCountriesForPwa(), // Desde el servicio que creamos
+    queryFn: () => countryService.getActiveCountriesForPwa(),
   });
 
   const countryOptions =
-    countries?.map((c) => ({ value: c.name, label: c.name })) || []; // Usar el nombre del país como valor y etiqueta
+    countries?.map((c) => ({ value: c.name, label: c.name })) || [];
 
-  // Formulario
   const form = useForm<{ countryOfOrigin: string | null }>({
     initialValues: {
       countryOfOrigin: null,
@@ -85,12 +83,9 @@ export default function SetCountryPage() {
     validate: zodResolver(setCountrySchema),
   });
 
-  // Mutación para guardar el país de origen
   const { mutateAsync: saveCountryMutation, isPending } = useMutation({
     mutationFn: async (selectedCountry: string) => {
-      if (!token) throw new Error("No autenticado"); // No debería pasar si está en esta página
-      // Asume que pwaUserService.updateProfile espera un objeto parcial
-      // y tu backend /api/users/profile (PATCH) maneja la actualización de countryOfOrigin
+      if (!token) throw new Error("No autenticado");
       return pwaUserService.updatePwaUserProfile(
         { countryOfOrigin: selectedCountry },
         token
@@ -103,11 +98,11 @@ export default function SetCountryPage() {
         color: "green",
         icon: <IconMapPin size={18} />,
       });
-      setCountryInStore(updatedUser.countryOfOrigin!); // Actualiza el país en el store de Zustand
+      setCountryInStore(updatedUser.countryOfOrigin!);
       queryClient.invalidateQueries({
         queryKey: ["pwa-user-profile", user?.id],
-      }); // Si tienes una query para el perfil
-      router.push("/dashboard"); // Redirigir al dashboard
+      });
+      // router.push("/orders");
     },
     onError: (error: any) => {
       notifications.show({

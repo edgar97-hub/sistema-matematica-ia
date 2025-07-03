@@ -192,6 +192,16 @@ function EducationalStageTable({ stages, isLoading, onEdit, onDelete }) {
                     style: {
                         textAlign: "center"
                     },
+                    children: stage.country?.name || stage.countryId || "N/A"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/EducationalStageTable.tsx",
+                    lineNumber: 41,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
+                    style: {
+                        textAlign: "center"
+                    },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Group$2f$Group$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Group"], {
                         gap: "xs",
                         justify: "center",
@@ -282,6 +292,16 @@ function EducationalStageTable({ stages, isLoading, onEdit, onDelete }) {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
                                 style: {
+                                    textAlign: "center"
+                                },
+                                children: "País"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/EducationalStageTable.tsx",
+                                lineNumber: 97,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
+                                style: {
                                     textAlign: "center",
                                     width: "100px"
                                 },
@@ -367,7 +387,7 @@ __turbopack_context__.s({
     "default": (()=>EducationalStagesPageWrapper)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)"); // useEffect para cargar países
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/core/esm/core/Box/Box.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Title$2f$Title$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/core/esm/components/Title/Title.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/core/esm/components/Button/Button.mjs [app-client] (ecmascript)");
@@ -382,11 +402,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$queryClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/query-core/build/modern/queryClient.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/notifications/esm/notifications.store.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$educational$2d$stage$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/educational-stage.service.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/country.service.ts [app-client] (ecmascript)"); // Para obtener la lista de países
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/country.service.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$admin_panel$292f$admin$2f$educational$2d$content$2f$stages$2f$EducationalStageTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/(admin_panel)/admin/educational-content/stages/EducationalStageTable.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -400,20 +419,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const queryClientInstance = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$queryClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClient"]({
-});
 function EducationalStagesPageWrapper() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClientProvider"], {
-        client: queryClientInstance,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(EducationalStagesPage, {}, void 0, false, {
-            fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-            lineNumber: 45,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(EducationalStagesPage, {}, void 0, false, {
         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-        lineNumber: 44,
-        columnNumber: 5
+        lineNumber: 39,
+        columnNumber: 10
     }, this);
 }
 _c = EducationalStagesPageWrapper;
@@ -422,7 +432,6 @@ function EducationalStagesPage() {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const [selectedCountryId, setSelectedCountryId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    // Cargar países para el filtro
     const { data: countriesData, isLoading: isLoadingCountries } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "countries-for-stages-filter"
@@ -435,7 +444,6 @@ function EducationalStagesPage() {
             value: c.id.toString(),
             label: c.name
         })) || [];
-    // Query para obtener las etapas, se re-ejecuta si selectedCountryId cambia
     const { data: stagesResponse, isError, isLoading, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "educational-stages",
@@ -460,7 +468,7 @@ function EducationalStagesPage() {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 90,
                         columnNumber: 15
                     }, this)
                 });
@@ -481,7 +489,7 @@ function EducationalStagesPage() {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                        lineNumber: 109,
+                        lineNumber: 99,
                         columnNumber: 15
                     }, this)
                 });
@@ -514,14 +522,14 @@ function EducationalStagesPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                                lineNumber: 130,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this),
                             "Gestión de Etapas Educativas"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                        lineNumber: 129,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Group$2f$Group$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Group"], {
@@ -532,7 +540,7 @@ function EducationalStagesPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 131,
                                     columnNumber: 26
                                 }, void 0),
                                 variant: "filled",
@@ -540,7 +548,7 @@ function EducationalStagesPage() {
                                 children: "Nueva Etapa"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                                lineNumber: 137,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -549,7 +557,7 @@ function EducationalStagesPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 139,
                                     columnNumber: 26
                                 }, void 0),
                                 variant: "default",
@@ -557,19 +565,19 @@ function EducationalStagesPage() {
                                 children: "Refrescar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                                lineNumber: 147,
+                                lineNumber: 137,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                        lineNumber: 136,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                lineNumber: 128,
+                lineNumber: 118,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Select$2f$Select$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -591,7 +599,7 @@ function EducationalStagesPage() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                lineNumber: 158,
+                lineNumber: 148,
                 columnNumber: 7
             }, this),
             isError && !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Alert$2f$Alert$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Alert"], {
@@ -599,13 +607,13 @@ function EducationalStagesPage() {
                 color: "red",
                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {}, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                    lineNumber: 170,
+                    lineNumber: 160,
                     columnNumber: 48
                 }, void 0),
                 children: "No se pudieron cargar las etapas."
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                lineNumber: 170,
+                lineNumber: 160,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$admin_panel$292f$admin$2f$educational$2d$content$2f$stages$2f$EducationalStageTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EducationalStageTable"], {
@@ -615,13 +623,13 @@ function EducationalStagesPage() {
                 onDelete: handleDeleteStage
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-                lineNumber: 175,
+                lineNumber: 165,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/page.tsx",
-        lineNumber: 127,
+        lineNumber: 117,
         columnNumber: 5
     }, this);
 }

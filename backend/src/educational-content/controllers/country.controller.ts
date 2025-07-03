@@ -17,14 +17,11 @@ import { FindAllCountriesQueryDto } from '../entities/country.entity';
 
 @Controller('countries')
 export class CountryController {
-  constructor(
-    private readonly countryService: CountryService,
-  ) {}
+  constructor(private readonly countryService: CountryService) {}
 
   @Post()
   @UseGuards(JwtAuthGuard, AdminGuard)
   create(@Body() createCountryDto: CreateCountryDto) {
-    console.log('test');
     return this.countryService.create(createCountryDto);
   }
 

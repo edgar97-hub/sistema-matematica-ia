@@ -535,7 +535,6 @@ function MainLayout({ children, navItems }) {
                             item: item,
                             onLinkClick: ()=>{
                                 if (navbarOpened) {
-                                    // Solo cierra si el navbar móvil estaba abierto
                                     toggleNavbar();
                                 }
                             }
@@ -558,7 +557,7 @@ function MainLayout({ children, navItems }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/components/layout/MainLayout.tsx",
-                lineNumber: 147,
+                lineNumber: 142,
                 columnNumber: 7
             }, this)
         ]

@@ -24,7 +24,7 @@ let UserEntity = class UserEntity extends base_entity_1.BaseEntity {
     role;
     isActive;
     countryOfOrigin;
-    credit_transactions;
+    creditTransactions;
     orders;
 };
 exports.UserEntity = UserEntity;
@@ -72,7 +72,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.OneToMany)(() => credit_transaction_entity_1.CreditTransactionEntity, (transaction) => transaction.targetUser),
     __metadata("design:type", Array)
-], UserEntity.prototype, "credit_transactions", void 0);
+], UserEntity.prototype, "creditTransactions", void 0);
 __decorate([
     (0, typeorm_1.OneToMany)(() => order_entity_1.OrderEntity, (transaction) => transaction.userId),
     __metadata("design:type", Array)

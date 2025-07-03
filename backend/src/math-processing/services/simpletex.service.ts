@@ -162,7 +162,7 @@ export class SimpleTexService {
     // El campo 'file' debe ser un Buffer o un Stream para que axios lo maneje como archivo
     formData.append('file', imageBuffer, { filename: originalFilename });
 
-    // Añadir otros dataParams al formData si es necesario (para este endpoint, parece que no)
+    // Añadir otros dataParams al formData
     Object.keys(dataParams).forEach((key) => {
       formData.append(key, dataParams[key].toString());
     });
@@ -176,7 +176,7 @@ export class SimpleTexService {
         this.httpService.post<SimpleTexFullResponse>(this.apiUrl, formData, {
           headers: {
             ...headers,
-            ...formData.getHeaders(), // Headers para multipart/form-data
+            ...formData.getHeaders(),
           },
         }),
       );

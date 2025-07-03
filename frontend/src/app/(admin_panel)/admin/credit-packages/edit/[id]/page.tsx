@@ -23,26 +23,25 @@ import {
   useQueryClient,
   QueryClient,
   QueryClientProvider,
-} from "@tanstack/react-query"; // Import QueryClient, QueryClientProvider
+} from "@tanstack/react-query";
 import { notifications } from "@mantine/notifications";
 
 import {
   CreditPackageFE,
   UpdateCreditPackageData,
-} from "../../../../../../types/credit-package.types"; // Ajusta ruta
-import { creditPackageService } from "../../../../../../lib/services/credit-package.service"; // Ajusta ruta
+} from "../../../../../../types/credit-package.types";
+import { creditPackageService } from "../../../../../../lib/services/credit-package.service";
 import {
   CreditPackageFormComponent,
   CreditPackageFormData,
-} from "../../../../../../components/admin/credit-packages/CreditPackageFormComponent"; // Ajusta ruta
+} from "../../../../../../components/admin/credit-packages/CreditPackageFormComponent";
 
 export default function EditCreditPackagePage() {
   const router = useRouter();
   const params = useParams();
-  const packageId = params.id as string; // El [id] de la ruta
+  const packageId = params.id as string;
   const queryClient = useQueryClient();
 
-  // Query para obtener los datos del paquete a editar
   const {
     data: currentPackage,
     isLoading: isLoadingPackage,
@@ -53,7 +52,7 @@ export default function EditCreditPackagePage() {
     queryKey: ["credit-package", packageId],
     queryFn: () => creditPackageService.getCreditPackageById(packageId),
     enabled: !!packageId, // Solo ejecuta si hay packageId
-    staleTime: 1000 * 60 * 5, // 5 minutos
+    // staleTime: 1000 * 60 * 5, // 5 minutos
   });
 
   const { mutateAsync: updatePackageMutation } = useMutation({
@@ -67,8 +66,11 @@ export default function EditCreditPackagePage() {
         color: "green",
         icon: <IconDeviceFloppy size={18} />,
       });
-      queryClient.invalidateQueries({ queryKey: ["credit-packages"] }); // Invalida la lista
-      queryClient.setQueryData(["credit-package", packageId], updatedPackage); // Actualiza el caché de este item
+
+      queryClient.invalidateQueries({ queryKey: ["credit-packages"] });
+      queryClient.invalidateQueries({
+        queryKey: ["credit-package", packageId],
+      });
       router.push("/admin/credit-packages"); // Volver a la lista
     },
     onError: (err: any) => {
@@ -136,18 +138,16 @@ export default function EditCreditPackagePage() {
   const initialFormDataForForm: CreditPackageFormData = {
     name: currentPackage.name,
     description: currentPackage.description || null,
-    creditAmount: currentPackage.credit_amount || 0,
+    creditAmount: currentPackage.creditAmount || 0,
     price: currentPackage.price,
-    isActive: currentPackage.is_active,
+    isActive: currentPackage.isActive,
   };
 
-  console.log("initialFormDataForForm", initialFormDataForForm, currentPackage);
   return (
     <Box p="lg" className="form-page-container">
       <Group justify="space-between" mb="xl">
         <Title order={3}>Editar Paquete de Crédito</Title>
         <Button
-          //   component={Link}
           onClick={() => router.push("/admin/credit-packages")}
           variant="default"
           size="xs"
@@ -157,7 +157,7 @@ export default function EditCreditPackagePage() {
         </Button>
       </Group>
       <CreditPackageFormComponent
-        initialData={initialFormDataForForm} // Pasa los datos cargados
+        initialData={initialFormDataForForm}
         onSubmit={handleFormSubmit}
         isSaving={false}
         onCancel={() => router.push("/admin/credit-packages")}

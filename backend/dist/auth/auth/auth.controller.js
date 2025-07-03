@@ -27,6 +27,10 @@ let AuthController = class AuthController {
         this.authService = authService;
         this.configService = configService;
     }
+    async getProfile(req) {
+        const userId = req.user.id;
+        return this.authService.findProfileById(userId);
+    }
     async loginAdmin(req, loginDto) {
         return this.authService.loginAdmin(req.user);
     }
@@ -84,6 +88,14 @@ let AuthController = class AuthController {
     }
 };
 exports.AuthController = AuthController;
+__decorate([
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
+    (0, common_1.Get)('me'),
+    __param(0, (0, common_1.Request)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "getProfile", null);
 __decorate([
     (0, common_1.UseGuards)(local_auth_guard_1.LocalAuthGuard),
     (0, common_1.Post)('admin/login'),

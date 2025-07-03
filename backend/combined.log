@@ -918,3 +918,501 @@
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:47.366Z"}
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:52.607Z"}
 {"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T21:23:52.610Z"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 5: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-07-01T23:31:44.897Z","trace":"EntityPropertyNotFoundError: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/credit-package.service.ts:99:7)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 5: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-07-01T23:34:21.202Z","trace":"EntityPropertyNotFoundError: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/credit-package.service.ts:99:7)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 5: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-07-01T23:34:40.494Z","trace":"EntityPropertyNotFoundError: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/credit-package.service.ts:99:7)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:35:15.510Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:35:15.512Z"}
+{"context":"CreditPackageService","level":"error","message":"Error updating credit package with id 5: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.","timestamp":"2025-07-01T23:35:24.071Z","trace":"EntityPropertyNotFoundError: Property \"credit_amount\" was not found in \"CreditPackageEntity\". Make sure your query is correct.\n    at <anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:500:31)\n    at Array.forEach (<anonymous>)\n    at UpdateQueryBuilder.createUpdateExpression (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:493:68)\n    at UpdateQueryBuilder.getQuery (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:53:21)\n    at UpdateQueryBuilder.getQueryAndParameters (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/QueryBuilder.ts:495:28)\n    at UpdateQueryBuilder.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/query-builder/src/query-builder/UpdateQueryBuilder.ts:142:50)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async CreditPackageService.update (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/src/credit-system/services/credit-package.service.ts:99:7)\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-execution-context.js:46:28\n    at async /home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/@nestjs/core/router/router-proxy.js:9:17"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:37:00.533Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:37:00.535Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-07-01T23:37:08.468Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:38:25.423Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:38:25.425Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-01T23:40:15.047Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-01T23:42:51.287Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:43:22.435Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:43:22.437Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:43:48.256Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-01T23:43:48.258Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-01T23:47:49.705Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-01T23:49:55.809Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-01T23:52:56.233Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:09:35.786Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:15:10.243Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:17:38.515Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:18:26.613Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:18:35.631Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-07-02T00:18:55.220Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:19:17.502Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:19:26.520Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 5","timestamp":"2025-07-02T00:19:40.847Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T00:19:49.171Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 8","timestamp":"2025-07-02T00:20:09.912Z"}
+{"context":"CreditPackageService","level":"info","message":"Removed credit package with id 8","timestamp":"2025-07-02T00:20:16.297Z"}
+{"context":"CreditPackageService","level":"info","message":"Created new credit package with id 9","timestamp":"2025-07-02T00:20:30.911Z"}
+{"context":"CreditService","level":"error","message":"Error adding welcome credits: Field 'balance_before' doesn't have a default value","timestamp":"2025-07-02T00:33:15.971Z","trace":"QueryFailedError: Field 'balance_before' doesn't have a default value\n    at Query.onResult (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/typeorm/driver/src/driver/mysql/MysqlQueryRunner.ts:247:33)\n    at Query.execute (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/commands/command.js:36:14)\n    at PoolConnection.handlePacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:475:34)\n    at PacketParser.onPacket (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:93:12)\n    at PacketParser.executeStart (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/packet_parser.js:75:16)\n    at Socket.<anonymous> (/home/edgar/Documents/projects/projects/nodejs/sistema-matematica-ia/backend/node_modules/mysql2/lib/base/connection.js:100:25)\n    at Socket.emit (node:events:524:28)\n    at addChunk (node:internal/streams/readable:561:12)\n    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n    at Readable.push (node:internal/streams/readable:392:5)"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T00:40:18.575Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T00:40:18.581Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T00:40:21.297Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T00:40:21.299Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 9","timestamp":"2025-07-02T00:54:33.371Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:01:00.410Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:01:00.413Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:02:06.324Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:02:06.327Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T01:02:22.846Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 6","timestamp":"2025-07-02T01:02:32.439Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T01:02:48.316Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T01:02:48.317Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T01:03:33.631Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T01:03:33.631Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T01:07:24.544Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T01:07:24.544Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:37.707Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:37.709Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:53.895Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:53.898Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:56.869Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:56.871Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:59.966Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:07:59.968Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:08:58.803Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:08:58.806Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:09:25.508Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T01:09:25.510Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:10.251Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:10.257Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:44.870Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:44.872Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:48.566Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:02:48.569Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:03:45.595Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:03:45.597Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:00.157Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:00.159Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:05.371Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:05.373Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:25.513Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:04:25.516Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:05:30.796Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:05:30.799Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:16.162Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:16.165Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:17.846Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:17.848Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:27.037Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:27.040Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:30.609Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:08:30.611Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:00.775Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:00.777Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:04.438Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:04.441Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:33.048Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:14:33.051Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:15:49.092Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:15:49.094Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:16:29.791Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:16:29.794Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:17:01.819Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:17:01.822Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:17:05.799Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:17:05.802Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:18:13.451Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:18:13.454Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:18:16.998Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:18:17.001Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:03.722Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:03.724Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:08.815Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:08.817Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:17.786Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:19:17.788Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:12.617Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:12.619Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:34.805Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:34.809Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:36.046Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:36.048Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:37.509Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:37.511Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:44.949Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:44.951Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:56.974Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:20:56.976Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:22:03.850Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:22:03.852Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:23:43.394Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:23:43.396Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:25:52.338Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:25:52.340Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:27:50.842Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:27:50.844Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:06.943Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:06.945Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:18.522Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:18.524Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:59.063Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:28:59.065Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T03:29:50.282Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T03:29:50.283Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T03:29:53.811Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T03:29:53.812Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:31:25.376Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:31:25.378Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:47:23.026Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:47:23.029Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:48:52.593Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:48:52.596Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:49:03.601Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T03:49:03.603Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T04:09:05.919Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T04:09:05.920Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1adLL179so45LEW7fYgDgPlqnroLhfezHfleO2ztMzYTOLHeIFsqqkMVT","timestamp":"2025-07-02T04:09:27.703Z"}
+{"context":"StripeService","level":"info","message":"Checkout session created: cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk","timestamp":"2025-07-02T04:09:40.431Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RgHybQjr3XYfKQ60RqNklOm, type: charge.succeeded","timestamp":"2025-07-02T04:11:22.525Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.succeeded","timestamp":"2025-07-02T04:11:22.526Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RgHybQjr3XYfKQ60tEldvfc, type: payment_intent.succeeded","timestamp":"2025-07-02T04:11:22.541Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.succeeded","timestamp":"2025-07-02T04:11:22.541Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_1RgHycQjr3XYfKQ6g5bRt0qs, type: checkout.session.completed","timestamp":"2025-07-02T04:11:22.673Z"}
+{"context":"CreditTransactionController","level":"info","message":"Processing checkout.session.completed for session: cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk","timestamp":"2025-07-02T04:11:22.674Z"}
+{"context":"CreditService","level":"info","message":"Handling successful checkout session: cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk, Payment Status: paid","timestamp":"2025-07-02T04:11:22.674Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RgHybQjr3XYfKQ60ceOsv8c, type: payment_intent.created","timestamp":"2025-07-02T04:11:22.696Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: payment_intent.created","timestamp":"2025-07-02T04:11:22.696Z"}
+{"context":"CreditService","level":"info","message":"Credits added and transaction recorded for user 7 from Stripe session cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk","timestamp":"2025-07-02T04:11:22.722Z"}
+{"context":"CreditTransactionController","level":"info","message":"Successfully processed checkout.session.completed for: cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk","timestamp":"2025-07-02T04:11:22.738Z"}
+{"context":"CreditTransactionController","level":"info","message":"Stripe webhook event received: evt_3RgHybQjr3XYfKQ60SbMll5z, type: charge.updated","timestamp":"2025-07-02T04:11:24.863Z"}
+{"context":"CreditTransactionController","level":"info","message":"Unhandled Stripe event type: charge.updated","timestamp":"2025-07-02T04:11:24.863Z"}
+{"context":"CreditService","level":"info","message":"Finding transaction by gatewayId: cs_test_a1ULRslwKIQi7cFaHB9HhF9Lno6KUWjsqOrArhLxBMqAnO5DAmN4fQQifk for user: 7","timestamp":"2025-07-02T04:11:36.165Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T04:14:32.424Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T04:14:32.425Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T04:34:16.333Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T04:34:16.334Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"purchase_success\"}","timestamp":"2025-07-02T04:34:34.923Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"purchase_success\"}, skip: 0, take: 10","timestamp":"2025-07-02T04:34:34.923Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"usage_resolution\"}","timestamp":"2025-07-02T04:34:36.952Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"usage_resolution\"}, skip: 0, take: 10","timestamp":"2025-07-02T04:34:36.952Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"welcome_bonus\"}","timestamp":"2025-07-02T04:34:39.036Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"welcome_bonus\"}, skip: 0, take: 10","timestamp":"2025-07-02T04:34:39.036Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\",\"action\":\"admin_adjustment\"}","timestamp":"2025-07-02T04:34:40.961Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {\"action\":\"admin_adjustment\"}, skip: 0, take: 10","timestamp":"2025-07-02T04:34:40.961Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T04:50:49.552Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T04:50:49.552Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T05:07:05.415Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T05:07:05.415Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:19:57.992Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:19:57.998Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T05:22:19.496Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T05:22:19.497Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T05:22:20.375Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T05:22:20.375Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T05:22:20.809Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T05:22:20.809Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:27:20.501Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:27:20.504Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:27:38.213Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T05:27:38.215Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T17:37:51.213Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T17:37:51.216Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T18:19:14.340Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-02T18:19:14.342Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-02T18:29:57.211Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-02T18:29:57.212Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:12:18.603Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:12:18.605Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:10.635Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:10.638Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:18.442Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:18.444Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:27.946Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T02:13:27.948Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T02:15:36.052Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T02:15:36.053Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T02:15:36.903Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T02:15:36.904Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T02:17:19.346Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T02:17:19.347Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T02:29:44.275Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T02:29:44.275Z"}
+{"context":"CreditPackageService","level":"info","message":"Updated credit package with id 9","timestamp":"2025-07-03T02:55:10.111Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:01:22.758Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:01:22.760Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:02:06.013Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:02:06.016Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:02:37.145Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:02:37.147Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:04:21.866Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:04:21.869Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:24:58.608Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:24:58.610Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:25:56.526Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:25:56.528Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:25:58.578Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:25:58.580Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:01.578Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:01.580Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:02.559Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:02.561Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:41.011Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:41.013Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:48.441Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:26:48.443Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:27:02.287Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:27:02.289Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:28:52.647Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:28:52.649Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:00.478Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:00.480Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:12.373Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:12.376Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:38.864Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:31:38.866Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:32:03.894Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:32:03.896Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:33:00.804Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:33:00.806Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:33:51.998Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:33:52.001Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:05.510Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:05.512Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:25.684Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:25.686Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:31.558Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:31.560Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:38.059Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:35:38.061Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:13.270Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:13.272Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:20.134Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:20.136Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:24.455Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:24.457Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:36.746Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:36.748Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:40.581Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:40.583Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:45.403Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:45.405Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:46.888Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:46.891Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:55.034Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:38:55.036Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:39:00.932Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:39:00.935Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:39:05.860Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:39:05.862Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:42:06.448Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:42:06.450Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:43:20.962Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:43:20.965Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:43:22.048Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:43:22.050Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:45:03.509Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:45:03.511Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:45:10.975Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:45:10.977Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T03:48:16.493Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T03:48:16.494Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:52:15.854Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:52:15.857Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:52:48.219Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:52:48.221Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:00.879Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:00.881Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:43.423Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:43.425Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:50.985Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:50.987Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:55.173Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:53:55.175Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:55:53.132Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:55:53.134Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:55:54.460Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:55:54.462Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:56:10.808Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:56:10.810Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:56:47.880Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:56:47.882Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:31.434Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:31.436Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:36.826Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:36.828Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:47.490Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:47.492Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:53.330Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:53.332Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:55.473Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:55.475Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:59.830Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:57:59.832Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:02.671Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:02.673Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:36.674Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:36.676Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:38.682Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:38.684Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:41.906Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:41.910Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:45.022Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:45.025Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:48.352Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:48.354Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:50.667Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T03:58:50.669Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:00:46.481Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:00:46.484Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:02:04.576Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:02:04.578Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:02:08.197Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:02:08.200Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:09.334Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:09.336Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:40.883Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:40.885Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:51.286Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:51.288Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:52.984Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:52.986Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:57.374Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:57.376Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:58.345Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:03:58.347Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:09.957Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:09.959Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:15.399Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:15.402Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:24.891Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:24.893Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:34.988Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:04:34.990Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:05:43.851Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:05:43.853Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:05:49.846Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:05:49.849Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:07:38.673Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:07:38.675Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:07:40.732Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:07:40.734Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:08:58.253Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:08:58.255Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:09:42.139Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:09:42.141Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:09:57.529Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:09:57.531Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:01.656Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:01.658Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:03.621Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:03.623Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:08.446Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:08.448Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:13.848Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:13.850Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:20.915Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:20.917Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:29.602Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:29.604Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:35.618Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:10:35.620Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:11:11.814Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:11:11.816Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:11:34.261Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:11:34.263Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:15:20.769Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:15:20.771Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:15:25.214Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:15:25.216Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:24:45.855Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:24:45.858Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T04:24:53.371Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T04:24:53.372Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:25:55.270Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:25:55.273Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:26:36.940Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:26:36.942Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T04:26:39.968Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T04:26:39.969Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:27:21.775Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:27:21.777Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:27:29.936Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:27:29.938Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:00.927Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:00.930Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:04.880Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:04.883Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:09.255Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:09.258Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:33.398Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:33.400Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:45.650Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:28:45.652Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:29:08.758Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:29:08.760Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:29:35.765Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:29:35.768Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:00.934Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:00.936Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:31.046Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:31.048Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:49.480Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:34:49.483Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:34.849Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:34.851Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:46.877Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:46.880Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:49.919Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:35:49.921Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:36:02.442Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:36:02.445Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:36:24.372Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:36:24.374Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:38:03.596Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:38:03.599Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:38:19.762Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:38:19.764Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:39:37.327Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:39:37.329Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:04.164Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:04.167Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:22.959Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:22.961Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:24.241Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:24.243Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:34.933Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:34.935Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:36.580Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:36.584Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:41.310Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:40:41.312Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:13.493Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:13.496Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:16.549Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:16.551Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:19.256Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:19.258Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:29.959Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:29.961Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:32.332Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:32.334Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:34.459Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:34.461Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:39.391Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:39.393Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:41.513Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:41.516Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:42.687Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:42.689Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:46.133Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:41:46.137Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:12.664Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:12.667Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:21.527Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:21.530Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:39.269Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:39.271Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:49.870Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:43:49.873Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:44:26.510Z"}
+{"context":"StripeService","level":"info","message":"Stripe service initialized","timestamp":"2025-07-03T04:44:26.512Z"}
+{"context":"CreditTransactionController","level":"info","message":"Admin fetching all credit transactions with filters: {\"page\":\"1\",\"limit\":\"10\"}","timestamp":"2025-07-03T04:44:36.708Z"}
+{"context":"CreditService","level":"info","message":"Querying credit transactions with where: {}, skip: 0, take: 10","timestamp":"2025-07-03T04:44:36.708Z"}

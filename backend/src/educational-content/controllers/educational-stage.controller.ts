@@ -20,11 +20,6 @@ export class EducationalStageController {
     private readonly educationalStageService: EducationalStageService,
   ) {}
 
-  @Post()
-  create(@Body() createEducationalStageDto: CreateEducationalStageDto) {
-    return this.educationalStageService.create(createEducationalStageDto);
-  }
-
   @Get()
   findAll(
     @Query('page') page: number = 1,
@@ -42,7 +37,9 @@ export class EducationalStageController {
 
   @Get('by-name-country/:countryName/pwa-list')
   findActiveStagesByCountryName(@Param('countryName') countryName: string) {
-    return this.educationalStageService.findActiveStagesByCountryName(countryName);
+    return this.educationalStageService.findActiveStagesByCountryName(
+      countryName,
+    );
   }
 
   @Get(':id')
@@ -50,6 +47,10 @@ export class EducationalStageController {
     return this.educationalStageService.findOne(+id);
   }
 
+  @Post()
+  create(@Body() createEducationalStageDto: CreateEducationalStageDto) {
+    return this.educationalStageService.create(createEducationalStageDto);
+  }
   @Patch(':id')
   update(
     @Param('id') id: string,

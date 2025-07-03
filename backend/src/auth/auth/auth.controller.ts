@@ -23,7 +23,13 @@ export class AuthController {
     private configService: ConfigService,
   ) {}
 
-  // Admin Authentication Endpoints
+  @UseGuards(JwtAuthGuard)
+  @Get('me')
+  async getProfile(@Request() req) {
+    const userId = req.user.id;
+    return this.authService.findProfileById(userId);
+  }
+
   @UseGuards(LocalAuthGuard)
   @Post('admin/login')
   async loginAdmin(@Request() req, @Body() loginDto: LoginDto) {
@@ -50,20 +56,10 @@ export class AuthController {
     // Passport will handle the redirect to Google
   }
 
-  // @Get('google/redirect')
-  // @UseGuards(AuthGuard('google'))
-  // async googleAuthRedirect(@Request() req) {
-  //   // This method handles the callback from Google
-  //   // req.user contains the PWA user created/found by GoogleStrategy
-  //   return this.authService.loginPwaUser(req.user);
-  // }
-
   @Get('google/redirect')
   @UseGuards(AuthGuard('google')) // GoogleStrategy se encarga de findOrCreatePwaUser
   async googleAuthRedirect(@Request() req, @Res() res: Response) {
-    // Inyecta @Res()
     if (!req.user) {
-      // Esto no debería pasar si GoogleStrategy funcionó, pero es una guarda
       const frontendLoginUrl =
         this.configService.get<string>('FRONTEND_URL') ||
         'http://localhost:3001';
@@ -92,8 +88,6 @@ export class AuthController {
   @UseGuards(JwtAuthGuard)
   @Get('pwa/profile')
   getPwaProfile(@Request() req) {
-    // This endpoint works for both admin and PWA users
-    // We can differentiate by checking the user properties
     if ('username' in req.user) {
       // Admin user
       return {
@@ -118,31 +112,4 @@ export class AuthController {
       };
     }
   }
-  // @UseGuards(JwtAuthGuard) // Asegura que el token sea válido
-  // @Get('pwa/profile')
-  // async getPwaUserProfile(@Request() req) {
-  //   const jwtPayload = req.user as JwtPayload; // Payload decodificado por JwtStrategy
-  //   console.log(
-  //     'AuthController: getPwaUserProfile called with JWT payload:',
-  //     jwtPayload,
-  //   );
-
-  //   if (jwtPayload.type !== 'pwa' || !jwtPayload.sub) {
-  //     throw new UnauthorizedException(
-  //       'Invalid token type or missing user ID for PWA profile.',
-  //     );
-  //   }
-  //   // JwtStrategy podría ya devolver la entidad UserEntity completa si la busca en su validate().
-  //   // Si JwtStrategy solo devuelve el payload, necesitas buscar al usuario aquí.
-  //   // Asumamos que JwtStrategy devuelve el payload y necesitamos buscar el usuario.
-  //   const user = await this.authService.getPwaUserByIdForProfile(
-  //     jwtPayload.sub,
-  //   ); // Nuevo método en AuthService
-  //   if (!user) {
-  //     throw new NotFoundException('PWA user not found for token.');
-  //   }
-  //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  //   const { password, ...userProfile } = user; // Asegurar que no se devuelva la contraseña si UserEntity la tuviera
-  //   return userProfile;
-  // }
 }

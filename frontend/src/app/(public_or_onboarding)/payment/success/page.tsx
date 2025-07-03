@@ -248,11 +248,11 @@ function SuccessContent() {
         {user ? ( // Verifica si user existe antes de acceder a sus propiedades
           <Button
             component={Link}
-            href="/dashboard"
+            href="/orders"
             leftSection={<IconHome size={18} />}
             variant="outline"
           >
-            Ir a mi Dashboard
+            Ir a ordenes
           </Button>
         ) : (
           <Button

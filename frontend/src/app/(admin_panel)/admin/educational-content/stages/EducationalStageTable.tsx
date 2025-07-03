@@ -38,9 +38,9 @@ export function EducationalStageTable({
       {/* <Table.Td className={classes.descriptionCell}>
         {stage.description || "-"}
       </Table.Td> */}
-      {/* <Table.Td style={{ textAlign: "center" }}>
+      <Table.Td style={{ textAlign: "center" }}>
         {stage.country?.name || stage.countryId || "N/A"}
-      </Table.Td> */}
+      </Table.Td>
       {/* <Table.Td style={{ textAlign: "center" }}>{stage.displayOrder}</Table.Td> */}
       {/* <Table.Td style={{ textAlign: "center" }}>
         <Badge
@@ -94,7 +94,7 @@ export function EducationalStageTable({
           <Table.Tr>
             <Table.Th>Nombre de la Etapa</Table.Th>
             {/* <Table.Th>Descripción</Table.Th> */}
-            {/* <Table.Th style={{ textAlign: "center" }}>País</Table.Th> */}
+            <Table.Th style={{ textAlign: "center" }}>País</Table.Th>
             {/* <Table.Th style={{ textAlign: "center", width: "100px" }}>
               Orden
             </Table.Th> */}

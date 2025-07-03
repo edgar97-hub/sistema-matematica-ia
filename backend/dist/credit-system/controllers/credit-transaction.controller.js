@@ -88,9 +88,6 @@ let CreditTransactionController = class CreditTransactionController {
         this.configService = configService;
         this.logger = logger;
     }
-    async getUserCreditHistory(userId, page = 1, limit = 10) {
-        return this.creditService.getUserCreditHistory(userId, page, limit);
-    }
     async getAllCreditTransactions(queryDto) {
         this.logger.log(`Admin fetching all credit transactions with filters: ${JSON.stringify(queryDto)}`, 'CreditTransactionController');
         return this.creditService.getAllCreditTransactions(queryDto);
@@ -175,16 +172,6 @@ let CreditTransactionController = class CreditTransactionController {
     }
 };
 exports.CreditTransactionController = CreditTransactionController;
-__decorate([
-    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
-    (0, common_1.Get)('history/:userId'),
-    __param(0, (0, common_1.Param)('userId')),
-    __param(1, (0, common_1.Query)('page')),
-    __param(2, (0, common_1.Query)('limit')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Number, Number]),
-    __metadata("design:returntype", Promise)
-], CreditTransactionController.prototype, "getUserCreditHistory", null);
 __decorate([
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
     (0, common_1.Get)(),

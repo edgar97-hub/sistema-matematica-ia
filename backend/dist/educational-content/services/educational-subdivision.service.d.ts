@@ -8,9 +8,9 @@ export declare class EducationalSubdivisionService {
         data: EducationalSubdivisionEntity[];
         total: number;
     }>;
+    findActiveSubdivisionsByStage(stageId: number): Promise<EducationalSubdivisionEntity[]>;
     findOne(id: number): Promise<EducationalSubdivisionEntity>;
     create(createEducationalSubdivisionDto: CreateEducationalSubdivisionDto): Promise<EducationalSubdivisionEntity>;
     update(id: number, updateEducationalSubdivisionDto: UpdateEducationalSubdivisionDto): Promise<EducationalSubdivisionEntity>;
     remove(id: number): Promise<void>;
-    findActiveSubdivisionsByStage(stageId: number): Promise<EducationalSubdivisionEntity[]>;
 }

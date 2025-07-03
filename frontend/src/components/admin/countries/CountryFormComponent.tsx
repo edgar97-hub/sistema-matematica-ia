@@ -13,12 +13,12 @@ import {
 } from "@mantine/core";
 import { useForm, zodResolver } from "@mantine/form";
 import { z } from "zod";
-import { CountryFE, CreateCountryData } from "../../../types/country.types"; // Ajusta ruta
+import { CountryFE, CreateCountryData } from "../../../types/country.types";
 import { useEffect, useState } from "react";
 import classes from "./CountryFormComponent.module.css";
 import { IconPhoto, IconWorld } from "@tabler/icons-react";
 
-export type CountryFormData = CreateCountryData; // O un tipo específico si es diferente
+export type CountryFormData = CreateCountryData;
 
 interface CountryFormProps {
   initialData?: CountryFE | null;
@@ -63,7 +63,7 @@ export function CountryFormComponent({
       ? {
           name: initialData.name,
           code: initialData.code,
-          flagUrl: initialData.flagUrl || null, // El form no maneja la URL directamente, sino el archivo
+          flagUrl: initialData.flagUrl || null,
           isActive: initialData.isActive,
           displayOrder: initialData.displayOrder,
         }
@@ -99,14 +99,14 @@ export function CountryFormComponent({
       };
       reader.readAsDataURL(file);
     } else {
-      setFlagPreview(initialData?.flagUrl || null); // Revertir a la URL original si se borra el archivo
+      setFlagPreview(initialData?.flagUrl || null);
     }
   };
 
   const handleSubmit = (values: CountryFormData) => {
     console.log("values", values);
     const dataToSubmit = { ...values };
-    delete (dataToSubmit as any).flagUrl; // Quitar flagUrl si se sube un archivo
+    delete (dataToSubmit as any).flagUrl;
     onSubmit(dataToSubmit, selectedFlagFile);
   };
 

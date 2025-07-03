@@ -81,7 +81,11 @@ const educationalStageService = {
         await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/educational-stages/${id}`);
     },
     async getEducationalStagesForPwa (id) {
-        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stage/${id}`);
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stages/by-id-country/${id}/pwa-list`);
+        return response.data;
+    },
+    async getStagesByCountryNameForPwa (id) {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stages/by-name-country/${id}/pwa-list`);
         return response.data;
     }
 };
@@ -392,7 +396,7 @@ function EditEducationalStagePage() {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                        lineNumber: 82,
+                        lineNumber: 79,
                         columnNumber: 15
                     }, this)
                 });
@@ -426,7 +430,7 @@ function EditEducationalStagePage() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Loader$2f$Loader$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Loader"], {}, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 102,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Text"], {
@@ -434,13 +438,13 @@ function EditEducationalStagePage() {
                     children: "Cargando datos..."
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                    lineNumber: 106,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-            lineNumber: 104,
+            lineNumber: 101,
             columnNumber: 7
         }, this);
     }
@@ -452,7 +456,7 @@ function EditEducationalStagePage() {
                     size: "1rem"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                    lineNumber: 115,
+                    lineNumber: 112,
                     columnNumber: 17
                 }, void 0),
                 title: "Error de Carga",
@@ -468,18 +472,18 @@ function EditEducationalStagePage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                        lineNumber: 121,
+                        lineNumber: 118,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                lineNumber: 114,
+                lineNumber: 111,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-            lineNumber: 113,
+            lineNumber: 110,
             columnNumber: 7
         }, this);
     }
@@ -491,18 +495,18 @@ function EditEducationalStagePage() {
                 title: "Faltan Países",
                 icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {}, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                    lineNumber: 132,
+                    lineNumber: 129,
                     columnNumber: 59
                 }, void 0),
                 children: "No hay países activos definidos para asignar la etapa."
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                lineNumber: 132,
+                lineNumber: 129,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-            lineNumber: 131,
+            lineNumber: 128,
             columnNumber: 7
         }, this);
     }
@@ -523,7 +527,7 @@ function EditEducationalStagePage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                        lineNumber: 142,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -533,20 +537,20 @@ function EditEducationalStagePage() {
                             size: 16
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                            lineNumber: 146,
+                            lineNumber: 143,
                             columnNumber: 24
                         }, void 0),
                         onClick: ()=>router.push("/admin/educational-content/stages"),
                         children: "Volver a la Lista"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                        lineNumber: 143,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                lineNumber: 141,
+                lineNumber: 138,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$stages$2f$EducationalStageFormComponent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EducationalStageFormComponent"], {
@@ -557,13 +561,13 @@ function EditEducationalStagePage() {
                 onCancel: ()=>router.push("/admin/educational-content/stages")
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-                lineNumber: 153,
+                lineNumber: 150,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/stages/edit/[id]/page.tsx",
-        lineNumber: 140,
+        lineNumber: 137,
         columnNumber: 5
     }, this);
 }

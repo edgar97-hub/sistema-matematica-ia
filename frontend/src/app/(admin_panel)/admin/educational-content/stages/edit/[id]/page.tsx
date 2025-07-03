@@ -40,9 +40,6 @@ import {
   EducationalStageFormData,
 } from "../../../../../../../components/admin/stages/EducationalStageFormComponent";
 
-// const queryClientInstance = new QueryClient({ /* ... */ });
-// export default function EditEducationalStagePageWrapper() { /* ... QueryClientProvider ... */ }
-
 export default function EditEducationalStagePage() {
   const router = useRouter();
   const params = useParams();
@@ -54,7 +51,7 @@ export default function EditEducationalStagePage() {
     CountryFE[],
     Error
   >({
-    queryKey: ["all-active-countries-for-stage-edit-form", stageId], // Añade stageId para que sea único si el componente se monta con otro ID
+    queryKey: ["all-active-countries-for-stage-edit-form", stageId],
     queryFn: () => countryService.getActiveCountriesForPwa(),
   });
 
@@ -67,7 +64,7 @@ export default function EditEducationalStagePage() {
   } = useQuery<EducationalStageFE, Error>({
     queryKey: ["educational-stage", stageId],
     queryFn: () => educationalStageService.getEducationalStageById(stageId),
-    enabled: !!stageId && !!countries, // Solo ejecuta si hay stageId y los países ya cargaron (o están cargando)
+    enabled: !!stageId && !!countries,
   });
 
   // Mutación para actualizar la etapa

@@ -117,10 +117,10 @@ function PwaUsersPage() {
         return pwaUserService.activateUser(user.id); // Llama a la API para activar (NECESITAS ESTE MÉTODO EN EL SERVICIO)
       }
     },
-    onSuccess: () => {
+    onSuccess: (item) => {
       notifications.show({
-        title: "Usuario Desactivado",
-        message: "El usuario ha sido desactivado correctamente.",
+        // title: "Usuario Desactivado",
+        message: "El usuario ha sido actualizado correctamente.",
         color: "green",
         icon: <IconTrash size={18} />,
       });

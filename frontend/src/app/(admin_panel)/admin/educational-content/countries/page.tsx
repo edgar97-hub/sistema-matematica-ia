@@ -1,4 +1,3 @@
-// src/app/(admin_panel)/admin/educational-content/countries/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -18,26 +17,22 @@ import { notifications } from "@mantine/notifications";
 import {
   CountryFE,
   PaginatedCountriesResponse,
-} from "../../../../../types/country.types"; // Ajusta ruta
-import { countryService } from "../../../../../lib/services/country.service"; // Ajusta ruta
-import { CountryTable } from "../../../../../components/admin/countries/CountryTable"; // Ajusta ruta
-
-// No necesitamos un QueryClientProvider aquí si ya está en (admin_panel)/layout.tsx
+} from "../../../../../types/country.types";
+import { countryService } from "../../../../../lib/services/country.service";
+import { CountryTable } from "../../../../../components/admin/countries/CountryTable";
 
 export default function CountriesListPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
 
-  // Para este ejemplo, asumimos que getCountries no toma paginación/filtros complejos por ahora
-  // Puedes añadir estado para eso si tu servicio y backend lo soportan.
   const {
-    data: countriesResponse, // Podría ser PaginatedCountriesResponse o CountryFE[]
+    data: countriesResponse,
     isError,
     isLoading,
     refetch,
   } = useQuery<PaginatedCountriesResponse | CountryFE[], Error>({
     queryKey: ["countries"],
-    queryFn: () => countryService.getCountries(), // Llama sin paginación por simplicidad inicial
+    queryFn: () => countryService.getCountries(),
   });
 
   const countries = Array.isArray(countriesResponse)

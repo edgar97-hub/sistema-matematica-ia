@@ -1,4 +1,3 @@
-// src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx
 "use client";
 
 import { useEffect } from "react";
@@ -25,11 +24,11 @@ import {
   CountryFE,
   UpdateCountryData,
 } from "../../../../../../../types/country.types";
-import { countryService } from "../../../../../../../lib/services/country.service"; // Ajusta ruta
+import { countryService } from "../../../../../../../lib/services/country.service";
 import {
   CountryFormComponent,
   CountryFormData,
-} from "../../../../../../../components/admin/countries/CountryFormComponent"; // Ajusta ruta
+} from "../../../../../../../components/admin/countries/CountryFormComponent";
 
 export default function EditCountryPage() {
   const router = useRouter();
@@ -56,7 +55,6 @@ export default function EditCountryPage() {
       formData: CountryFormData;
       flagFile?: File | null;
     }) => {
-      // Similar a la creación, maneja la subida de archivo aquí o en el servicio
       let dataToUpdate: UpdateCountryData = { ...formData };
       if (flagFile) {
         console.log(
@@ -64,8 +62,6 @@ export default function EditCountryPage() {
         );
         // Lógica de subida...
         // dataToUpdate.flagUrl = await uploadService.uploadFlag(flagFile);
-        // Si se sube un nuevo archivo, flagUrl se actualizará.
-        // Si no se selecciona nuevo archivo, se usará el flagUrl existente en formData.
       } else if (formData.flagUrl === null) {
         // Si el usuario limpió la imagen y no seleccionó nueva
         dataToUpdate.flagUrl = null; // Enviar null para borrarla si el backend lo soporta
@@ -82,13 +78,9 @@ export default function EditCountryPage() {
         message: `El país "${updatedCountry.name}" ha sido actualizado.`,
         color: "green",
       });
-      // queryClient.invalidateQueries({ queryKey: ["countries"] });
 
-      queryClient.invalidateQueries({ queryKey: ["countries"] }); // Para la lista de países
-      queryClient.invalidateQueries({ queryKey: ["country", countryId] }); // Para este detalle
-
-      // queryClient.setQueryData(["country", countryId], updatedCountry);
-
+      queryClient.invalidateQueries({ queryKey: ["countries"] });
+      queryClient.invalidateQueries({ queryKey: ["country", countryId] });
       router.push("/admin/educational-content/countries");
     },
     onError: (error: any) => {
@@ -127,7 +119,7 @@ export default function EditCountryPage() {
   const initialFormDataForForm: CountryFormData = {
     name: currentCountry.name,
     code: currentCountry.code,
-    flagUrl: currentCountry.flagUrl || null, // Pasar la URL actual para la preview inicial
+    flagUrl: currentCountry.flagUrl || null,
     isActive: currentCountry.isActive,
     displayOrder: currentCountry.displayOrder,
   };

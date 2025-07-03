@@ -23,7 +23,6 @@ let CreditPackageController = class CreditPackageController {
         this.creditPackageService = creditPackageService;
     }
     create(createCreditPackageDto) {
-        console.log('createCreditPackageDto', createCreditPackageDto);
         return this.creditPackageService.create(createCreditPackageDto);
     }
     findAll() {

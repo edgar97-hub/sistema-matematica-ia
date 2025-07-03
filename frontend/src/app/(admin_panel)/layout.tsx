@@ -7,23 +7,15 @@ import { useRouter } from "next/navigation";
 import { useAuthStore } from "../../store/auth.store";
 import { adminMenuItems } from "project/config/admin-menu-items";
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutos
-      refetchOnWindowFocus: false, // Opcional
-    },
-  },
-});
-
-const adminPanelQueryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 20,
-      refetchOnWindowFocus: false,
-    },
-  },
-});
+// const adminPanelQueryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       staleTime: 1000 * 20,
+//       refetchOnWindowFocus: false,
+//     },
+//   },
+// });
+const adminPanelQueryClient = new QueryClient();
 
 export default function AdminPanelLayout({
   children,
@@ -50,7 +42,6 @@ export default function AdminPanelLayout({
   return (
     <QueryClientProvider client={adminPanelQueryClient}>
       <MainLayout navItems={adminMenuItems}>{children}</MainLayout>
-      {/* <ReactQueryDevtools initialIsOpen={false} />  */}
     </QueryClientProvider>
   );
 }

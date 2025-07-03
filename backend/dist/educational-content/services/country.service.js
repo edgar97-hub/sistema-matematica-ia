@@ -46,6 +46,12 @@ let CountryService = class CountryService {
         const [data, total] = await this.countryRepository.findAndCount(queryOptions);
         return { data, total };
     }
+    async findActiveCountriesForPwa() {
+        return (this.countryRepository
+            .createQueryBuilder('country')
+            .where('country.is_active = :isActive', { isActive: true })
+            .getMany());
+    }
     async findOne(id) {
         const country = await this.countryRepository.findOne({ where: { id } });
         if (!country) {
@@ -78,13 +84,6 @@ let CountryService = class CountryService {
         if (result.affected === 0) {
             throw new common_1.NotFoundException(`Country with ID "${id}" not found`);
         }
-    }
-    async findActiveCountriesForPwa() {
-        console.log('test');
-        return (this.countryRepository
-            .createQueryBuilder('country')
-            .where('country.is_active = :isActive', { isActive: true })
-            .getMany());
     }
     async isValidCountry(countryName) {
         const country = await this.countryRepository.findOne({

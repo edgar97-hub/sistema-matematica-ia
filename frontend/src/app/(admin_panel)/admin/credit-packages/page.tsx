@@ -30,9 +30,9 @@ const queryClientInstance = new QueryClient({
 
 export default function CreditPackagesPageWrapper() {
   return (
-    <QueryClientProvider client={queryClientInstance}>
-      <CreditPackagesPage />
-    </QueryClientProvider>
+    // <QueryClientProvider client={queryClientInstance}>
+    <CreditPackagesPage />
+    // </QueryClientProvider>
   );
 }
 
@@ -40,15 +40,12 @@ function CreditPackagesPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
 
-  // Para este ejemplo, asumimos que getCreditPackages no usa paginación compleja por ahora,
-  // pero puedes añadir estado para paginación/ordenamiento como en PwaUsersPage si es necesario.
   const {
     data: packagesResponse, // Podría ser PaginatedCreditPackagesResponse o CreditPackageFE[]
     isError,
     isLoading,
     refetch,
   } = useQuery<any | CreditPackageFE[], Error>({
-    // Ajusta el tipo de respuesta
     queryKey: ["credit-packages"],
     queryFn: creditPackageService.getCreditPackages,
   });

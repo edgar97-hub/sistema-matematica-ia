@@ -100,21 +100,6 @@ export class UsersController {
     }
   }
 
-  @Delete(':id')
-  @UseGuards(JwtAuthGuard, AdminGuard)
-  @HttpCode(HttpStatus.NO_CONTENT)
-  @Throttle({ short: { ttl: 1000, limit: 3 } })
-  async remove(@Param('id', ParseIntPipe) id: number) {
-    try {
-      await this.usersService.remove(id);
-    } catch (error) {
-      if (error instanceof NotFoundException) {
-        throw error;
-      }
-      throw new BadRequestException('Failed to remove user');
-    }
-  }
-
   @Get('profile')
   @UseGuards(JwtAuthGuard)
   @Throttle({ medium: { ttl: 10000, limit: 10 } })
@@ -129,12 +114,15 @@ export class UsersController {
   @Patch('update-by-user/profile')
   @UseGuards(JwtAuthGuard)
   @Throttle({ short: { ttl: 1000, limit: 3 } })
-  async updateProfile(
+  async updateProfileByUserStandar(
     @User() user,
     @Body() updateProfileDto: UpdateUserPwaProfileDto,
   ) {
     try {
-      return await this.usersService.updateProfile(user.id, updateProfileDto);
+      return await this.usersService.updateProfileByUserStandar(
+        user.id,
+        updateProfileDto,
+      );
     } catch (error) {
       if (error instanceof BadRequestException) {
         throw error;
@@ -160,6 +148,21 @@ export class UsersController {
         throw error;
       }
       throw new BadRequestException('Failed to update user email');
+    }
+  }
+
+  @Delete(':id')
+  @UseGuards(JwtAuthGuard, AdminGuard)
+  @HttpCode(HttpStatus.NO_CONTENT)
+  @Throttle({ short: { ttl: 1000, limit: 3 } })
+  async remove(@Param('id', ParseIntPipe) id: number) {
+    try {
+      return await this.usersService.remove(id);
+    } catch (error) {
+      if (error instanceof NotFoundException) {
+        throw error;
+      }
+      throw new BadRequestException('Failed to remove user');
     }
   }
 }

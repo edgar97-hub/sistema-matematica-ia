@@ -73,38 +73,39 @@ export class OrdersController {
     }
   }
 
-  @Get()
-  async findAll(
-    @User() user: any,
-    @Query('page') page: string,
-    @Query('limit') limit: string,
-  ) {
-    try {
-      return await this.ordersService.findUserOrders(
-        user.id.toString(),
-        parseInt(page),
-        parseInt(limit),
-      );
-    } catch (error) {
-      throw new BadRequestException(error.message);
-    }
-  }
+  // @Get()
+  // async findAll(
+  //   @User() user: any,
+  //   @Query('page') page: string,
+  //   @Query('limit') limit: string,
+  // ) {
+  //   try {
+      
+  //     return await this.ordersService.findUserOrders(
+  //       user.id.toString(),
+  //       parseInt(page),
+  //       parseInt(limit),
+  //     );
+  //   } catch (error) {
+  //     throw new BadRequestException(error.message);
+  //   }
+  // }
 
-  @Get(':id')
-  async findOne(@Param('id') id: string, @User() user: any) {
-    try {
-      const order = await this.ordersService.findOrderByIdForUser(
-        id,
-        user.id.toString(),
-      );
-      if (!order) {
-        throw new NotFoundException(`Order with ID "${id}" not found`);
-      }
-      return order;
-    } catch (error) {
-      throw new BadRequestException(error.message);
-    }
-  }
+  // @Get(':id')
+  // async findOne(@Param('id') id: string, @User() user: any) {
+  //   try {
+  //     const order = await this.ordersService.findOrderByIdForUser(
+  //       id,
+  //       user.id.toString(),
+  //     );
+  //     if (!order) {
+  //       throw new NotFoundException(`Order with ID "${id}" not found`);
+  //     }
+  //     return order;
+  //   } catch (error) {
+  //     throw new BadRequestException(error.message);
+  //   }
+  // }
 
   @Get('admin/all')
   @UseGuards(JwtAuthGuard, AdminGuard)
@@ -161,7 +162,7 @@ export class OrdersController {
     return this.ordersService.findUserOrdersPaginated(userId, paginationDto);
   }
 
-  @UseGuards(JwtAuthGuard) // Asegura que solo usuarios logueados puedan descargar
+  @UseGuards(JwtAuthGuard)
   @Get('download/:orderId')
   async downloadVideo(
     @Param('orderId') orderId: number,
@@ -179,5 +180,11 @@ export class OrdersController {
         res.status(404).send({ message: 'No se pudo encontrar el video.' });
       }
     });
+  }
+  @UseGuards(JwtAuthGuard)
+  @Get(':id')
+  async getOrderById(@Param('id') id: string, @User() user: any) {
+    const userId = user.id;
+    return this.ordersService.findOrderByIdForUser(id, userId);
   }
 }

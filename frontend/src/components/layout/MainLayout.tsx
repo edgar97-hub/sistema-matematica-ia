@@ -31,7 +31,6 @@ export function MainLayout({
   const handleLogout = () => {
     logoutAction();
   };
-  console.log("user", user);
 
   return (
     <AppShell
@@ -99,7 +98,7 @@ export function MainLayout({
                   )}
                 </>
               )}
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
               {user && (
                 <Button
                   onClick={handleLogout}
@@ -131,17 +130,12 @@ export function MainLayout({
               item={item}
               onLinkClick={() => {
                 if (navbarOpened) {
-                  // Solo cierra si el navbar móvil estaba abierto
                   toggleNavbar();
                 }
               }}
             />
           ))}
         </AppShell.Section>
-        {/* Puedes añadir una sección fija al final del Navbar si quieres, ej. el botón de logout */}
-        {/* <AppShell.Section>
-           <AppNavItem item={{ label: 'Cerrar Sesión', icon: IconLogout, action: handleLogout }} />
-        </AppShell.Section> */}
       </AppShell.Navbar>
 
       <AppShell.Main>{children}</AppShell.Main>

@@ -1,21 +1,20 @@
-"use client"; // Si usas hooks o estado, sino puede ser Server Component
+"use client";
 import React, { useEffect } from "react";
 import { Box, Center, Loader } from "@mantine/core";
-import classes from "./onboarding-layout.module.css"; // CSS para este layout
-import { useAuthStore } from "../../store/auth.store"; // Ajusta ruta
+import classes from "./onboarding-layout.module.css";
+import { useAuthStore } from "../../store/auth.store";
 import { useRouter, usePathname } from "next/navigation";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // <--- IMPORTAR
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const onboardingQueryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // Puedes tener opciones diferentes para las queries en esta sección si es necesario
-      staleTime: 1000 * 60, // 1 minuto
+      staleTime: 1000 * 60,
       refetchOnWindowFocus: false,
     },
   },
 });
-const INTENDED_URL_KEY = "intended_pwa_url"; // Misma clave que en PwaAppLayout
+const INTENDED_URL_KEY = "intended_pwa_url";
 
 export default function OnboardingLayout({
   children,
@@ -28,40 +27,35 @@ export default function OnboardingLayout({
   const router = useRouter();
   const pathname = usePathname();
 
-  // Lógica de redirección para este layout
   useEffect(() => {
-    if (isLoadingAuth) return; // Esperar a que termine la carga del estado de auth
-
+    if (isLoadingAuth) return;
+    // if (!isAuthenticated) {
+    //   router.replace("/login");
+    // }
     if (pathname === "/set-country") {
-      if (!isAuthenticated) {
-        // Si no está autenticado, no debería estar aquí
-        router.replace("/login");
-      } else if (user?.countryOfOrigin) {
-        // Si ya tiene país, no debería estar aquí
-        // router.replace("/dashboard");
-
-        const intendedUrl = sessionStorage.getItem(INTENDED_URL_KEY);
-        sessionStorage.removeItem(INTENDED_URL_KEY);
-        if (!user?.countryOfOrigin) {
-          router.replace(
-            intendedUrl && intendedUrl !== "/set-country"
-              ? `/set-country?redirect=${encodeURIComponent(intendedUrl)}`
-              : "/set-country"
-          );
-        } else {
-          router.replace(intendedUrl || "/dashboard");
-        }
-        return;
-      }
+      // if (!isAuthenticated) {
+      //   router.replace("/login");
+      // } else if (user?.countryOfOrigin) {
+      //   const intendedUrl = sessionStorage.getItem(INTENDED_URL_KEY);
+      //   sessionStorage.removeItem(INTENDED_URL_KEY);
+      //   if (!user?.countryOfOrigin) {
+      //     router.replace(
+      //       intendedUrl && intendedUrl !== "/set-country"
+      //         ? `/set-country?redirect=${encodeURIComponent(intendedUrl)}`
+      //         : "/set-country"
+      //     );
+      //   } else {
+      //     router.replace(intendedUrl || "/orders");
+      //   }
+      //   return;
+      // }
     } else if (pathname === "/login" || pathname === "/admin/login") {
-      // Para las páginas de login
       if (isAuthenticated) {
-        // Si ya está autenticado, redirigir
         if (user?.role === "ADMINISTRATOR" && pathname.startsWith("/admin")) {
-          router.replace("/admin/dashboard");
+          router.replace("/admin/credit-transactions");
         } else if (user?.role === "CLIENT") {
           // Asumiendo que UserPwaRole.CLIENT es 'CLIENT'
-          // router.replace("/dashboard");
+          // router.replace("/orders");
         }
       }
     }
@@ -73,7 +67,6 @@ export default function OnboardingLayout({
       pathname === "/login" ||
       pathname === "/admin/login")
   ) {
-    // Muestra un loader simple si está cargando el auth y está en una de estas páginas sensibles
     return (
       <Center style={{ height: "100vh" }}>
         <Loader />

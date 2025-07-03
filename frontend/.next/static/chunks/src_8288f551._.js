@@ -137,12 +137,7 @@ const packageSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
     description: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().nullable().optional(),
     creditAmount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].number().min(1, {
         message: "Cantidad de créditos debe ser al menos 1"
-    }).int(),
-    // price: z.number().min(0.01, { message: "Precio debe ser mayor a 0" }),
-    // price: z.number().refine((val) => !Number.isNaN(parseInt(val, 10)), {
-    //   message: "Precio debe ser mayor a 0",
-    // }),
-    isActive: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].boolean()
+    }).int()
 });
 function CreditPackageFormComponent({ initialData, onSubmit, isSaving, onCancel }) {
     _s();
@@ -331,12 +326,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconAlertCircle.mjs [app-client] (ecmascript) <export default as IconAlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconArrowLeft$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconArrowLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconArrowLeft.mjs [app-client] (ecmascript) <export default as IconArrowLeft>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconDeviceFloppy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconDeviceFloppy$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconDeviceFloppy.mjs [app-client] (ecmascript) <export default as IconDeviceFloppy>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)"); // Import QueryClient, QueryClientProvider
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/notifications/esm/notifications.store.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$credit$2d$package$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/credit-package.service.ts [app-client] (ecmascript)"); // Ajusta ruta
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$credit$2d$packages$2f$CreditPackageFormComponent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/admin/credit-packages/CreditPackageFormComponent.tsx [app-client] (ecmascript)"); // Ajusta ruta
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$credit$2d$package$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/credit-package.service.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$credit$2d$packages$2f$CreditPackageFormComponent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/admin/credit-packages/CreditPackageFormComponent.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -351,9 +346,8 @@ function EditCreditPackagePage() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
-    const packageId = params.id; // El [id] de la ruta
+    const packageId = params.id;
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
-    // Query para obtener los datos del paquete a editar
     const { data: currentPackage, isLoading: isLoadingPackage, isError, error, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "credit-package",
@@ -362,8 +356,7 @@ function EditCreditPackagePage() {
         queryFn: {
             "EditCreditPackagePage.useQuery": ()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$credit$2d$package$2e$service$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["creditPackageService"].getCreditPackageById(packageId)
         }["EditCreditPackagePage.useQuery"],
-        enabled: !!packageId,
-        staleTime: 1000 * 60 * 5
+        enabled: !!packageId
     });
     const { mutateAsync: updatePackageMutation } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])({
         mutationFn: {
@@ -380,7 +373,7 @@ function EditCreditPackagePage() {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 68,
+                        lineNumber: 67,
                         columnNumber: 15
                     }, this)
                 });
@@ -388,11 +381,13 @@ function EditCreditPackagePage() {
                     queryKey: [
                         "credit-packages"
                     ]
-                }); // Invalida la lista
-                queryClient.setQueryData([
-                    "credit-package",
-                    packageId
-                ], updatedPackage); // Actualiza el caché de este item
+                });
+                queryClient.invalidateQueries({
+                    queryKey: [
+                        "credit-package",
+                        packageId
+                    ]
+                });
                 router.push("/admin/credit-packages"); // Volver a la lista
             }
         }["EditCreditPackagePage.useMutation"],
@@ -406,7 +401,7 @@ function EditCreditPackagePage() {
                         size: 18
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 79,
+                        lineNumber: 81,
                         columnNumber: 15
                     }, this)
                 });
@@ -442,18 +437,18 @@ function EditCreditPackagePage() {
                         children: "Cargando datos del paquete..."
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 109,
+                        lineNumber: 111,
                         columnNumber: 36
                     }, void 0)
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                lineNumber: 106,
+                lineNumber: 108,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-            lineNumber: 97,
+            lineNumber: 99,
             columnNumber: 7
         }, this);
     }
@@ -465,7 +460,7 @@ function EditCreditPackagePage() {
                     size: "1rem"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                    lineNumber: 119,
+                    lineNumber: 121,
                     columnNumber: 17
                 }, void 0),
                 title: "Error de Carga",
@@ -483,29 +478,28 @@ function EditCreditPackagePage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 127,
+                        lineNumber: 129,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                lineNumber: 118,
+                lineNumber: 120,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-            lineNumber: 117,
+            lineNumber: 119,
             columnNumber: 7
         }, this);
     }
     const initialFormDataForForm = {
         name: currentPackage.name,
         description: currentPackage.description || null,
-        creditAmount: currentPackage.credit_amount || 0,
+        creditAmount: currentPackage.creditAmount || 0,
         price: currentPackage.price,
-        isActive: currentPackage.is_active
+        isActive: currentPackage.isActive
     };
-    console.log("initialFormDataForForm", initialFormDataForForm, currentPackage);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Box"], {
         p: "lg",
         className: "form-page-container",
@@ -519,11 +513,10 @@ function EditCreditPackagePage() {
                         children: "Editar Paquete de Crédito"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        //   component={Link}
                         onClick: ()=>router.push("/admin/credit-packages"),
                         variant: "default",
                         size: "xs",
@@ -537,13 +530,13 @@ function EditCreditPackagePage() {
                         children: "Volver a la Lista"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-                lineNumber: 147,
+                lineNumber: 148,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$credit$2d$packages$2f$CreditPackageFormComponent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CreditPackageFormComponent"], {
@@ -559,7 +552,7 @@ function EditCreditPackagePage() {
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/edit/[id]/page.tsx",
-        lineNumber: 146,
+        lineNumber: 147,
         columnNumber: 5
     }, this);
 }

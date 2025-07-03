@@ -22,28 +22,10 @@ export class PaginationDto {
  * @template T El tipo de los datos que contiene el array 'data'.
  */
 export interface PaginatedResponse<T> {
-  /**
-   * El array de registros para la página actual.
-   */
   data: T[];
-
-  /**
-   * Metadatos sobre la paginación.
-   */
   meta: {
-    /**
-     * El número total de registros en la base de datos que coinciden con la consulta.
-     */
     total: number;
-
-    /**
-     * El número de la página actual.
-     */
     page: number;
-
-    /**
-     * El número de la última página disponible.
-     */
     lastPage: number;
   };
 }

@@ -4,10 +4,8 @@ export interface CreditPackageFE {
   name?: string;
   description?: string | null;
   creditAmount?: number;
-  credit_amount?: number;
   price?: number;
   isActive?: boolean;
-  is_active?: boolean;
   createdAt?: string | Date;
   updatedAt?: string | Date;
 }

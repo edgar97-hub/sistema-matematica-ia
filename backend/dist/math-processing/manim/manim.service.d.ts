@@ -13,15 +13,6 @@ export declare class ManimService {
     private readonly openaiApiKey;
     private readonly logger;
     constructor(httpService: HttpService, configService: ConfigService, fileStorageService: FileStorageService);
-    renderSegment(payload: {
-        segmentId: string;
-        description: string;
-        formula: string;
-        duration: number;
-    }): Promise<{
-        localPath?: string;
-        error?: string;
-    }>;
     renderFullVoiceoverVideo(payload: FullVoiceoverPayload): Promise<{
         localPath?: string;
         error?: string;

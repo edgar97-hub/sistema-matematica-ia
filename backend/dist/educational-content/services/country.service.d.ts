@@ -8,10 +8,10 @@ export declare class CountryService {
         data: CountryEntity[];
         total: number;
     }>;
+    findActiveCountriesForPwa(): Promise<CountryEntity[]>;
     findOne(id: number): Promise<CountryEntity>;
     create(createCountryDto: CreateCountryDto): Promise<CountryEntity>;
     update(id: number, updateCountryDto: UpdateCountryDto): Promise<CountryEntity>;
     remove(id: number): Promise<void>;
-    findActiveCountriesForPwa(): Promise<CountryEntity[]>;
     isValidCountry(countryName: string): Promise<boolean>;
 }

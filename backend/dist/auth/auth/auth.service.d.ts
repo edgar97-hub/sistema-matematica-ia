@@ -19,7 +19,7 @@ export declare class AuthService {
     private systemConfigurationService;
     private creditService;
     constructor(adminUsersService: AdminUsersService, usersService: UsersService, jwtService: JwtService, systemConfigurationService: SystemConfigurationService, creditService: CreditService);
-    validateAdmin(username: string, password: string): Promise<AdminUserEntity | null>;
+    findProfileById(userId: number): Promise<any>;
     loginAdmin(user: AdminUserEntity): Promise<{
         accessToken: string;
         user: {
@@ -30,6 +30,7 @@ export declare class AuthService {
             role: import("../../admin-users/enums/admin-role.enum").AdminRole;
         };
     }>;
+    validateAdmin(username: string, password: string): Promise<AdminUserEntity | null>;
     findOrCreatePwaUser(profile: any): Promise<UserEntity>;
     loginPwaUser(user: UserEntity): Promise<{
         access_token: string;

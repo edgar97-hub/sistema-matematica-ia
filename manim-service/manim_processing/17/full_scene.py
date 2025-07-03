@@ -23,6 +23,8 @@ class VoiceoverSolutionScene(VoiceoverScene):
             formula = step.get('formula', '').replace("'", "\'")
             narration_text = f"<speak>{description}</speak>"
             with self.voiceover(text=narration_text) as tracker:
+                subtitle_text = MarkupText(description, font_size=65, color=WHITE, width=12).to_edge(DOWN).shift(UP * 0.5)
+                self.play(FadeIn(subtitle_text), run_time=0.25)
                 if formula and formula.strip():
                     new_formula_to_write = MathTex(formula, font_size=48, color=WHITE).shift(UP*0.5)
                     if i > 0 and current_formula_on_screen.submobjects:
@@ -34,4 +36,6 @@ class VoiceoverSolutionScene(VoiceoverScene):
                 else:
                     self.wait(tracker.duration)
 
-        self.wait(0.5)
+                # Desvanecer el subtítulo al final del segmento de audio
+                self.play(FadeOut(subtitle_text), run_time=0.25)
+        self.wait(0.001)

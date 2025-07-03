@@ -16,7 +16,6 @@ const config_1 = require("@nestjs/config");
 const axios_1 = require("@nestjs/axios");
 const rxjs_1 = require("rxjs");
 const file_storage_service_1 = require("../../file-storage/file-storage/file-storage.service");
-const path_1 = require("path");
 let ManimService = ManimService_1 = class ManimService {
     httpService;
     configService;
@@ -32,30 +31,6 @@ let ManimService = ManimService_1 = class ManimService {
             this.configService.get('MANIM_MICROSERVICE_URL') ||
                 'http://localhost:3002';
         this.openaiApiKey = this.configService.get('OPENAI_API_KEY') || '';
-    }
-    async renderSegment(payload) {
-        try {
-            const renderResponse = await (0, rxjs_1.firstValueFrom)(this.httpService.post(`${this.manimServiceUrl}/render-segment`, payload));
-            const renderResult = renderResponse.data;
-            if (renderResult.status !== 'success' || !renderResult.video_path) {
-                throw new Error(renderResult.message ||
-                    'El microservicio Manim devolvió un error durante el renderizado.');
-            }
-            const pathInContainer = renderResult.video_path;
-            const relativePath = (0, path_1.relative)('/app/manim_processing', pathInContainer);
-            const pathParts = pathInContainer.split('/');
-            const filename = pathParts.pop();
-            const downloadUrl = `${this.manimServiceUrl}/videos/${relativePath}`;
-            console.log(`Descargando video de animación desde: ${downloadUrl}`, 'ManimService');
-            const videoResponse = await (0, rxjs_1.firstValueFrom)(this.httpService.get(downloadUrl, { responseType: 'arraybuffer' }));
-            const videoBuffer = Buffer.from(videoResponse.data);
-            const saveResult = await this.fileStorageService.uploadBuffer(videoBuffer, `temp/${payload.segmentId}`, filename);
-            console.log(`Video de animación guardado localmente en: ${saveResult.filePath}`, 'ManimService');
-            return { localPath: saveResult.filePath };
-        }
-        catch (error) {
-            return { error: error.message };
-        }
     }
     async renderFullVoiceoverVideo(payload) {
         const loggerContext = 'ManimService_RenderFull';

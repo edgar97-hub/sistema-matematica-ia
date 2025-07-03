@@ -12,11 +12,6 @@ export declare class OrdersController {
     private readonly usersService;
     constructor(ordersService: OrdersService, usersService: UsersService);
     create(user: any, createOrderDto: CreateOrderDto, imageFile: any): Promise<import("./entities/order.entity").OrderEntity>;
-    findAll(user: any, page: string, limit: string): Promise<{
-        data: import("./entities/order.entity").OrderEntity[];
-        total: number;
-    }>;
-    findOne(id: string, user: any): Promise<import("./entities/order.entity").OrderEntity>;
     findAllOrders(page: number, limit: number, filters: FilterOrderDto, sort: SortOrderDto): Promise<{
         data: import("./entities/order.entity").OrderEntity[];
         total: number;
@@ -25,4 +20,5 @@ export declare class OrdersController {
     updateOrderStatusByAdmin(id: number, updateOrderStatusAdminDto: UpdateOrderStatusAdminDto): Promise<import("./entities/order.entity").OrderEntity>;
     getMyOrders(user: any, paginationDto: PaginationDto): Promise<import("./dto/pagination.dto").PaginatedResponse<any>>;
     downloadVideo(orderId: number, res: Response, user: any): Promise<void>;
+    getOrderById(id: string, user: any): Promise<import("./entities/order.entity").OrderEntity | null>;
 }

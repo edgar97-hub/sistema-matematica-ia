@@ -26,26 +26,20 @@ const user_entity_1 = require("../users/entities/user.entity");
 const credit_transaction_entity_1 = require("../credit-system/entities/credit-transaction.entity");
 const simpletex_service_1 = require("../math-processing/services/simpletex.service");
 const path_1 = require("path");
-const audio_service_1 = require("../math-processing/services/audio.service");
 const manim_service_1 = require("../math-processing/manim/manim.service");
-const ffmpeg_service_1 = require("../math-processing/services/ffmpeg.service");
 let OrdersService = class OrdersService {
     orderRepository;
     usersService;
     fileStorageService;
-    audioService;
-    ffmpegService;
     manimService;
     simpleTexService;
     openaiService;
     systemConfigurationService;
     entityManager;
-    constructor(orderRepository, usersService, fileStorageService, audioService, ffmpegService, manimService, simpleTexService, openaiService, systemConfigurationService, entityManager) {
+    constructor(orderRepository, usersService, fileStorageService, manimService, simpleTexService, openaiService, systemConfigurationService, entityManager) {
         this.orderRepository = orderRepository;
         this.usersService = usersService;
         this.fileStorageService = fileStorageService;
-        this.audioService = audioService;
-        this.ffmpegService = ffmpegService;
         this.manimService = manimService;
         this.simpleTexService = simpleTexService;
         this.openaiService = openaiService;
@@ -195,8 +189,6 @@ let OrdersService = class OrdersService {
             if (order.status === order_pipeline_status_enum_1.OrderPipelineStatus.AI_SOLUTION_PENDING) {
                 console.log(`Pipeline: Iniciando generación de solución IA para ${order.id}`, 'OrdersService_Pipeline');
                 const config = await this.systemConfigurationService.getConfiguration();
-                if (!config || !config.openAiPromptBase) {
-                }
                 const solutionJson = await this.openaiService.generateStepByStepSolution(order.mathpixExtraction, config.openAiPromptBase, order.countrySelected, order.educationalStageSelected, order.subdivisionGradeSelected);
                 await this.entityManager.update(order_entity_1.OrderEntity, order.id, {
                     openAiSolution: solutionJson,
@@ -251,21 +243,6 @@ let OrdersService = class OrdersService {
             }
         }
     }
-    async findUserOrders(userId, page = 1, limit = 10) {
-        const [data, total] = await this.orderRepository.findAndCount({
-            where: { userId },
-            order: { createdAt: 'DESC' },
-            skip: (page - 1) * limit,
-            take: limit,
-        });
-        return { data, total };
-    }
-    async findOrderByIdForUser(orderId, userId) {
-        const order = await this.orderRepository.findOne({
-            where: { id: parseInt(orderId), userId },
-        });
-        return order;
-    }
     async findAllOrders(page = 1, limit = 10, filters, sort) {
         const where = {};
         if (filters?.status) {
@@ -309,15 +286,6 @@ let OrdersService = class OrdersService {
         order.status = newStatus;
         await this.orderRepository.save(order);
         return order;
-    }
-    async updateOrderDetails(orderId, updates) {
-        try {
-            await this.orderRepository.update(orderId, updates);
-        }
-        catch (error) {
-            console.error(`Error updating order ${orderId}:`, error);
-            throw new common_1.BadRequestException(`Failed to update order ${orderId}`);
-        }
     }
     async findUserOrdersPaginated(userId, paginationDto) {
         const { page = 1, limit = 10 } = paginationDto;
@@ -373,6 +341,15 @@ let OrdersService = class OrdersService {
         const filePath = (0, path_1.join)(process.cwd(), 'uploads', order.finalVideoUrl);
         return filePath;
     }
+    async findOrderByIdForUser(orderId, userId) {
+        const order = await this.orderRepository.findOne({
+            where: { id: parseInt(orderId), userId },
+        });
+        if (!order) {
+            throw new common_1.NotFoundException('Orden no encontrada.');
+        }
+        return order;
+    }
 };
 exports.OrdersService = OrdersService;
 exports.OrdersService = OrdersService = __decorate([
@@ -381,8 +358,6 @@ exports.OrdersService = OrdersService = __decorate([
     __metadata("design:paramtypes", [typeorm_2.Repository,
         users_service_1.UsersService,
         file_storage_service_1.FileStorageService,
-        audio_service_1.AudioService,
-        ffmpeg_service_1.FFmpegService,
         manim_service_1.ManimService,
         simpletex_service_1.SimpleTexService,
         openai_service_1.OpenaiService,

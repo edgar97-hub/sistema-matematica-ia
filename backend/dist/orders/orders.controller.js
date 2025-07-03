@@ -47,26 +47,6 @@ let OrdersController = class OrdersController {
             throw new common_1.BadRequestException(error.message);
         }
     }
-    async findAll(user, page, limit) {
-        try {
-            return await this.ordersService.findUserOrders(user.id.toString(), parseInt(page), parseInt(limit));
-        }
-        catch (error) {
-            throw new common_1.BadRequestException(error.message);
-        }
-    }
-    async findOne(id, user) {
-        try {
-            const order = await this.ordersService.findOrderByIdForUser(id, user.id.toString());
-            if (!order) {
-                throw new common_1.NotFoundException(`Order with ID "${id}" not found`);
-            }
-            return order;
-        }
-        catch (error) {
-            throw new common_1.BadRequestException(error.message);
-        }
-    }
     async findAllOrders(page, limit, filters, sort) {
         try {
             return await this.ordersService.findAllOrders(page, limit, filters, sort);
@@ -108,6 +88,10 @@ let OrdersController = class OrdersController {
             }
         });
     }
+    async getOrderById(id, user) {
+        const userId = user.id;
+        return this.ordersService.findOrderByIdForUser(id, userId);
+    }
 };
 exports.OrdersController = OrdersController;
 __decorate([
@@ -123,23 +107,6 @@ __decorate([
     __metadata("design:paramtypes", [Object, create_order_dto_1.CreateOrderDto, Object]),
     __metadata("design:returntype", Promise)
 ], OrdersController.prototype, "create", null);
-__decorate([
-    (0, common_1.Get)(),
-    __param(0, (0, user_decorator_1.User)()),
-    __param(1, (0, common_1.Query)('page')),
-    __param(2, (0, common_1.Query)('limit')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String, String]),
-    __metadata("design:returntype", Promise)
-], OrdersController.prototype, "findAll", null);
-__decorate([
-    (0, common_1.Get)(':id'),
-    __param(0, (0, common_1.Param)('id')),
-    __param(1, (0, user_decorator_1.User)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Object]),
-    __metadata("design:returntype", Promise)
-], OrdersController.prototype, "findOne", null);
 __decorate([
     (0, common_1.Get)('admin/all'),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
@@ -188,6 +155,15 @@ __decorate([
     __metadata("design:paramtypes", [Number, Object, Object]),
     __metadata("design:returntype", Promise)
 ], OrdersController.prototype, "downloadVideo", null);
+__decorate([
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
+    (0, common_1.Get)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, user_decorator_1.User)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], OrdersController.prototype, "getOrderById", null);
 exports.OrdersController = OrdersController = __decorate([
     (0, common_1.Controller)('orders'),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),

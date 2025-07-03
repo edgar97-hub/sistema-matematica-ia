@@ -41,64 +41,64 @@ export class ManimService {
     this.openaiApiKey = this.configService.get<string>('OPENAI_API_KEY') || '';
   }
 
-  // Añadir un nuevo método para renderizar segmentos
-  async renderSegment(payload: {
-    segmentId: string;
-    description: string;
-    formula: string;
-    duration: number;
-  }): Promise<{ localPath?: string; error?: string }> {
-    try {
-      const renderResponse = await firstValueFrom(
-        this.httpService.post(
-          `${this.manimServiceUrl}/render-segment`,
-          payload,
-        ),
-      );
+  // // Añadir un nuevo método para renderizar segmentos
+  // async renderSegment(payload: {
+  //   segmentId: string;
+  //   description: string;
+  //   formula: string;
+  //   duration: number;
+  // }): Promise<{ localPath?: string; error?: string }> {
+  //   try {
+  //     const renderResponse = await firstValueFrom(
+  //       this.httpService.post(
+  //         `${this.manimServiceUrl}/render-segment`,
+  //         payload,
+  //       ),
+  //     );
 
-      const renderResult = renderResponse.data;
-      if (renderResult.status !== 'success' || !renderResult.video_path) {
-        throw new Error(
-          renderResult.message ||
-            'El microservicio Manim devolvió un error durante el renderizado.',
-        );
-      }
+  //     const renderResult = renderResponse.data;
+  //     if (renderResult.status !== 'success' || !renderResult.video_path) {
+  //       throw new Error(
+  //         renderResult.message ||
+  //           'El microservicio Manim devolvió un error durante el renderizado.',
+  //       );
+  //     }
 
-      const pathInContainer = renderResult.video_path; // ej: /app/manim_processing/test_render_001/videos/scene/480p15/segment.mp4
-      const relativePath = relative('/app/manim_processing', pathInContainer); // Obtiene la ruta relativa: test_render_001/.../segment.mp4
+  //     const pathInContainer = renderResult.video_path; // ej: /app/manim_processing/test_render_001/videos/scene/480p15/segment.mp4
+  //     const relativePath = relative('/app/manim_processing', pathInContainer); // Obtiene la ruta relativa: test_render_001/.../segment.mp4
 
-      const pathParts = pathInContainer.split('/');
-      const filename = pathParts.pop();
-      // const segmentId = pathParts.pop();
+  //     const pathParts = pathInContainer.split('/');
+  //     const filename = pathParts.pop();
+  //     // const segmentId = pathParts.pop();
 
-      const downloadUrl = `${this.manimServiceUrl}/videos/${relativePath}`;
-      console.log(
-        `Descargando video de animación desde: ${downloadUrl}`,
-        'ManimService',
-      );
+  //     const downloadUrl = `${this.manimServiceUrl}/videos/${relativePath}`;
+  //     console.log(
+  //       `Descargando video de animación desde: ${downloadUrl}`,
+  //       'ManimService',
+  //     );
 
-      const videoResponse = await firstValueFrom(
-        this.httpService.get(downloadUrl, { responseType: 'arraybuffer' }),
-      );
+  //     const videoResponse = await firstValueFrom(
+  //       this.httpService.get(downloadUrl, { responseType: 'arraybuffer' }),
+  //     );
 
-      const videoBuffer = Buffer.from(videoResponse.data);
+  //     const videoBuffer = Buffer.from(videoResponse.data);
 
-      // 3. Guardar el buffer descargado en el sistema de archivos de NestJS
-      const saveResult = await this.fileStorageService.uploadBuffer(
-        videoBuffer,
-        `temp/${payload.segmentId}`, // Guardar en una carpeta temporal en el servidor NestJS
-        filename,
-      );
+  //     // 3. Guardar el buffer descargado en el sistema de archivos de NestJS
+  //     const saveResult = await this.fileStorageService.uploadBuffer(
+  //       videoBuffer,
+  //       `temp/${payload.segmentId}`, // Guardar en una carpeta temporal en el servidor NestJS
+  //       filename,
+  //     );
 
-      console.log(
-        `Video de animación guardado localmente en: ${saveResult.filePath}`,
-        'ManimService',
-      );
-      return { localPath: saveResult.filePath }; // Devolver la ruta LOCAL en el servidor NestJS
-    } catch (error) {
-      return { error: error.message };
-    }
-  }
+  //     console.log(
+  //       `Video de animación guardado localmente en: ${saveResult.filePath}`,
+  //       'ManimService',
+  //     );
+  //     return { localPath: saveResult.filePath }; // Devolver la ruta LOCAL en el servidor NestJS
+  //   } catch (error) {
+  //     return { error: error.message };
+  //   }
+  // }
 
   /**
    * Solicita la renderización de un video completo con audio sincronizado

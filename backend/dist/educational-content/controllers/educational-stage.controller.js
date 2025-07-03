@@ -21,9 +21,6 @@ let EducationalStageController = class EducationalStageController {
     constructor(educationalStageService) {
         this.educationalStageService = educationalStageService;
     }
-    create(createEducationalStageDto) {
-        return this.educationalStageService.create(createEducationalStageDto);
-    }
     findAll(page = 1, limit = 10, filter, sort) {
         return this.educationalStageService.findAll(page, limit, filter, sort);
     }
@@ -36,6 +33,9 @@ let EducationalStageController = class EducationalStageController {
     findOne(id) {
         return this.educationalStageService.findOne(+id);
     }
+    create(createEducationalStageDto) {
+        return this.educationalStageService.create(createEducationalStageDto);
+    }
     update(id, updateEducationalStageDto) {
         return this.educationalStageService.update(+id, updateEducationalStageDto);
     }
@@ -44,13 +44,6 @@ let EducationalStageController = class EducationalStageController {
     }
 };
 exports.EducationalStageController = EducationalStageController;
-__decorate([
-    (0, common_1.Post)(),
-    __param(0, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [educational_stage_dto_1.CreateEducationalStageDto]),
-    __metadata("design:returntype", void 0)
-], EducationalStageController.prototype, "create", null);
 __decorate([
     (0, common_1.Get)(),
     __param(0, (0, common_1.Query)('page')),
@@ -82,6 +75,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EducationalStageController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [educational_stage_dto_1.CreateEducationalStageDto]),
+    __metadata("design:returntype", void 0)
+], EducationalStageController.prototype, "create", null);
 __decorate([
     (0, common_1.Patch)(':id'),
     __param(0, (0, common_1.Param)('id')),

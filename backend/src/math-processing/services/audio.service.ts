@@ -5,7 +5,7 @@ import * as mm from 'music-metadata';
 export class AudioService {
   async getAudioDuration(audioBuffer: Buffer): Promise<number> {
     try {
-      const metadata = await mm.parseBuffer(audioBuffer, 'audio/mpeg'); // O el tipo correcto
+      const metadata = await mm.parseBuffer(audioBuffer, 'audio/mpeg');
       return metadata.format.duration || 0;
     } catch (error) {
       console.error('Error al obtener la duración del audio:', error);

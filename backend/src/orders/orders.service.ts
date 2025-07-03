@@ -21,20 +21,19 @@ import { FileStorageService } from '../file-storage/file-storage/file-storage.se
 import { OrderPipelineStatus } from './enums/order-pipeline-status.enum';
 import { CreditService } from '../credit-system/services/credit.service';
 import { Express } from 'express';
-// import { MathpixService } from '../math-processing/mathpix/mathpix.service';
 import { FilterOrderDto } from './dto/filter-order.dto';
 import { SortOrderDto } from './dto/sort-order.dto';
 import { SystemConfigurationService } from '../system-configuration/services/system-configuration.service';
 import { OpenaiService } from '../math-processing/openai/openai.service';
 import { UserEntity } from 'src/users/entities/user.entity';
 import { CreditTransactionAction } from 'src/credit-system/entities/credit-transaction.entity';
-import { SimpleTexService } from '../math-processing/services/simpletex.service'; // Importa el nuevo servicio y tipo
+import { SimpleTexService } from '../math-processing/services/simpletex.service';
 import {
   SimpleTexError,
   SimpleTexResponse,
-} from '../math-processing/interfaces/simpletex-response.interface'; // Importa la interfaz
+} from '../math-processing/interfaces/simpletex-response.interface';
 import { join, parse, basename } from 'path';
-import * as fs from 'fs'; // Importa el módulo 'fs' de Node.js
+import * as fs from 'fs';
 import { AudioService } from 'src/math-processing/services/audio.service';
 import { ManimService } from 'src/math-processing/manim/manim.service';
 import { FFmpegService } from 'src/math-processing/services/ffmpeg.service';
@@ -47,176 +46,18 @@ export class OrdersService {
     private readonly orderRepository: Repository<OrderEntity>,
     private readonly usersService: UsersService,
     private readonly fileStorageService: FileStorageService,
-    // private readonly creditService: CreditService,
-    private readonly audioService: AudioService,
-    private readonly ffmpegService: FFmpegService,
+    // private readonly audioService: AudioService,
+    // private readonly ffmpegService: FFmpegService,
     private readonly manimService: ManimService,
 
-    private readonly simpleTexService: SimpleTexService, // Reemplaza MathpixService
+    private readonly simpleTexService: SimpleTexService,
     private readonly openaiService: OpenaiService,
     private readonly systemConfigurationService: SystemConfigurationService,
-    private readonly entityManager: EntityManager, // <--- Inyectar EntityManager
+    private readonly entityManager: EntityManager,
   ) {}
 
-  // async createOrder(
-  //   userId: string,
-  //   createOrderDto: CreateOrderDto,
-  //   imageFile: any,
-  // ): Promise<OrderEntity> {
-  //   try {
-  //     // Deduct credits
-  //     await this.usersService.deductCredits(
-  //       parseInt(userId),
-  //       1,
-  //       'ORDER_CREATION',
-  //     );
-
-  //     // Upload file to S3
-  //     const { url: originalImageUrl } =
-  //       await this.fileStorageService.uploadFile(imageFile, 'orders/images');
-
-  //     // Extract text from image using Mathpix
-  //     let mathpixExtraction: any;
-  //     try {
-  //       mathpixExtraction =
-  //         await this.mathpixService.extractTextFromImageUrl(originalImageUrl);
-  //     } catch (e) {
-  //       console.error('Mathpix extraction failed:', e);
-  //       mathpixExtraction = { error: e.message };
-  //     }
-
-  //     // Create order entity
-  //     const order = this.orderRepository.create({
-  //       userId: userId,
-  //       countrySelected: createOrderDto.countrySelected,
-  //       educationalStageSelected: createOrderDto.educationalStageSelected,
-  //       subdivisionGradeSelected: createOrderDto.subdivisionGradeSelected,
-  //       topic: createOrderDto.topic,
-  //       originalImageUrl: originalImageUrl,
-  //       mathpixExtraction: mathpixExtraction,
-  //       status: OrderPipelineStatus.PENDING,
-  //     });
-
-  //     const savedOrder = await this.orderRepository.save(order);
-
-  //     console.log(
-  //       'TODO: Disparar pipeline de procesamiento para la orden ID:',
-  //       savedOrder.id,
-  //     );
-
-  //     // Process OCR asynchronously
-  //     this.processOcr(
-  //       savedOrder.id,
-  //       savedOrder.originalImageUrl,
-  //       createOrderDto.countrySelected,
-  //       createOrderDto.educationalStageSelected,
-  //       createOrderDto.subdivisionGradeSelected,
-  //     );
-
-  //     return savedOrder;
-  //   } catch (error) {
-  //     console.error('Error creating order:', error);
-  //     throw new BadRequestException('Failed to create order');
-  //   }
-  // }
-
-  // async createOrder(
-  //   userId: number,
-  //   createOrderDto: CreateOrderDto,
-  //   imageFile: Express.Multer.File,
-  // ): Promise<OrderEntity> {
-  //   let savedOrder: OrderEntity | undefined = undefined;
-
-  //   try {
-  //     await this.entityManager.transaction(
-  //       async (transactionalEntityManager) => {
-  //         // 1. Deducir créditos
-  //         const creditsConsumed = 1; // O de una configuración
-  //         // Pasa el ID de la orden (que aún no existe) o un placeholder.
-  //         // Podrías generar un UUID para la orden aquí primero si la transacción de crédito lo necesita.
-  //         // O el log de crédito podría no tener el orderId si se crea antes que la orden.
-  //         // Por ahora, pasamos una descripción.
-  //         await this.usersService.deductCredits(
-  //           userId,
-  //           creditsConsumed,
-  //           `Resolución para tema: ${createOrderDto.topic}`,
-  //           transactionalEntityManager, // Pasar el manager
-  //         );
-  //         console.log(`Credits deducted for user ${userId}`);
-
-  //         // 2. Subir imagen (esto podría ir fuera de la transacción si la subida es a un servicio externo como S3
-  //         // y quieres evitar mantener la transacción de BD abierta mucho tiempo. Pero para local está bien dentro.)
-  //         const uploadResult = await this.fileStorageService.uploadFile(
-  //           imageFile,
-  //           `orders/images/${userId}`,
-  //         );
-  //         if (!uploadResult || !uploadResult.url) {
-  //           // Asume que uploadFile devuelve {url: string, key: string}
-  //           throw new InternalServerErrorException(
-  //             'Fallo al subir la imagen del problema.',
-  //           );
-  //         }
-  //         console.log(`Image uploaded to: ${uploadResult.url}`);
-
-  //         // // 3. Generar el siguiente 'code' para la orden
-  //         // const lastOrder = await transactionalEntityManager.findOne(
-  //         //   OrderEntity,
-  //         //   {
-  //         //     order: { code: 'DESC' },
-  //         //     where: {},
-  //         //     select: ['code'],
-  //         //   },
-  //         // );
-  //         // const nextCode =
-  //         //   (lastOrder && lastOrder.code ? lastOrder.code : 0) + 1;
-
-  //         // 4. Crear y guardar la entidad Order
-  //         const newOrder = transactionalEntityManager.create(OrderEntity, {
-  //           ...createOrderDto,
-  //           userId: userId,
-  //           originalImageUrl: uploadResult.url, // URL del archivo guardado localmente o en S3
-  //           status: OrderPipelineStatus.PENDING, // Inicia como pendiente
-  //           creditsConsumed,
-  //         });
-  //         savedOrder = await transactionalEntityManager.save(newOrder);
-  //         console.log(`Order created with ID: ${savedOrder.id}`);
-  //       },
-  //     ); // Fin de la transacción de BD
-  //     console.log('Fin de la transacción de BD');
-
-  //     // Si la transacción fue exitosa y tenemos savedOrder
-  //     if (savedOrder) {
-  //       // 5. Disparar el pipeline de IA de forma asíncrona (NO bloquear la respuesta)
-  //       this.processOrderPipeline(savedOrder).catch((pipelineError) => {
-  //         console.error(
-  //           `Error en el pipeline asíncrono para la orden ${savedOrder?.id}:`,
-  //           pipelineError,
-  //         );
-  //         // Aquí podrías tener una lógica para reintentar o marcar la orden con un error de pipeline más específico
-  //       });
-  //       return savedOrder; // Devuelve la orden creada al usuario
-  //     } else {
-  //       // Esto no debería ocurrir si la transacción no lanzó error
-  //       throw new InternalServerErrorException(
-  //         'No se pudo crear la orden después de la transacción.',
-  //       );
-  //     }
-  //   } catch (error) {
-  //     console.error('Error en createOrder:', error);
-  //     if (
-  //       error instanceof BadRequestException ||
-  //       error instanceof NotFoundException
-  //     ) {
-  //       throw error; // Relanzar errores de negocio específicos
-  //     }
-  //     throw new InternalServerErrorException(
-  //       'Ocurrió un error al crear la orden.',
-  //     );
-  //   }
-  // }
-
   async createOrder(
-    userId: number, // Asumiendo que es string (UUID)
+    userId: number,
     createOrderDto: CreateOrderDto,
     imageFile: Express.Multer.File,
   ): Promise<OrderEntity> {
@@ -260,7 +101,6 @@ export class OrdersService {
         ...createOrderDto,
         userId,
         originalImageUrl: uploadResult.url,
-        // code: nextCode,
         status: OrderPipelineStatus.OCR_PENDING, // Nuevo estado: listo para OCR
         creditsConsumed: 1, // Definimos que consumirá 1, pero aún no se ha deducido
       };
@@ -372,7 +212,7 @@ export class OrdersService {
               'Error interno al acceder a la imagen para OCR: ' +
               readError.message,
           });
-          return; // Termina el pipeline aquí
+          return;
         }
 
         // Obtener el nombre de archivo original de la ruta (SimpleTex lo podría usar para el nombre en respuestas de batch, aunque aquí es single)
@@ -383,7 +223,7 @@ export class OrdersService {
             imageBuffer,
             originalFilename,
           );
-        const extractedMathText = simpleTexResponse.res?.latex; // O el campo que necesites
+        const extractedMathText = simpleTexResponse.res?.latex;
         console.log('extractedMathText', extractedMathText);
         if (
           !simpleTexResponse.status ||
@@ -397,7 +237,7 @@ export class OrdersService {
             errorMessage:
               simpleTexResponse.status +
               ' SimpleTex OCR no devolvió texto extraído.',
-            mathpixExtraction: JSON.stringify(simpleTexResponse), // Guardar toda la respuesta para depuración
+            mathpixExtraction: JSON.stringify(simpleTexResponse),
           });
           return;
         }
@@ -436,7 +276,7 @@ export class OrdersService {
               where: { id: orderInTransaction.userId },
             });
 
-            const creditsToConsume = orderInTransaction.creditsConsumed || 1; // Usar el valor de la orden
+            const creditsToConsume = orderInTransaction.creditsConsumed || 1;
 
             if (userInTransaction.creditBalance < creditsToConsume) {
               throw new BadRequestException(
@@ -452,7 +292,6 @@ export class OrdersService {
 
             // Registrar la transacción de crédito
             await this.usersService.internalRecordTransaction(
-              // Asumiendo que este método acepta 'tem'
               {
                 targetUserId: userInTransaction.id,
                 action: CreditTransactionAction.USAGE_RESOLUTION,
@@ -502,11 +341,11 @@ export class OrdersService {
         //   config,
         //   config.openAiPromptBase,
         // );
-        if (!config || !config.openAiPromptBase) {
-          // throw new Error(
-          //   'Configuración de prompt base de OpenAI no encontrada.',
-          // );
-        }
+        // if (!config || !config.openAiPromptBase) {
+        //   throw new Error(
+        //     'Configuración de prompt base de OpenAI no encontrada.',
+        //   );
+        // }
         const solutionJson =
           await this.openaiService.generateStepByStepSolution(
             order.mathpixExtraction!,
@@ -749,31 +588,20 @@ export class OrdersService {
     }
   }
 
-  async findUserOrders(
-    userId: number,
-    page: number = 1,
-    limit: number = 10,
-  ): Promise<{ data: OrderEntity[]; total: number }> {
-    const [data, total] = await this.orderRepository.findAndCount({
-      where: { userId },
-      order: { createdAt: 'DESC' },
-      skip: (page - 1) * limit,
-      take: limit,
-    });
+  // async findUserOrders(
+  //   userId: number,
+  //   page: number = 1,
+  //   limit: number = 10,
+  // ): Promise<{ data: OrderEntity[]; total: number }> {
+  //   const [data, total] = await this.orderRepository.findAndCount({
+  //     where: { userId },
+  //     order: { createdAt: 'DESC' },
+  //     skip: (page - 1) * limit,
+  //     take: limit,
+  //   });
 
-    return { data, total };
-  }
-
-  async findOrderByIdForUser(
-    orderId: string,
-    userId: number,
-  ): Promise<OrderEntity | null> {
-    const order = await this.orderRepository.findOne({
-      where: { id: parseInt(orderId), userId },
-    });
-
-    return order;
-  }
+  //   return { data, total };
+  // }
 
   // async updateOcrResult(
   //   orderId: number,
@@ -922,17 +750,6 @@ export class OrdersService {
     return order;
   }
 
-  async updateOrderDetails(
-    orderId: number,
-    updates: Partial<OrderEntity>,
-  ): Promise<void> {
-    try {
-      await this.orderRepository.update(orderId, updates);
-    } catch (error) {
-      console.error(`Error updating order ${orderId}:`, error);
-      throw new BadRequestException(`Failed to update order ${orderId}`);
-    }
-  }
   /**
    * Busca las órdenes de un usuario específico de forma paginada.
    * @param userId ID del usuario autenticado.
@@ -940,7 +757,7 @@ export class OrdersService {
    * @returns Una promesa que resuelve a un objeto de respuesta paginada.
    */
   async findUserOrdersPaginated(
-    userId: number, // o number, según tu UserEntity.id
+    userId: number,
     paginationDto: PaginationDto,
   ): Promise<PaginatedResponse<any>> {
     const { page = 1, limit = 10 } = paginationDto;
@@ -948,7 +765,7 @@ export class OrdersService {
 
     const [orders, total] = await this.orderRepository.findAndCount({
       where: { userId: userId },
-      order: { createdAt: 'DESC' }, // Ordenar por más reciente
+      order: { createdAt: 'DESC' },
       take: limit,
       skip: skip,
       select: [
@@ -963,7 +780,6 @@ export class OrdersService {
       ],
     });
 
-    // Mapear la entidad de la base de datos al formato esperado por el frontend
     const data: any[] = orders.map((order) => ({
       id: order.id,
       topic: order.topic,
@@ -985,6 +801,18 @@ export class OrdersService {
       },
     };
   }
+
+  // async updateOrderDetails(
+  //   orderId: number,
+  //   updates: Partial<OrderEntity>,
+  // ): Promise<void> {
+  //   try {
+  //     await this.orderRepository.update(orderId, updates);
+  //   } catch (error) {
+  //     console.error(`Error updating order ${orderId}:`, error);
+  //     throw new BadRequestException(`Failed to update order ${orderId}`);
+  //   }
+  // }
 
   async getFinalVideoPath(userId: number, orderId: number): Promise<string> {
     const order = await this.orderRepository.findOne({
@@ -1012,5 +840,18 @@ export class OrdersService {
     // Construir la ruta absoluta en el sistema de archivos
     const filePath = join(process.cwd(), 'uploads', order.finalVideoUrl);
     return filePath;
+  }
+
+  async findOrderByIdForUser(
+    orderId: string,
+    userId: number,
+  ): Promise<OrderEntity | null> {
+    const order = await this.orderRepository.findOne({
+      where: { id: parseInt(orderId), userId },
+    });
+    if (!order) {
+      throw new NotFoundException('Orden no encontrada.');
+    }
+    return order;
   }
 }

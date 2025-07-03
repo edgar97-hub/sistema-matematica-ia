@@ -1,6 +1,3 @@
-// src/types/country.types.ts
-
-// Coincide con CountryEntity del backend (usando camelCase para frontend)
 export interface CountryFE {
   id?: number;
   name: string;
@@ -20,13 +17,11 @@ export interface PaginatedCountriesResponse {
   // limit: number;
 }
 
-// Para crear un nuevo país (omite id, createdAt, updatedAt, educationalStages)
 export type CreateCountryData = Omit<
   CountryFE,
   "id" | "createdAt" | "updatedAt" | "educationalStages"
 >;
 
-// Para actualizar un país (id es para la URL, el resto opcional)
 export type UpdateCountryData = Partial<
   Omit<CountryFE, "id" | "createdAt" | "updatedAt" | "educationalStages">
 >;

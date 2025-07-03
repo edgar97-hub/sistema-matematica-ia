@@ -6,13 +6,10 @@ import { AdminUserEntity } from '../../admin-users/entities/admin-user.entity';
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy, 'local') {
-  // constructor(private authService: AuthService) {
-  //   // super();
-  // }
   constructor(private authService: AuthService) {
     super({
-      usernameField: 'username', // Nombre del campo para el usuario en el request body (de LoginDto)
-      passwordField: 'password', // Nombre del campo para la contraseña en el request body
+      usernameField: 'username',
+      passwordField: 'password',
     });
   }
   async validate(username: string, password: string): Promise<AdminUserEntity> {

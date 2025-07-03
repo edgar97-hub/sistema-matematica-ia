@@ -88,16 +88,6 @@ export class CreditTransactionController {
   ) {}
 
   @UseGuards(JwtAuthGuard, AdminGuard)
-  @Get('history/:userId')
-  async getUserCreditHistory(
-    @Param('userId') userId: string,
-    @Query('page') page: number = 1,
-    @Query('limit') limit: number = 10,
-  ) {
-    return this.creditService.getUserCreditHistory(userId, page, limit);
-  }
-
-  @UseGuards(JwtAuthGuard, AdminGuard)
   @Get()
   async getAllCreditTransactions(
     @Query() queryDto: GetAllCreditTransactionsDto,
@@ -106,9 +96,18 @@ export class CreditTransactionController {
       `Admin fetching all credit transactions with filters: ${JSON.stringify(queryDto)}`,
       'CreditTransactionController',
     );
-    // No necesitas desestructurar aquí, pasa el DTO completo al servicio
     return this.creditService.getAllCreditTransactions(queryDto);
   }
+
+  // @UseGuards(JwtAuthGuard, AdminGuard)
+  // @Get('history/:userId')
+  // async getUserCreditHistory(
+  //   @Param('userId') userId: string,
+  //   @Query('page') page: number = 1,
+  //   @Query('limit') limit: number = 10,
+  // ) {
+  //   return this.creditService.getUserCreditHistory(userId, page, limit);
+  // }
 
   @Post('admin/adjust')
   @UseGuards(JwtAuthGuard, AdminGuard)

@@ -54,6 +54,17 @@ export class CountryService {
     return { data, total };
   }
 
+  async findActiveCountriesForPwa(): Promise<CountryEntity[]> {
+    return (
+      this.countryRepository
+        .createQueryBuilder('country')
+        // .leftJoinAndSelect('country.educational_stages', 'stage')
+        .where('country.is_active = :isActive', { isActive: true })
+        // .andWhere('stage.is_active = :isActive', { isActive: true })
+        .getMany()
+    );
+  }
+
   async findOne(id: number): Promise<CountryEntity> {
     const country = await this.countryRepository.findOne({ where: { id } });
     if (!country) {
@@ -94,18 +105,6 @@ export class CountryService {
     if (result.affected === 0) {
       throw new NotFoundException(`Country with ID "${id}" not found`);
     }
-  }
-
-  async findActiveCountriesForPwa(): Promise<CountryEntity[]> {
-    console.log('test');
-    return (
-      this.countryRepository
-        .createQueryBuilder('country')
-        // .leftJoinAndSelect('country.educational_stages', 'stage')
-        .where('country.is_active = :isActive', { isActive: true })
-        // .andWhere('stage.is_active = :isActive', { isActive: true })
-        .getMany()
-    );
   }
 
   async isValidCountry(countryName: string): Promise<boolean> {

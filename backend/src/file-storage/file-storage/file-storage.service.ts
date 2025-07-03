@@ -54,8 +54,8 @@ export class FileStorageService {
         'FileStorageService',
       );
       return {
-        url: relativeUrlPath, // Esta es la que se guarda en OrderEntity.originalImageUrl (relativa al prefijo estático)
-        filePath: filePath, // Ruta absoluta en el servidor
+        url: relativeUrlPath,
+        filePath: filePath,
         originalName,
         size: file.size,
       };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react"; // useEffect para cargar países
+import { useState, useEffect } from "react";
 import {
   Box,
   Title,
@@ -31,20 +31,12 @@ import {
   PaginatedEducationalStagesResponse,
 } from "../../../../../types/educational-content.types";
 import { educationalStageService } from "../../../../../lib/services/educational-stage.service";
-import { countryService } from "../../../../../lib/services/country.service"; // Para obtener la lista de países
+import { countryService } from "../../../../../lib/services/country.service";
 import { EducationalStageTable } from "./EducationalStageTable";
 import { CountryFE } from "project/types/country.types";
 
-const queryClientInstance = new QueryClient({
-  /* ... */
-});
-
 export default function EducationalStagesPageWrapper() {
-  return (
-    <QueryClientProvider client={queryClientInstance}>
-      <EducationalStagesPage />
-    </QueryClientProvider>
-  );
+  return <EducationalStagesPage />;
 }
 
 function EducationalStagesPage() {
@@ -54,13 +46,12 @@ function EducationalStagesPage() {
     null
   );
 
-  // Cargar países para el filtro
   const { data: countriesData, isLoading: isLoadingCountries } = useQuery<
     CountryFE[],
     Error
   >({
     queryKey: ["countries-for-stages-filter"],
-    queryFn: () => countryService.getActiveCountriesForPwa(), // <--- CORRECCIÓN: pasar como función
+    queryFn: () => countryService.getActiveCountriesForPwa(),
   });
 
   const countryOptions =
@@ -69,7 +60,6 @@ function EducationalStagesPage() {
       label: c.name,
     })) || [];
 
-  // Query para obtener las etapas, se re-ejecuta si selectedCountryId cambia
   const {
     data: stagesResponse,
     isError,
@@ -79,10 +69,10 @@ function EducationalStagesPage() {
     PaginatedEducationalStagesResponse | EducationalStageFE[],
     Error
   >({
-    queryKey: ["educational-stages", selectedCountryId], // La query depende del país seleccionado
+    queryKey: ["educational-stages", selectedCountryId],
     queryFn: () =>
       educationalStageService.getEducationalStages({
-        countryId: selectedCountryId || undefined, // Envía countryId solo si está seleccionado
+        countryId: selectedCountryId || undefined,
       }),
   });
 

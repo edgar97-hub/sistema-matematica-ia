@@ -44,10 +44,10 @@ export class CreditTransactionEntity extends BaseEntity {
   @Column({ type: 'int' })
   amount: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', default: 0 })
   balanceBefore: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', default: 0 })
   balanceAfter: number;
 
   @Column({ type: 'text', nullable: true })

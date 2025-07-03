@@ -1,0 +1,100 @@
+[
+  {
+    "input_text": "<speak>El problema a resolver es la suma de dos fracciones.</speak>",
+    "input_data": {
+      "input_text": "<speak>El problema a resolver es la suma de dos fracciones.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-el-problema-a-resolver-es-la-suma-de-dos-fdaf3e8b.mp3",
+    "final_audio": "speak-el-problema-a-resolver-es-la-suma-de-dos-fdaf3e8b.mp3"
+  },
+  {
+    "input_text": "<speak>Identificamos que ambas fracciones tienen el mismo denominador.</speak>",
+    "input_data": {
+      "input_text": "<speak>Identificamos que ambas fracciones tienen el mismo denominador.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-identificamos-que-ambas-fracciones-tienen-el-fa816fc2.mp3",
+    "final_audio": "speak-identificamos-que-ambas-fracciones-tienen-el-fa816fc2.mp3"
+  },
+  {
+    "input_text": "<speak>Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.</speak>",
+    "input_data": {
+      "input_text": "<speak>Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-por-lo-tanto-podemos-sumar-directamente-los-84ea4125.mp3",
+    "final_audio": "speak-por-lo-tanto-podemos-sumar-directamente-los-84ea4125.mp3"
+  },
+  {
+    "input_text": "<speak>Realizamos la suma de los numeradores.</speak>",
+    "input_data": {
+      "input_text": "<speak>Realizamos la suma de los numeradores.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-realizamos-la-suma-de-los-numeradores-speak-d83428ce.mp3",
+    "final_audio": "speak-realizamos-la-suma-de-los-numeradores-speak-d83428ce.mp3"
+  },
+  {
+    "input_text": "<speak>Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es 4.</speak>",
+    "input_data": {
+      "input_text": "<speak>Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es 4.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-ahora-simplificamos-la-fraccion-dividiendo-a8ed4c55.mp3",
+    "final_audio": "speak-ahora-simplificamos-la-fraccion-dividiendo-a8ed4c55.mp3"
+  },
+  {
+    "input_text": "<speak>Realizamos las divisiones para obtener la fracci\u00f3n simplificada.</speak>",
+    "input_data": {
+      "input_text": "<speak>Realizamos las divisiones para obtener la fracci\u00f3n simplificada.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-realizamos-las-divisiones-para-obtener-la-f645ecf5.mp3",
+    "final_audio": "speak-realizamos-las-divisiones-para-obtener-la-f645ecf5.mp3"
+  },
+  {
+    "input_text": "<speak>La respuesta final a la operaci\u00f3n es diecinueve medios.</speak>",
+    "input_data": {
+      "input_text": "<speak>La respuesta final a la operaci\u00f3n es diecinueve medios.</speak>",
+      "service": "openai",
+      "config": {
+        "voice": "fable",
+        "model": "tts-1-hd",
+        "speed": 1.0
+      }
+    },
+    "original_audio": "speak-la-respuesta-final-a-la-operacion-es-37fc2b3e.mp3",
+    "final_audio": "speak-la-respuesta-final-a-la-operacion-es-37fc2b3e.mp3"
+  }
+]

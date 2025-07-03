@@ -76,6 +76,14 @@ const orderService = {
             params: pagination
         });
         return response.data;
+    },
+    async getOrderByIdPwa (orderId, token) {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/orders/${orderId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+        return response.data;
     }
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -104,11 +112,23 @@ __turbopack_context__.s({
     "OrderPipelineStatus": (()=>OrderPipelineStatus)
 });
 var OrderPipelineStatus = /*#__PURE__*/ function(OrderPipelineStatus) {
-    // PENDING = "PENDING",
-    // ... todos los estados
+    OrderPipelineStatus["PENDING"] = "PENDING";
+    OrderPipelineStatus["OCR_PENDING"] = "OCR_PENDING";
+    OrderPipelineStatus["PROCESSING_OCR"] = "PROCESSING_OCR";
+    OrderPipelineStatus["OCR_SUCCESSFUL_CREDIT_PENDING"] = "OCR_SUCCESSFUL_CREDIT_PENDING";
+    OrderPipelineStatus["OCR_FAILED"] = "OCR_FAILED";
+    OrderPipelineStatus["CREDIT_DEDUCTION_FAILED"] = "CREDIT_DEDUCTION_FAILED";
+    OrderPipelineStatus["AI_SOLUTION_PENDING"] = "AI_SOLUTION_PENDING";
+    OrderPipelineStatus["AI_SOLUTION_FAILED"] = "AI_SOLUTION_FAILED";
+    OrderPipelineStatus["GENERATING_AUDIO_PENDING"] = "GENERATING_AUDIO_PENDING";
+    OrderPipelineStatus["AUDIO_FAILED"] = "AUDIO_FAILED";
+    OrderPipelineStatus["RENDERING_ANIMATION_PENDING"] = "RENDERING_ANIMATION_PENDING";
+    OrderPipelineStatus["ANIMATION_FAILED"] = "ANIMATION_FAILED";
+    OrderPipelineStatus["ASSEMBLING_FINAL_PENDING"] = "ASSEMBLING_FINAL_PENDING";
+    OrderPipelineStatus["ASSEMBLY_FAILED"] = "ASSEMBLY_FAILED";
     OrderPipelineStatus["COMPLETED"] = "COMPLETED";
     OrderPipelineStatus["FAILED_GENERAL"] = "FAILED_GENERAL";
-    OrderPipelineStatus["OCR_FAILED"] = "OCR_FAILED";
+    OrderPipelineStatus["GENERATING_VIDEO_PENDING"] = "GENERATING_VIDEO_PENDING";
     return OrderPipelineStatus;
 }({});
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -126,14 +146,90 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Badge$2f$Badge$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/core/esm/components/Badge/Badge.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconCircleCheck.mjs [app-client] (ecmascript) <export default as IconCircleCheck>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconAlertCircle.mjs [app-client] (ecmascript) <export default as IconAlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconProgress$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconProgress$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconProgress.mjs [app-client] (ecmascript) <export default as IconProgress>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/types/order.types.ts [app-client] (ecmascript)"); // Asume que tienes este enum en tus tipos
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/types/order.types.ts [app-client] (ecmascript)");
 ;
 ;
 ;
 ;
 const statusConfig = {
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].OCR_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 18,
+            columnNumber: 11
+        }, this),
+        label: "Lectura de Imagen (OCR)"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].PROCESSING_OCR]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 23,
+            columnNumber: 11
+        }, this),
+        label: "Lectura de Imagen (OCR)"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].OCR_SUCCESSFUL_CREDIT_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 28,
+            columnNumber: 11
+        }, this),
+        label: "Análisis con IA"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].AI_SOLUTION_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 33,
+            columnNumber: 11
+        }, this),
+        label: "Análisis con IA"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].GENERATING_AUDIO_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 38,
+            columnNumber: 11
+        }, this),
+        label: "Creando Video"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].RENDERING_ANIMATION_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 43,
+            columnNumber: 11
+        }, this),
+        label: "Creando Video"
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].ASSEMBLING_FINAL_PENDING]: {
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 48,
+            columnNumber: 11
+        }, this),
+        label: "Creando Video"
+    },
     [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].COMPLETED]: {
         label: "Completado",
         color: "green",
@@ -141,43 +237,109 @@ const statusConfig = {
             size: 14
         }, void 0, false, {
             fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
-            lineNumber: 19,
+            lineNumber: 54,
             columnNumber: 11
         }, this)
     },
-    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].FAILED_GENERAL]: {
-        label: "Error",
-        color: "red",
-        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].PENDING]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
             size: 14
         }, void 0, false, {
             fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
-            lineNumber: 24,
+            lineNumber: 59,
             columnNumber: 11
         }, this)
     },
     [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].OCR_FAILED]: {
-        label: "Error de Lectura",
-        color: "red",
-        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
             size: 14
         }, void 0, false, {
             fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
-            lineNumber: 29,
+            lineNumber: 64,
             columnNumber: 11
         }, this)
     },
-    //   [OrderPipelineStatus.CREDIT_DEDUCTION_FAILED]: {
-    //     label: "Error de Crédito",
-    //     color: "red",
-    //     icon: <IconAlertCircle size={14} />,
-    //   },
-    //   [OrderPipelineStatus.AI_SOLUTION_FAILED]: {
-    //     label: "Error de IA",
-    //     color: "red",
-    //     icon: <IconAlertCircle size={14} />,
-    //   },
-    // ... puedes añadir más estados de error específicos
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].CREDIT_DEDUCTION_FAILED]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 69,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].AI_SOLUTION_FAILED]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 74,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].AUDIO_FAILED]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 79,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].ANIMATION_FAILED]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 84,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].ASSEMBLY_FAILED]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 89,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].FAILED_GENERAL]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 94,
+            columnNumber: 11
+        }, this)
+    },
+    [__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$order$2e$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrderPipelineStatus"].GENERATING_VIDEO_PENDING]: {
+        label: "Completado",
+        color: "green",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+            size: 14
+        }, void 0, false, {
+            fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
+            lineNumber: 99,
+            columnNumber: 11
+        }, this)
+    },
     DEFAULT: {
         label: "Procesando",
         color: "blue",
@@ -185,7 +347,7 @@ const statusConfig = {
             size: 14
         }, void 0, false, {
             fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
-            lineNumber: 45,
+            lineNumber: 105,
             columnNumber: 11
         }, this)
     }
@@ -199,7 +361,7 @@ function OrderStatusBadge({ status }) {
         children: config.label
     }, void 0, false, {
         fileName: "[project]/src/components/pwa/orders/OrderStatusBadge.tsx",
-        lineNumber: 53,
+        lineNumber: 113,
         columnNumber: 5
     }, this);
 }

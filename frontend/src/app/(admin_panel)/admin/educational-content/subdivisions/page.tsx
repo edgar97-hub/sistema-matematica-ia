@@ -53,7 +53,7 @@ export default function EducationalSubdivisionsPage() {
     Error
   >({
     queryKey: ["countries-for-stages-filter"],
-    queryFn: () => countryService.getActiveCountriesForPwa(), // <--- CORRECCIÓN: pasar como función
+    queryFn: () => countryService.getActiveCountriesForPwa(),
   });
 
   const countryOptions =
@@ -94,7 +94,7 @@ export default function EducationalSubdivisionsPage() {
       educationalSubdivisionService.getEducationalSubdivisions({
         educationalStageId: selectedStageId || undefined,
       }),
-    enabled: !!selectedStageId, // Solo cargar si se selecciona una etapa
+    enabled: !!selectedStageId,
   });
 
   const subdivisions = Array.isArray(subdivisionsResponse)
@@ -137,7 +137,7 @@ export default function EducationalSubdivisionsPage() {
 
   const handleCountryChange = (countryId: string | null) => {
     setSelectedCountryId(countryId);
-    setSelectedStageId(null); // Resetear etapa al cambiar país
+    setSelectedStageId(null);
   };
 
   const isLoading =
@@ -165,7 +165,6 @@ export default function EducationalSubdivisionsPage() {
           >
             Nueva Subdivisión
           </Button>
-          {/* ... botón de refrescar ... */}
           <Button
             onClick={() => refetch()}
             leftSection={<IconRefresh size={18} />}
@@ -211,16 +210,14 @@ export default function EducationalSubdivisionsPage() {
         </Alert>
       )}
 
-      {!isLoading &&
-        !isError &&
-        selectedStageId && ( // Mostrar tabla solo si se seleccionó una etapa
-          <EducationalSubdivisionTable
-            subdivisions={subdivisions}
-            isLoading={isLoadingSubdivisions && subdivisions.length === 0}
-            onEdit={handleEditSubdivision}
-            onDelete={handleDeleteSubdivision}
-          />
-        )}
+      {!isLoading && !isError && selectedStageId && (
+        <EducationalSubdivisionTable
+          subdivisions={subdivisions}
+          isLoading={isLoadingSubdivisions && subdivisions.length === 0}
+          onEdit={handleEditSubdivision}
+          onDelete={handleDeleteSubdivision}
+        />
+      )}
       {!isLoading && !isError && !selectedStageId && (
         <Center p="xl">
           <Text c="dimmed">

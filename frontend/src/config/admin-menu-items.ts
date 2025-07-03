@@ -93,7 +93,7 @@ export const adminMenuItems: NavLinkItem[] = [
 
 export const pwaAppMenuItems: NavLinkItem[] = [
   // { href: "/dashboard", label: "Inicio", icon: IconFileSettings },
-  { href: "/orders", label: "Mi Historial", icon: IconFileSettings },
   { href: "/orders/new", label: "Nueva Resolución", icon: IconFileSettings },
+  { href: "/orders", label: "Mis Ordenes", icon: IconFileSettings },
   { href: "/credits", label: "Comprar Créditos", icon: IconReceipt2 },
 ];

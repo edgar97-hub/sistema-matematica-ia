@@ -43,7 +43,7 @@ export class UserEntity extends BaseEntity {
     () => CreditTransactionEntity,
     (transaction) => transaction.targetUser,
   )
-  credit_transactions: CreditTransactionEntity[];
+  creditTransactions: CreditTransactionEntity[];
 
   @OneToMany(() => OrderEntity, (transaction) => transaction.userId)
   orders: OrderEntity[];

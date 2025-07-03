@@ -535,7 +535,6 @@ function MainLayout({ children, navItems }) {
                             item: item,
                             onLinkClick: ()=>{
                                 if (navbarOpened) {
-                                    // Solo cierra si el navbar móvil estaba abierto
                                     toggleNavbar();
                                 }
                             }
@@ -558,7 +557,7 @@ function MainLayout({ children, navItems }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/components/layout/MainLayout.tsx",
-                lineNumber: 147,
+                lineNumber: 142,
                 columnNumber: 7
             }, this)
         ]
@@ -689,14 +688,6 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const queryClient = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$queryClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClient"]({
-    defaultOptions: {
-        queries: {
-            staleTime: 1000 * 60 * 5,
-            refetchOnWindowFocus: false
-        }
-    }
-});
 const adminPanelQueryClient = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$queryClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClient"]({
     defaultOptions: {
         queries: {
@@ -733,7 +724,7 @@ function AdminPanelLayout({ children }) {
         children: "Cargando sesión..."
     }, void 0, false, {
         fileName: "[project]/src/app/(admin_panel)/layout.tsx",
-        lineNumber: 47,
+        lineNumber: 38,
         columnNumber: 29
     }, this);
     if (!isAuthenticated || user?.role !== "ADMINISTRATOR") return null;
@@ -744,12 +735,12 @@ function AdminPanelLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/layout.tsx",
-            lineNumber: 52,
+            lineNumber: 43,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(admin_panel)/layout.tsx",
-        lineNumber: 51,
+        lineNumber: 42,
         columnNumber: 5
     }, this);
 }

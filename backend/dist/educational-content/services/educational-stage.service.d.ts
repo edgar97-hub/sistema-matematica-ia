@@ -8,10 +8,10 @@ export declare class EducationalStageService {
         data: EducationalStageEntity[];
         total: number;
     }>;
+    findActiveStagesByCountry(countryId: number): Promise<EducationalStageEntity[]>;
+    findActiveStagesByCountryName(countryName: string): Promise<EducationalStageEntity[]>;
     findOne(id: number): Promise<EducationalStageEntity>;
     create(createEducationalStageDto: CreateEducationalStageDto): Promise<EducationalStageEntity>;
     update(id: number, updateEducationalStageDto: UpdateEducationalStageDto): Promise<EducationalStageEntity>;
     remove(id: number): Promise<void>;
-    findActiveStagesByCountry(countryId: number): Promise<EducationalStageEntity[]>;
-    findActiveStagesByCountryName(countryName: string): Promise<EducationalStageEntity[]>;
 }

@@ -65,10 +65,6 @@ export const useAuthStore = create<AuthState>()(
           isLoading: false,
           error: null,
         });
-        // Opcional: forzar redirección a login, aunque los guards deberían manejarlo
-        // if (typeof window !== 'undefined') { // Asegurar que solo se ejecuta en el cliente
-        //   window.location.href = '/login';
-        // }
       },
       setCountryOfOrigin: (country: string) => {
         set((state) => ({
@@ -78,8 +74,6 @@ export const useAuthStore = create<AuthState>()(
       setLoading: (loading: boolean) => set({ isLoading: loading }),
       setError: (error: string | null) => set({ isLoading: false, error }), // Poner isLoading a false si hay error
       hydrateAuth: (initialUser, initialToken) => {
-        // Usado para establecer el estado al cargar la app si hay sesión persistida
-        // o después de una verificación de token silenciosa.
         if (initialUser && initialToken) {
           console.log("AuthStore: Hydrating auth state", {
             initialUser,
@@ -93,7 +87,6 @@ export const useAuthStore = create<AuthState>()(
             error: null,
           });
         } else {
-          // Si no hay datos válidos, asegura el estado de deslogueado
           set({
             user: null,
             token: null,
@@ -150,9 +143,3 @@ export const useAuthStore = create<AuthState>()(
     }
   )
 );
-
-// Opcional: selector para saber si la hidratación inicial desde el storage ya ocurrió
-// Esto es útil para evitar mostrar la UI de login brevemente si el usuario ya está logueado.
-// (Zustand v4 no tiene un estado _hasHydrated directamente expuesto de forma simple fuera del middleware)
-// Para un manejo más robusto de la hidratación, a veces se usa una señal/estado separado.
-// Por ahora, la lógica de carga inicial del token en AppComponent manejará esto.

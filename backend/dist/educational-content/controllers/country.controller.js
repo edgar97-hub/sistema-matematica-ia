@@ -25,7 +25,6 @@ let CountryController = class CountryController {
         this.countryService = countryService;
     }
     create(createCountryDto) {
-        console.log('test');
         return this.countryService.create(createCountryDto);
     }
     findAll(queryDto) {

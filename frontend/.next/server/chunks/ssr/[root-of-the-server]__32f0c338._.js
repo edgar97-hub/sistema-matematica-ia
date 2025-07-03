@@ -307,6 +307,14 @@ const orderService = {
             params: pagination
         });
         return response.data;
+    },
+    async getOrderByIdPwa (orderId, token) {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["apiClient"].get(`/orders/${orderId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+        return response.data;
     }
 };
 }}),
@@ -808,8 +816,6 @@ var { g: global, __dirname } = __turbopack_context__;
 //     </Box>
 //   );
 // }
-// src/app/(pwa_app)/orders/new/page.tsx
-// src/app/(pwa_app)/orders/new/page.tsx
 __turbopack_context__.s({
     "default": (()=>NewOrderPage)
 });
@@ -838,11 +844,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/notifications/esm/notifications.store.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconUpload$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconUpload$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconUpload.mjs [app-ssr] (ecmascript) <export default as IconUpload>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconAlertCircle.mjs [app-ssr] (ecmascript) <export default as IconAlertCircle>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconCircleCheck.mjs [app-ssr] (ecmascript) <export default as IconCircleCheck>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconMoodShare$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconMoodShare$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconMoodShare.mjs [app-ssr] (ecmascript) <export default as IconMoodShare>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconDeviceFloppy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconDeviceFloppy$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconDeviceFloppy.mjs [app-ssr] (ecmascript) <export default as IconDeviceFloppy>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCamera$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCamera$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconCamera.mjs [app-ssr] (ecmascript) <export default as IconCamera>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconRotate2$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconRotate2$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconRotate2.mjs [app-ssr] (ecmascript) <export default as IconRotate2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconProgress$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconProgress$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconProgress.mjs [app-ssr] (ecmascript) <export default as IconProgress>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$auth$2e$store$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/auth.store.ts [app-ssr] (ecmascript)"); // Ajusta ruta
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/country.service.ts [app-ssr] (ecmascript)"); // Ajusta ruta
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$educational$2d$stage$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/educational-stage.service.ts [app-ssr] (ecmascript)"); // Ajusta ruta
@@ -896,8 +902,6 @@ function NewOrderPage() {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const { user, token } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$auth$2e$store$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuthStore"])();
-    // Se elimina el estado de activeStep
-    // const [activeStep, setActiveStep] = useState(0); // Para el Stepper de Mantine
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$form$2f$esm$2f$use$2d$form$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useForm"])({
         initialValues: {
             imageFile: null,
@@ -914,38 +918,55 @@ function NewOrderPage() {
     const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const mediaStreamRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null); // Para almacenar la referencia al MediaStream
-    // Función para iniciar la cámara
-    const startCamera = async ()=>{
-        try {
-            const stream = await navigator.mediaDevices.getUserMedia({
-                video: true
-            });
-            mediaStreamRef.current = stream; // Guardar referencia al stream
-            if (videoRef.current) {
-                videoRef.current.srcObject = stream;
-                await videoRef.current.play();
-                setIsCameraActive(true);
-                setCapturedImagePreview(null); // Resetear cualquier imagen capturada previamente
-                form.setFieldValue("imageFile", null); // Limpiar el archivo en el formulario
-            }
-        } catch (err) {
-            console.error("Error al acceder a la cámara:", err);
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["notifications"].show({
-                title: "Error de Cámara",
-                message: "No se pudo acceder a la cámara. Asegúrate de dar permisos.",
-                color: "red",
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {
-                    size: 18
-                }, void 0, false, {
-                    fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                    lineNumber: 634,
-                    columnNumber: 15
-                }, this)
-            });
-            setIsCameraActive(false);
-        }
+    const startCamera = ()=>{
+        setIsCameraActive(true);
+        setCapturedImagePreview(null);
+        form.setFieldValue("imageFile", null);
     };
-    // Función para detener la cámara
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (isCameraActive) {
+            const getMedia = async ()=>{
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({
+                        video: true
+                    });
+                    mediaStreamRef.current = stream;
+                    if (videoRef.current) {
+                        videoRef.current.srcObject = stream;
+                    // No es necesario llamar a play() si el tag tiene el atributo autoPlay
+                    }
+                } catch (err) {
+                    console.error("Error al acceder a la cámara:", err);
+                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["notifications"].show({
+                        title: "Error de Cámara",
+                        message: "No se pudo acceder a la cámara. Asegúrate de dar permisos.",
+                        color: "red",
+                        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {
+                            size: 18
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
+                            lineNumber: 638,
+                            columnNumber: 19
+                        }, this)
+                    });
+                    setIsCameraActive(false); // Volver al estado inicial si hay un error
+                }
+            };
+            getMedia();
+        } else {
+            if (mediaStreamRef.current) {
+                mediaStreamRef.current.getTracks().forEach((track)=>track.stop());
+                mediaStreamRef.current = null;
+            }
+        }
+        return ()=>{
+            if (mediaStreamRef.current) {
+                mediaStreamRef.current.getTracks().forEach((track)=>track.stop());
+            }
+        };
+    }, [
+        isCameraActive
+    ]);
     const stopCamera = ()=>{
         if (mediaStreamRef.current) {
             mediaStreamRef.current.getTracks().forEach((track)=>track.stop());
@@ -988,7 +1009,7 @@ function NewOrderPage() {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                            lineNumber: 684,
+                            lineNumber: 702,
                             columnNumber: 21
                         }, this)
                     });
@@ -1073,20 +1094,19 @@ function NewOrderPage() {
     // Mutación para crear la orden
     const { mutateAsync: createOrderMutation, isPending: isCreatingOrder } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
         mutationFn: (formData)=>{
-            // CreateOrderFrontendData debe esperar FormData
             if (!token) throw new Error("No autenticado.");
             return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$order$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["orderService"].createOrderPwa(formData, token); // Necesitas este método en orderService
         },
         onSuccess: (newOrder)=>{
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["notifications"].show({
-                title: "Solicitud Enviada",
-                message: `Tu problema matemático (Orden N°: ${newOrder.code || newOrder.id}) está siendo procesado.`,
-                color: "green",
-                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleCheck$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleCheck$3e$__["IconCircleCheck"], {
+                title: "Solicitud Recibida",
+                message: `Tu problema (Orden N°: ${newOrder.code}) ha comenzado a procesarse.`,
+                color: "blue",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconProgress$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconProgress$3e$__["IconProgress"], {
                     size: 18
                 }, void 0, false, {
                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                    lineNumber: 797,
+                    lineNumber: 812,
                     columnNumber: 17
                 }, this)
             });
@@ -1105,7 +1125,7 @@ function NewOrderPage() {
                     user?.id
                 ]
             });
-            router.push("/orders"); // Ir al historial
+            router.push(`/orders/${newOrder.id}/status`);
         },
         onError: (error)=>{
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["notifications"].show({
@@ -1116,7 +1136,7 @@ function NewOrderPage() {
                     size: 18
                 }, void 0, false, {
                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                    lineNumber: 819,
+                    lineNumber: 834,
                     columnNumber: 17
                 }, this)
             });
@@ -1150,15 +1170,16 @@ function NewOrderPage() {
                 children: "Debes iniciar sesión para crear una nueva resolución."
             }, void 0, false, {
                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                lineNumber: 857,
+                lineNumber: 872,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-            lineNumber: 856,
+            lineNumber: 871,
             columnNumber: 7
         }, this);
     }
+    console.log("isCameraActive", isCameraActive);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Box"], {
         p: "lg",
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$pwa_app$292f$orders$2f$new$2f$new$2d$order$2d$page$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].newOrderContainer,
@@ -1176,14 +1197,14 @@ function NewOrderPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 865,
+                        lineNumber: 880,
                         columnNumber: 9
                     }, this),
                     "Nueva Resolución Matemática"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                lineNumber: 864,
+                lineNumber: 879,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Paper$2f$Paper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Paper"], {
@@ -1202,14 +1223,14 @@ function NewOrderPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                    lineNumber: 878,
+                                    lineNumber: 893,
                                     columnNumber: 28
                                 }, void 0),
                                 variant: "outline",
                                 children: "Tomar Foto"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 876,
+                                lineNumber: 891,
                                 columnNumber: 13
                             }, this),
                             (isCameraActive || capturedImagePreview) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1222,20 +1243,20 @@ function NewOrderPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                    lineNumber: 891,
+                                    lineNumber: 906,
                                     columnNumber: 28
                                 }, void 0),
                                 variant: "outline",
                                 children: "Subir Archivo"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 885,
+                                lineNumber: 900,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 874,
+                        lineNumber: 889,
                         columnNumber: 9
                     }, this),
                     !isCameraActive && !capturedImagePreview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$FileInput$2f$FileInput$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FileInput"], {
@@ -1248,14 +1269,14 @@ function NewOrderPage() {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                            lineNumber: 907,
+                            lineNumber: 922,
                             columnNumber: 26
                         }, void 0),
                         mb: "md",
                         description: `Máx. ${MAX_FILE_SIZE_MB}MB. Formatos: JPG, PNG.`
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 901,
+                        lineNumber: 916,
                         columnNumber: 11
                     }, this),
                     isCameraActive && !capturedImagePreview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Stack$2f$Stack$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Stack"], {
@@ -1273,7 +1294,7 @@ function NewOrderPage() {
                                 playsInline: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 915,
+                                lineNumber: 930,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
@@ -1283,7 +1304,7 @@ function NewOrderPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 921,
+                                lineNumber: 936,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -1293,20 +1314,19 @@ function NewOrderPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                    lineNumber: 925,
+                                    lineNumber: 939,
                                     columnNumber: 28
                                 }, void 0),
-                                disabled: !videoRef.current || videoRef.current.readyState < 3,
                                 children: "Capturar Foto"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 923,
+                                lineNumber: 937,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 914,
+                        lineNumber: 929,
                         columnNumber: 11
                     }, this),
                     capturedImagePreview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Box"], {
@@ -1315,7 +1335,9 @@ function NewOrderPage() {
                             border: "1px solid #ccc",
                             padding: "10px",
                             borderRadius: "4px",
-                            textAlign: "center"
+                            textAlign: "center",
+                            display: "flex",
+                            flexDirection: "column"
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Text"], {
@@ -1325,7 +1347,7 @@ function NewOrderPage() {
                                 children: "Vista previa de la foto capturada:"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 943,
+                                lineNumber: 958,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1338,7 +1360,7 @@ function NewOrderPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 946,
+                                lineNumber: 961,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1347,7 +1369,7 @@ function NewOrderPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                    lineNumber: 957,
+                                    lineNumber: 972,
                                     columnNumber: 28
                                 }, void 0),
                                 variant: "outline",
@@ -1355,13 +1377,13 @@ function NewOrderPage() {
                                 children: "Volver a Tomar Foto"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 955,
+                                lineNumber: 970,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 934,
+                        lineNumber: 947,
                         columnNumber: 11
                     }, this),
                     form.values.imageFile && !isCameraActive && !capturedImagePreview && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Box"], {
@@ -1378,7 +1400,7 @@ function NewOrderPage() {
                                 children: "Vista previa:"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 976,
+                                lineNumber: 991,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1391,13 +1413,13 @@ function NewOrderPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 979,
+                                lineNumber: 994,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 968,
+                        lineNumber: 983,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Textarea$2f$Textarea$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -1410,7 +1432,7 @@ function NewOrderPage() {
                         mb: "lg"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 991,
+                        lineNumber: 1006,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Select$2f$Select$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1425,7 +1447,7 @@ function NewOrderPage() {
                         mb: "md"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1001,
+                        lineNumber: 1016,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Select$2f$Select$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1440,7 +1462,7 @@ function NewOrderPage() {
                         mb: "md"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1012,
+                        lineNumber: 1027,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Select$2f$Select$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1455,7 +1477,7 @@ function NewOrderPage() {
                         mb: "lg"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1027,
+                        lineNumber: 1042,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Text"], {
@@ -1470,7 +1492,7 @@ function NewOrderPage() {
                                 children: "1 crédito"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 1050,
+                                lineNumber: 1065,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -1478,7 +1500,7 @@ function NewOrderPage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1048,
+                        lineNumber: 1063,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Text"], {
@@ -1493,14 +1515,14 @@ function NewOrderPage() {
                                 children: user?.credits || 0
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 1057,
+                                lineNumber: 1072,
                                 columnNumber: 11
                             }, this),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1055,
+                        lineNumber: 1070,
                         columnNumber: 9
                     }, this),
                     user.credits < 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Alert$2f$Alert$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Alert"], {
@@ -1508,7 +1530,7 @@ function NewOrderPage() {
                         title: "Créditos Insuficientes",
                         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__["IconAlertCircle"], {}, void 0, false, {
                             fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                            lineNumber: 1066,
+                            lineNumber: 1081,
                             columnNumber: 19
                         }, void 0),
                         mb: "lg",
@@ -1525,18 +1547,18 @@ function NewOrderPage() {
                                     children: "Compra más créditos aquí."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                    lineNumber: 1071,
+                                    lineNumber: 1086,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 1070,
+                                lineNumber: 1085,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1063,
+                        lineNumber: 1078,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Group$2f$Group$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Group"], {
@@ -1550,31 +1572,31 @@ function NewOrderPage() {
                                 size: 18
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                                lineNumber: 1088,
+                                lineNumber: 1103,
                                 columnNumber: 26
                             }, void 0),
                             color: "green",
                             children: isCreatingOrder ? "Enviando..." : "Confirmar y Resolver"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                            lineNumber: 1079,
+                            lineNumber: 1094,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                        lineNumber: 1078,
+                        lineNumber: 1093,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-                lineNumber: 872,
+                lineNumber: 887,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(pwa_app)/orders/new/page.tsx",
-        lineNumber: 863,
+        lineNumber: 878,
         columnNumber: 5
     }, this);
 }

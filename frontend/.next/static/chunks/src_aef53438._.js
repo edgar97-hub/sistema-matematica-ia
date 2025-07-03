@@ -45,12 +45,7 @@ const packageSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
     description: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().nullable().optional(),
     creditAmount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].number().min(1, {
         message: "Cantidad de créditos debe ser al menos 1"
-    }).int(),
-    // price: z.number().min(0.01, { message: "Precio debe ser mayor a 0" }),
-    // price: z.number().refine((val) => !Number.isNaN(parseInt(val, 10)), {
-    //   message: "Precio debe ser mayor a 0",
-    // }),
-    isActive: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].boolean()
+    }).int()
 });
 function CreditPackageFormComponent({ initialData, onSubmit, isSaving, onCancel }) {
     _s();

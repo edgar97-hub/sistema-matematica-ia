@@ -52,7 +52,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// src/app/admin/login/page.tsx
 __turbopack_context__.s({
     "default": (()=>AdminLoginPage)
 });
@@ -75,8 +74,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__ = __turbopack_context__.i("[project]/node_modules/zod/dist/esm/v3/external.js [app-client] (ecmascript) <export * as z>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconAlertCircle$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconAlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconAlertCircle.mjs [app-client] (ecmascript) <export default as IconAlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconLogin$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconLogin$3e$__ = __turbopack_context__.i("[project]/node_modules/@tabler/icons-react/dist/esm/icons/IconLogin.mjs [app-client] (ecmascript) <export default as IconLogin>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$auth$2e$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/auth.store.ts [app-client] (ecmascript)"); // Ajusta ruta
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/apiClient.ts [app-client] (ecmascript)"); // Ajusta ruta
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$auth$2e$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/auth.store.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/apiClient.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -88,7 +87,6 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-// Asume que tu backend devuelve algo como AuthResponse que tiene token y datos del usuario
 const loginSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
     username: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$dist$2f$esm$2f$v3$2f$external$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().min(3, {
         message: "El nombre de usuario debe tener al menos 3 caracteres"
@@ -108,11 +106,10 @@ function AdminLoginPage() {
         },
         validate: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$form$2f$esm$2f$resolvers$2f$zod$2d$resolver$2f$zod$2d$resolver$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["zodResolver"])(loginSchema)
     });
-    // Redirigir si ya está logueado como admin
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AdminLoginPage.useEffect": ()=>{
             if (isAuthenticated && currentUserFromStore?.role === "ADMINISTRATOR") {
-                router.replace("/admin/dashboard");
+                router.replace("/admin/credit-transactions");
             }
         }
     }["AdminLoginPage.useEffect"], [
@@ -129,8 +126,6 @@ function AdminLoginPage() {
                 password: values.password
             });
             const { accessToken, user: adminUserDataBackend } = response.data;
-            // Adapta la respuesta del backend a la estructura UserPwa de tu store
-            // o crea una interfaz AdminUser y ajústala en el store.
             const adminUserForStore = {
                 id: adminUserDataBackend.id,
                 name: adminUserDataBackend.name,
@@ -141,7 +136,7 @@ function AdminLoginPage() {
                 credits: 0
             };
             setUser(adminUserForStore, accessToken);
-            router.push("/admin/dashboard");
+            router.push("/admin/credit-transactions");
         } catch (err) {
             const apiErrorMessage = err.response?.data?.message || err.message || "Error de autenticación.";
             setAuthError(apiErrorMessage);
@@ -152,19 +147,16 @@ function AdminLoginPage() {
     if (isAuthenticated && currentUserFromStore?.role === "ADMINISTRATOR") {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Center$2f$Center$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Center"], {
             mih: "100vh",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$LoadingOverlay$2f$LoadingOverlay$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LoadingOverlay"], {
-                    visible: true
-                }, void 0, false, {
-                    fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 110,
-                    columnNumber: 9
-                }, this),
-                " "
-            ]
-        }, void 0, true, {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$LoadingOverlay$2f$LoadingOverlay$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LoadingOverlay"], {
+                visible: true
+            }, void 0, false, {
+                fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
+                lineNumber: 104,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
             fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-            lineNumber: 109,
+            lineNumber: 103,
             columnNumber: 7
         }, this);
     }
@@ -191,7 +183,7 @@ function AdminLoginPage() {
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 127,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Title$2f$Title$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Title"], {
@@ -201,7 +193,7 @@ function AdminLoginPage() {
                     children: "Panel de Administración"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 131,
+                    lineNumber: 125,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Text"], {
@@ -212,7 +204,7 @@ function AdminLoginPage() {
                     children: "Acceso exclusivo para administradores."
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 134,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this),
                 authErrorFromStore && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Alert$2f$Alert$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Alert"], {
@@ -220,7 +212,7 @@ function AdminLoginPage() {
                         size: "1.1rem"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 134,
                         columnNumber: 19
                     }, void 0),
                     title: "Error de Acceso",
@@ -233,7 +225,7 @@ function AdminLoginPage() {
                     children: authErrorFromStore
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 139,
+                    lineNumber: 133,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -248,7 +240,7 @@ function AdminLoginPage() {
                                 "data-autofocus": true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 149,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$PasswordInput$2f$PasswordInput$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PasswordInput"], {
@@ -258,7 +250,7 @@ function AdminLoginPage() {
                                 ...form.getInputProps("password")
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                                lineNumber: 162,
+                                lineNumber: 156,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -269,36 +261,36 @@ function AdminLoginPage() {
                                     size: "1.1rem"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 166,
                                     columnNumber: 28
                                 }, void 0),
                                 loading: authIsLoadingFromStore,
                                 children: "Ingresar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                                lineNumber: 168,
+                                lineNumber: 162,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                        lineNumber: 154,
+                        lineNumber: 148,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-                    lineNumber: 153,
+                    lineNumber: 147,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-            lineNumber: 120,
+            lineNumber: 114,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(public_or_onboarding)/admin/login/page.tsx",
-        lineNumber: 116,
+        lineNumber: 110,
         columnNumber: 5
     }, this);
 }

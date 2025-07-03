@@ -60,12 +60,14 @@ export const pwaUserService = {
     return response.data;
   },
 
-  async deactivateUser(id: string): Promise<void> {
-    await apiClient.delete(`/users/${id}`);
+  async deactivateUser(id: string): Promise<UserPwaFE> {
+    const response = await apiClient.delete(`/users/${id}`);
+    return response.data;
   },
 
-  async activateUser(id: string): Promise<void> {
-    await apiClient.delete(`/users/${id}`);
+  async activateUser(id: string): Promise<UserPwaFE> {
+    const response = await apiClient.delete(`/users/${id}`);
+    return response.data;
   },
 
   async getUserById(id: string): Promise<UserPwaFE> {
@@ -125,13 +127,11 @@ export const pwaUserService = {
     const response = await apiClient.post<UserPwaFE>(
       `/credit-transactions/admin/adjust`,
       {
-        // Ajusta el endpoint
-        targetUserId: userId, // El backend espera targetUserId o userId
-        amount, // 'amount' ya tiene el signo correcto (+ o -)
+        targetUserId: userId,
+        amount,
         reason,
-        // adminUserId se tomará del token en el backend
       }
     );
-    return response.data; // Asume que devuelve el usuario actualizado o la transacción
+    return response.data;
   },
 };

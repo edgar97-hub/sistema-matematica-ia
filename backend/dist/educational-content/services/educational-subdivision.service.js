@@ -41,6 +41,14 @@ let EducationalSubdivisionService = class EducationalSubdivisionService {
         });
         return { data, total };
     }
+    async findActiveSubdivisionsByStage(stageId) {
+        return this.educationalSubdivisionRepository.find({
+            where: {
+                educationalStageId: stageId,
+                isActive: true,
+            },
+        });
+    }
     async findOne(id) {
         const subdivision = await this.educationalSubdivisionRepository.findOne({
             where: { id },
@@ -72,14 +80,6 @@ let EducationalSubdivisionService = class EducationalSubdivisionService {
         if (result.affected === 0) {
             throw new common_1.NotFoundException(`Educational Subdivision with ID "${id}" not found`);
         }
-    }
-    async findActiveSubdivisionsByStage(stageId) {
-        return this.educationalSubdivisionRepository.find({
-            where: {
-                educationalStageId: stageId,
-                isActive: true,
-            },
-        });
     }
 };
 exports.EducationalSubdivisionService = EducationalSubdivisionService;

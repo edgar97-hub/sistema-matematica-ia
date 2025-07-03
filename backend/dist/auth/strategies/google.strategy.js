@@ -19,7 +19,6 @@ let GoogleStrategy = class GoogleStrategy extends (0, passport_1.PassportStrateg
     configService;
     authService;
     constructor(configService, authService) {
-        console.log('super', configService.get('API_BASE_URL'));
         super({
             clientID: configService.get('GOOGLE_CLIENT_ID') || 'dummy-client-id',
             clientSecret: configService.get('GOOGLE_CLIENT_SECRET') ||

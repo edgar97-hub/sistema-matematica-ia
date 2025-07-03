@@ -11,6 +11,6 @@ export declare class UserEntity extends BaseEntity {
     role: UserPwaRole;
     isActive: boolean;
     countryOfOrigin: string;
-    credit_transactions: CreditTransactionEntity[];
+    creditTransactions: CreditTransactionEntity[];
     orders: OrderEntity[];
 }

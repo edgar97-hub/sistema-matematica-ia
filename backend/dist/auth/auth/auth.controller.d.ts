@@ -6,6 +6,7 @@ export declare class AuthController {
     private authService;
     private configService;
     constructor(authService: AuthService, configService: ConfigService);
+    getProfile(req: any): Promise<any>;
     loginAdmin(req: any, loginDto: LoginDto): Promise<{
         accessToken: string;
         user: {

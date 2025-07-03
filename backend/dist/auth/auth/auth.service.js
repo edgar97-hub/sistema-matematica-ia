@@ -16,6 +16,7 @@ const admin_users_service_1 = require("../../admin-users/admin-users/admin-users
 const users_service_1 = require("../../users/users/users.service");
 const system_configuration_service_1 = require("../../system-configuration/services/system-configuration.service");
 const credit_service_1 = require("../../credit-system/services/credit.service");
+const credit_transaction_entity_1 = require("../../credit-system/entities/credit-transaction.entity");
 let AuthService = class AuthService {
     adminUsersService;
     usersService;
@@ -29,11 +30,22 @@ let AuthService = class AuthService {
         this.systemConfigurationService = systemConfigurationService;
         this.creditService = creditService;
     }
-    async validateAdmin(username, password) {
-        return this.adminUsersService.validateUser(username, password);
+    async findProfileById(userId) {
+        const user = await this.usersService.findById(userId);
+        if (!user) {
+            throw new common_1.NotFoundException('Usuario no encontrado.');
+        }
+        return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            pictureUrl: user.pictureUrl,
+            countryOfOrigin: user.countryOfOrigin,
+            credits: user.creditBalance,
+            role: user.role,
+        };
     }
     async loginAdmin(user) {
-        console.log('user', user);
         const payload = {
             sub: user.id,
             username: user.username,
@@ -51,9 +63,13 @@ let AuthService = class AuthService {
             },
         };
     }
+    async validateAdmin(username, password) {
+        return this.adminUsersService.validateUser(username, password);
+    }
     async findOrCreatePwaUser(profile) {
         const user = await this.usersService.findOrCreateFromGoogle(profile);
-        if (user.googleId && user.creditBalance === 0) {
+        let creditIsAssigned = user.creditTransactions?.some((item) => item.action === credit_transaction_entity_1.CreditTransactionAction.WELCOME_BONUS);
+        if (user.googleId && !creditIsAssigned) {
             const config = await this.systemConfigurationService.getConfiguration();
             if (config.welcomeCreditEnabled) {
                 await this.creditService.addWelcomeCredits(user.id, config.welcomeCreditAmount);

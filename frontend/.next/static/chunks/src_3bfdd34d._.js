@@ -79,6 +79,10 @@ const educationalSubdivisionService = {
     },
     async deleteEducationalSubdivision (id) {
         await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/educational-subdivisions/${id}`);
+    },
+    async getSubdivisionsByStageIdForPwa (id) {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-subdivisions/by-stage/${id}/pwa-list`);
+        return response.data;
     }
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -119,7 +123,11 @@ const educationalStageService = {
         await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/educational-stages/${id}`);
     },
     async getEducationalStagesForPwa (id) {
-        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stages/by-country/${id}/pwa-list`);
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stages/by-id-country/${id}/pwa-list`);
+        return response.data;
+    },
+    async getStagesByCountryNameForPwa (id) {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].get(`/educational-stages/by-name-country/${id}/pwa-list`);
         return response.data;
     }
 };

@@ -86,10 +86,12 @@ const pwaUserService = {
         return response.data;
     },
     async deactivateUser (id) {
-        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        return response.data;
     },
     async activateUser (id) {
-        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        return response.data;
     },
     async getUserById (id) {
         console.log(`PWAUSER_SERVICE: Attempting to fetch user with ID: ${id}`); // LOG AQUÍ
@@ -129,12 +131,11 @@ const pwaUserService = {
         // Ajusta el endpoint y el cuerpo según tu API
         console.log(`SERVICE: Adjusting credits for user ${userId} by ${amount}. Reason: ${reason}`);
         const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].post(`/credit-transactions/admin/adjust`, {
-            // Ajusta el endpoint
             targetUserId: userId,
             amount,
             reason
         });
-        return response.data; // Asume que devuelve el usuario actualizado o la transacción
+        return response.data;
     }
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -1100,10 +1101,10 @@ function PwaUsersPage() {
             }
         }["PwaUsersPage.useMutation"],
         onSuccess: {
-            "PwaUsersPage.useMutation": ()=>{
+            "PwaUsersPage.useMutation": (item)=>{
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["notifications"].show({
-                    title: "Usuario Desactivado",
-                    message: "El usuario ha sido desactivado correctamente.",
+                    // title: "Usuario Desactivado",
+                    message: "El usuario ha sido actualizado correctamente.",
                     color: "green",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconTrash$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconTrash$3e$__["IconTrash"], {
                         size: 18

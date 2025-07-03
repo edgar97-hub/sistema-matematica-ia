@@ -139,7 +139,7 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                     children: pkg.name
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 48,
+                    lineNumber: 38,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
@@ -147,17 +147,17 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                     children: pkg.description || "-"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 49,
+                    lineNumber: 39,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
                     style: {
                         textAlign: "center"
                     },
-                    children: pkg.credit_amount
+                    children: pkg.creditAmount
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 52,
+                    lineNumber: 42,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
@@ -170,7 +170,7 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 53,
+                    lineNumber: 43,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
@@ -184,24 +184,24 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                             size: 14
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                            lineNumber: 65,
+                            lineNumber: 55,
                             columnNumber: 15
                         }, void 0) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconCircleX$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconCircleX$3e$__["IconCircleX"], {
                             size: 14
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                            lineNumber: 67,
+                            lineNumber: 57,
                             columnNumber: 15
                         }, void 0),
                         children: pkg.isActive ? "Activo" : "Inactivo"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                        lineNumber: 60,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 59,
+                    lineNumber: 49,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Td, {
@@ -223,17 +223,17 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 72,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 76,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Tooltip$2f$Tooltip$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -246,34 +246,34 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 81,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 85,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                        lineNumber: 75,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 74,
+                    lineNumber: 64,
                     columnNumber: 7
                 }, this)
             ]
         }, pkg.id, true, {
             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-            lineNumber: 47,
+            lineNumber: 37,
             columnNumber: 5
         }, this));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Box"], {
@@ -295,14 +295,14 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                 children: "Nombre del Paquete"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 112,
+                                lineNumber: 102,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
                                 children: "Descripción"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 113,
+                                lineNumber: 103,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
@@ -313,7 +313,7 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                 children: "Créditos"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 114,
+                                lineNumber: 104,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
@@ -324,7 +324,7 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                 children: "Precio (PEN)"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 117,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
@@ -335,7 +335,7 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                 children: "Estado"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 120,
+                                lineNumber: 110,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Th, {
@@ -346,18 +346,18 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                 children: "Acciones"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 123,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                        lineNumber: 111,
+                        lineNumber: 101,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 110,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Tbody, {
@@ -371,22 +371,22 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                         color: "blue"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 123,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 122,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 131,
+                                lineNumber: 121,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                            lineNumber: 130,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, this),
                         !isLoading && packages.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Table$2f$Table$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Table"].Tr, {
@@ -399,40 +399,40 @@ function CreditPackageTable({ packages, isLoading, onEdit, onDelete }) {
                                         children: "No hay paquetes de crédito definidos."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 132,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 131,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                                lineNumber: 140,
+                                lineNumber: 130,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                            lineNumber: 139,
+                            lineNumber: 129,
                             columnNumber: 13
                         }, this),
                         !isLoading && packages.length > 0 && rows
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-                    lineNumber: 128,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-            lineNumber: 101,
+            lineNumber: 91,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/CreditPackageTable.tsx",
-        lineNumber: 100,
+        lineNumber: 90,
         columnNumber: 5
     }, this);
 }
@@ -481,28 +481,19 @@ var _s = __turbopack_context__.k.signature();
 const queryClientInstance = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$queryClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClient"]({
 });
 function CreditPackagesPageWrapper() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["QueryClientProvider"], {
-        client: queryClientInstance,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CreditPackagesPage, {}, void 0, false, {
-            fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-            lineNumber: 34,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+    return(// <QueryClientProvider client={queryClientInstance}>
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CreditPackagesPage, {}, void 0, false, {
         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-        lineNumber: 33,
+        lineNumber: 34,
         columnNumber: 5
-    }, this);
+    }, this));
 }
 _c = CreditPackagesPageWrapper;
 function CreditPackagesPage() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
-    // Para este ejemplo, asumimos que getCreditPackages no usa paginación compleja por ahora,
-    // pero puedes añadir estado para paginación/ordenamiento como en PwaUsersPage si es necesario.
     const { data: packagesResponse, isError, isLoading, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
-        // Ajusta el tipo de respuesta
         queryKey: [
             "credit-packages"
         ],
@@ -563,14 +554,14 @@ function CreditPackagesPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                                lineNumber: 101,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, this),
                             "Gestión de Paquetes de Crédito"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Group$2f$Group$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Group"], {
@@ -581,7 +572,7 @@ function CreditPackagesPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 107,
                                     columnNumber: 26
                                 }, void 0),
                                 variant: "filled" // Botón más prominente
@@ -590,7 +581,7 @@ function CreditPackagesPage() {
                                 children: "Nuevo Paquete"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                                lineNumber: 108,
+                                lineNumber: 105,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Button$2f$Button$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -599,7 +590,7 @@ function CreditPackagesPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 115,
                                     columnNumber: 26
                                 }, void 0),
                                 variant: "default",
@@ -608,19 +599,19 @@ function CreditPackagesPage() {
                                 children: "Refrescar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                        lineNumber: 107,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                lineNumber: 99,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             isError && !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Alert$2f$Alert$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Alert"], {
@@ -628,7 +619,7 @@ function CreditPackagesPage() {
                     size: "1rem"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                    lineNumber: 130,
+                    lineNumber: 127,
                     columnNumber: 17
                 }, void 0),
                 title: "Error de Carga",
@@ -638,7 +629,7 @@ function CreditPackagesPage() {
                 children: "No se pudieron cargar los paquetes de crédito."
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                lineNumber: 129,
+                lineNumber: 126,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$admin_panel$292f$admin$2f$credit$2d$packages$2f$CreditPackageTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CreditPackageTable"], {
@@ -648,13 +639,13 @@ function CreditPackagesPage() {
                 onDelete: handleDeletePackage
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-                lineNumber: 140,
+                lineNumber: 137,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin_panel)/admin/credit-packages/page.tsx",
-        lineNumber: 98,
+        lineNumber: 95,
         columnNumber: 5
     }, this);
 }

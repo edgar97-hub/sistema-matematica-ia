@@ -36,6 +36,62 @@ let CreditService = class CreditService {
         this.logger = logger;
         this.entityManager = entityManager;
     }
+    async getAllCreditTransactions(queryDto) {
+        const { page = 1, limit = 10, startDate, endDate, action, targetUserId, } = queryDto;
+        const skip = (page - 1) * limit;
+        const where = {};
+        if (targetUserId) {
+            where.targetUserId = parseInt(targetUserId);
+        }
+        if (action) {
+            where.action = action;
+        }
+        if (startDate && endDate) {
+            where.createdAt = (0, typeorm_2.Between)(new Date(startDate), new Date(endDate + 'T23:59:59.999Z'));
+        }
+        else if (startDate) {
+            where.createdAt = (0, typeorm_2.MoreThanOrEqual)(new Date(startDate));
+        }
+        else if (endDate) {
+            where.createdAt = (0, typeorm_2.LessThanOrEqual)(new Date(endDate + 'T23:59:59.999Z'));
+        }
+        this.logger.log(`Querying credit transactions with where: ${JSON.stringify(where)}, skip: ${skip}, take: ${limit}`, 'CreditService');
+        try {
+            const [data, total] = await this.creditTransactionRepository.findAndCount({
+                where,
+                relations: ['targetUser', 'adminUser', 'creditPackage'],
+                order: { createdAt: 'DESC' },
+                skip: skip,
+                take: limit,
+            });
+            const formattedData = data.map((tx) => ({
+                ...tx,
+                targetUser: tx.targetUser
+                    ? {
+                        id: tx.targetUser.id,
+                        name: tx.targetUser.name,
+                        email: tx.targetUser.email,
+                    }
+                    : undefined,
+                adminUser: tx.adminUser
+                    ? { id: tx.adminUser.id, name: tx.adminUser.name }
+                    : undefined,
+                creditPackage: tx.creditPackage
+                    ? { id: tx.creditPackage.id, name: tx.creditPackage.name }
+                    : undefined,
+            }));
+            return {
+                data: formattedData,
+                total,
+                page: Number(page),
+                limit: Number(limit),
+            };
+        }
+        catch (error) {
+            this.logger.error(`Error fetching all credit transactions: ${error.message}`, error.stack, 'CreditService');
+            throw error;
+        }
+    }
     async recordTransaction(data) {
         return this.entityManager.transaction(async (transactionalEntityManager) => {
             const user = await transactionalEntityManager.findOne(user_entity_1.UserEntity, {
@@ -124,59 +180,6 @@ let CreditService = class CreditService {
             this.logger.log(`Credits added and transaction recorded for user ${userId} from Stripe session ${session.id}`, 'CreditService');
         });
     }
-    async useCredits(userId, amount, description) {
-        try {
-            return await this.recordTransaction({
-                action: credit_transaction_entity_1.CreditTransactionAction.USAGE_RESOLUTION,
-                amount: -amount,
-                targetUserId: userId,
-                reason: description,
-            });
-        }
-        catch (error) {
-            this.logger.error(`Error using credits: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
-    }
-    async getCreditBalance(userId) {
-        try {
-            const user = await this.userRepository.findOne({ where: { id: userId } });
-            if (!user) {
-                throw new common_1.NotFoundException(`User with ID "${userId}" not found`);
-            }
-            return user.creditBalance;
-        }
-        catch (error) {
-            this.logger.error(`Error getting credit balance: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
-    }
-    async getCreditTransactions(userId) {
-        try {
-            return this.creditTransactionRepository.find({
-                where: { targetUserId: userId },
-                order: { createdAt: 'DESC' },
-            });
-        }
-        catch (error) {
-            this.logger.error(`Error getting credit transactions: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
-    }
-    async addWelcomeCredits(userId, amount) {
-        try {
-            return await this.recordTransaction({
-                action: credit_transaction_entity_1.CreditTransactionAction.WELCOME_BONUS,
-                amount: amount,
-                targetUserId: userId,
-                reason: 'Créditos de bonificación de bienvenida',
-            });
-        }
-        catch (error) {
-            this.logger.error(`Error adding welcome credits: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
-    }
     async adminAdjustCredits(adminUserId, targetUserId, amount, reason) {
         return this.entityManager.transaction(async (tem) => {
             const userRepo = tem.getRepository(user_entity_1.UserEntity);
@@ -198,23 +201,29 @@ let CreditService = class CreditService {
             }, tem);
         });
     }
-    async internalRecordTransaction(data, manager) {
-        const transactionRepo = manager.getRepository(credit_transaction_entity_1.CreditTransactionEntity);
-        const transaction = transactionRepo.create(data);
-        return transactionRepo.save(transaction);
-    }
-    async getUserCreditHistory(targetUserId, page, limit) {
+    async addWelcomeCredits(targetUserId, amount) {
         try {
-            const [data, total] = await this.creditTransactionRepository.findAndCount({
-                where: { targetUserId: parseInt(targetUserId) },
-                order: { createdAt: 'DESC' },
-                skip: (page - 1) * limit,
-                take: limit,
+            return this.entityManager.transaction(async (tem) => {
+                const userRepo = tem.getRepository(user_entity_1.UserEntity);
+                const user = await userRepo.findOneBy({ id: targetUserId });
+                if (!user)
+                    throw new common_1.NotFoundException(`User with ID ${targetUserId} not found.`);
+                const balanceBefore = user.creditBalance;
+                user.creditBalance += amount;
+                const balanceAfter = user.creditBalance;
+                await userRepo.save(user);
+                return this.internalRecordTransaction({
+                    targetUserId: targetUserId,
+                    action: credit_transaction_entity_1.CreditTransactionAction.WELCOME_BONUS,
+                    amount: amount,
+                    balanceBefore,
+                    balanceAfter,
+                    reason: 'Créditos de bonificación de bienvenida',
+                }, tem);
             });
-            return { data, total };
         }
         catch (error) {
-            this.logger.error(`Error getting user credit history: ${error.message}`, error.stack, 'CreditService');
+            this.logger.error(`Error adding welcome credits: ${error.message}`, error.stack, 'CreditService');
             throw error;
         }
     }
@@ -228,84 +237,10 @@ let CreditService = class CreditService {
             },
         });
     }
-    async getAllCreditTransactions(queryDto) {
-        const { page = 1, limit = 10, startDate, endDate, action, targetUserId, } = queryDto;
-        const skip = (page - 1) * limit;
-        const where = {};
-        if (targetUserId) {
-            where.targetUserId = parseInt(targetUserId);
-        }
-        if (action) {
-            where.action = action;
-        }
-        if (startDate && endDate) {
-            where.createdAt = (0, typeorm_2.Between)(new Date(startDate), new Date(endDate + 'T23:59:59.999Z'));
-        }
-        else if (startDate) {
-            where.createdAt = (0, typeorm_2.MoreThanOrEqual)(new Date(startDate));
-        }
-        else if (endDate) {
-            where.createdAt = (0, typeorm_2.LessThanOrEqual)(new Date(endDate + 'T23:59:59.999Z'));
-        }
-        this.logger.log(`Querying credit transactions with where: ${JSON.stringify(where)}, skip: ${skip}, take: ${limit}`, 'CreditService');
-        try {
-            const [data, total] = await this.creditTransactionRepository.findAndCount({
-                where,
-                relations: ['targetUser', 'adminUser', 'creditPackage'],
-                order: { createdAt: 'DESC' },
-                skip: skip,
-                take: limit,
-            });
-            const formattedData = data.map((tx) => ({
-                ...tx,
-                targetUser: tx.targetUser
-                    ? {
-                        id: tx.targetUser.id,
-                        name: tx.targetUser.name,
-                        email: tx.targetUser.email,
-                    }
-                    : undefined,
-                adminUser: tx.adminUser
-                    ? { id: tx.adminUser.id, name: tx.adminUser.name }
-                    : undefined,
-                creditPackage: tx.creditPackage
-                    ? { id: tx.creditPackage.id, name: tx.creditPackage.name }
-                    : undefined,
-            }));
-            return {
-                data: formattedData,
-                total,
-                page: Number(page),
-                limit: Number(limit),
-            };
-        }
-        catch (error) {
-            this.logger.error(`Error fetching all credit transactions: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
-    }
-    async deductCreditsForOrder(userId, orderId, amount) {
-        try {
-            const user = await this.userRepository.findOne({ where: { id: userId } });
-            if (!user) {
-                throw new common_1.NotFoundException(`User with ID "${userId}" not found`);
-            }
-            if (user.creditBalance < amount) {
-                throw new common_1.BadRequestException('Insufficient credits for this order');
-            }
-            const transaction = await this.recordTransaction({
-                action: credit_transaction_entity_1.CreditTransactionAction.USAGE_RESOLUTION,
-                amount: -amount,
-                targetUserId: userId,
-                reason: `Credit deduction for order ${orderId}`,
-            });
-            this.logger.log(`Credits deducted for order: User ${userId}, Order ${orderId}, Amount ${amount}`, 'CreditService');
-            return transaction;
-        }
-        catch (error) {
-            this.logger.error(`Error deducting credits for order: ${error.message}`, error.stack, 'CreditService');
-            throw error;
-        }
+    async internalRecordTransaction(data, manager) {
+        const transactionRepo = manager.getRepository(credit_transaction_entity_1.CreditTransactionEntity);
+        const transaction = transactionRepo.create(data);
+        return transactionRepo.save(transaction);
     }
 };
 exports.CreditService = CreditService;

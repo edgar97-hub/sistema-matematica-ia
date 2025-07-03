@@ -6,6 +6,7 @@ import { UsersService } from '../../users/users/users.service';
 import { UserEntity } from '../../users/entities/user.entity';
 import { SystemConfigurationService } from '../../system-configuration/services/system-configuration.service';
 import { CreditService } from '../../credit-system/services/credit.service';
+import { CreditTransactionAction } from 'src/credit-system/entities/credit-transaction.entity';
 
 export interface JwtPayload {
   sub: number;
@@ -25,29 +26,23 @@ export class AuthService {
     private creditService: CreditService,
   ) {}
 
-  async validateAdmin(
-    username: string,
-    password: string,
-  ): Promise<AdminUserEntity | null> {
-    return this.adminUsersService.validateUser(username, password);
+  async findProfileById(userId: number): Promise<any> {
+    const user = await this.usersService.findById(userId);
+    if (!user) {
+      throw new NotFoundException('Usuario no encontrado.');
+    }
+    return {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      pictureUrl: user.pictureUrl,
+      countryOfOrigin: user.countryOfOrigin,
+      credits: user.creditBalance,
+      role: user.role,
+    };
   }
 
-  // async validateAdmin(
-  //   username: string,
-  //   pass: string,
-  // ): Promise<AdminUserEntity | null> {
-  //   console.log(`AuthService: Validating admin - ${username}`);
-  //   const adminUser = await this.adminUsersService.findOneByUsername(username); // Necesitas este método en AdminUsersService
-  //   if (adminUser && (await adminUser.comparePassword(pass))) {
-  //     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  //     const { password, ...result } = adminUser; // Quita la contraseña del objeto devuelto
-  //     return result as AdminUserEntity;
-  //   }
-  //   return null;
-  // }
-
   async loginAdmin(user: AdminUserEntity) {
-    console.log('user', user);
     const payload: JwtPayload = {
       sub: user.id,
       username: user.username,
@@ -67,17 +62,26 @@ export class AuthService {
     };
   }
 
+  async validateAdmin(
+    username: string,
+    password: string,
+  ): Promise<AdminUserEntity | null> {
+    return this.adminUsersService.validateUser(username, password);
+  }
+
   async findOrCreatePwaUser(profile: any): Promise<UserEntity> {
     const user = await this.usersService.findOrCreateFromGoogle(profile);
-
-    if (user.googleId && user.creditBalance === 0) {
+    // console.log('findOrCreatePwaUser', user);
+    let creditIsAssigned = user.creditTransactions?.some(
+      (item) => item.action === CreditTransactionAction.WELCOME_BONUS,
+    );
+    if (user.googleId && !creditIsAssigned) {
       const config = await this.systemConfigurationService.getConfiguration();
       if (config.welcomeCreditEnabled) {
         await this.creditService.addWelcomeCredits(
           user.id,
           config.welcomeCreditAmount,
         );
-        // Refresh the user to get the updated credit balance
         const updatedUser = await this.usersService.findById(user.id);
         if (updatedUser) {
           return updatedUser;

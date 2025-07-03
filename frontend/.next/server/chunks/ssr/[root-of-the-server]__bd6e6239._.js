@@ -277,7 +277,7 @@ function CountryFormComponent({ initialData, onSubmit, isSaving, onCancel }) {
             };
             reader.readAsDataURL(file);
         } else {
-            setFlagPreview(initialData?.flagUrl || null); // Revertir a la URL original si se borra el archivo
+            setFlagPreview(initialData?.flagUrl || null);
         }
     };
     const handleSubmit = (values)=>{
@@ -285,7 +285,7 @@ function CountryFormComponent({ initialData, onSubmit, isSaving, onCancel }) {
         const dataToSubmit = {
             ...values
         };
-        delete dataToSubmit.flagUrl; // Quitar flagUrl si se sube un archivo
+        delete dataToSubmit.flagUrl;
         onSubmit(dataToSubmit, selectedFlagFile);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Paper$2f$Paper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Paper"], {
@@ -356,7 +356,6 @@ function CountryFormComponent({ initialData, onSubmit, isSaving, onCancel }) {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx
 __turbopack_context__.s({
     "default": (()=>EditCountryPage)
 });
@@ -373,8 +372,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useMutation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@mantine/notifications/esm/notifications.store.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/country.service.ts [app-ssr] (ecmascript)"); // Ajusta ruta
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$countries$2f$CountryFormComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/admin/countries/CountryFormComponent.tsx [app-ssr] (ecmascript)"); // Ajusta ruta
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/services/country.service.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$countries$2f$CountryFormComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/admin/countries/CountryFormComponent.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -399,7 +398,6 @@ function EditCountryPage() {
     });
     const { mutateAsync: updateCountryMutation, isPending } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
         mutationFn: async ({ formData, flagFile })=>{
-            // Similar a la creación, maneja la subida de archivo aquí o en el servicio
             let dataToUpdate = {
                 ...formData
             };
@@ -407,8 +405,6 @@ function EditCountryPage() {
                 console.log("Manejando subida de NUEVO archivo para la bandera (simulado)...");
             // Lógica de subida...
             // dataToUpdate.flagUrl = await uploadService.uploadFlag(flagFile);
-            // Si se sube un nuevo archivo, flagUrl se actualizará.
-            // Si no se selecciona nuevo archivo, se usará el flagUrl existente en formData.
             } else if (formData.flagUrl === null) {
                 // Si el usuario limpió la imagen y no seleccionó nueva
                 dataToUpdate.flagUrl = null; // Enviar null para borrarla si el backend lo soporta
@@ -416,7 +412,6 @@ function EditCountryPage() {
             // No enviar flagUrl si no cambió y no se subió nuevo archivo (para no enviar la URL de preview)
             // O el servicio/backend debería ignorar flagUrl si no es una URL válida o no se espera.
             // Por simplicidad, asumimos que el servicio updateCountry puede recibir flagUrl.
-            console.log("test");
             return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$country$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["countryService"].updateCountry(countryId, dataToUpdate);
         },
         onSuccess: (updatedCountry)=>{
@@ -425,19 +420,17 @@ function EditCountryPage() {
                 message: `El país "${updatedCountry.name}" ha sido actualizado.`,
                 color: "green"
             });
-            // queryClient.invalidateQueries({ queryKey: ["countries"] });
             queryClient.invalidateQueries({
                 queryKey: [
                     "countries"
                 ]
-            }); // Para la lista de países
+            });
             queryClient.invalidateQueries({
                 queryKey: [
                     "country",
                     countryId
                 ]
-            }); // Para este detalle
-            // queryClient.setQueryData(["country", countryId], updatedCountry);
+            });
             router.push("/admin/educational-content/countries");
         },
         onError: (error)=>{
@@ -449,7 +442,6 @@ function EditCountryPage() {
         }
     });
     const handleSubmit = async (formData, flagFile)=>{
-        console.log("formData", formData);
         await updateCountryMutation({
             formData,
             flagFile
@@ -462,12 +454,12 @@ function EditCountryPage() {
                 visible: true
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                lineNumber: 115,
+                lineNumber: 105,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-            lineNumber: 114,
+            lineNumber: 104,
             columnNumber: 7
         }, this);
     }
@@ -480,12 +472,12 @@ function EditCountryPage() {
                 children: error?.message || "País no encontrado."
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                lineNumber: 122,
+                lineNumber: 112,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-            lineNumber: 121,
+            lineNumber: 111,
             columnNumber: 7
         }, this);
     }
@@ -514,13 +506,13 @@ function EditCountryPage() {
                             size: 16
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                            lineNumber: 145,
+                            lineNumber: 135,
                             columnNumber: 24
                         }, void 0),
                         children: "Volver"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Title$2f$Title$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Title"], {
@@ -531,20 +523,20 @@ function EditCountryPage() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                        lineNumber: 149,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$core$2f$Box$2f$Box$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Box"], {
                         w: 40
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                lineNumber: 139,
+                lineNumber: 129,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$admin$2f$countries$2f$CountryFormComponent$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CountryFormComponent"], {
@@ -554,13 +546,13 @@ function EditCountryPage() {
                 onCancel: ()=>router.push("/admin/educational-content/countries")
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-                lineNumber: 152,
+                lineNumber: 142,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin_panel)/admin/educational-content/countries/edit/[id]/page.tsx",
-        lineNumber: 138,
+        lineNumber: 128,
         columnNumber: 5
     }, this);
 }

@@ -224,7 +224,7 @@ export default function SystemSettingsPage() {
             <Button
               type="submit"
               loading={isPending}
-              disabled={!form.isDirty() || isPending}
+              // disabled={!form.isDirty() || isPending}
               leftSection={<IconDeviceFloppy size={18} />}
             >
               Guardar Configuración

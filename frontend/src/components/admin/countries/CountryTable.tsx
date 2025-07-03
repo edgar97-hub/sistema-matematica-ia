@@ -19,15 +19,14 @@ import {
   IconCircleX,
   IconWorld,
 } from "@tabler/icons-react";
-import { CountryFE } from "../../../types/country.types"; // Ajusta ruta
-import classes from "./CountryTable.module.css"; // Crearemos este archivo
+import { CountryFE } from "../../../types/country.types";
+import classes from "./CountryTable.module.css";
 
 export interface CountryTableProps {
   countries: CountryFE[];
   isLoading: boolean;
   onEdit: (country: CountryFE) => void;
   onDelete: (country: CountryFE) => void;
-  // Añade props para paginación/ordenamiento si los implementas
 }
 
 export function CountryTable({
@@ -40,7 +39,7 @@ export function CountryTable({
     <Table.Tr key={index} className={classes.dataRow}>
       <Table.Td>
         <Group gap="sm" wrap="nowrap">
-          {country.flagUrl ? (
+          {/* {country.flagUrl ? (
             <Avatar
               src={country.flagUrl}
               size={24}
@@ -51,7 +50,7 @@ export function CountryTable({
             <Avatar color="blue" radius="xl" size={24}>
               <IconWorld size={14} />
             </Avatar>
-          )}
+          )} */}
           <Text>{country.name}</Text>
         </Group>
       </Table.Td>

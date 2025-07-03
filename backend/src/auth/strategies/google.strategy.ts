@@ -11,14 +11,12 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     private configService: ConfigService,
     private authService: AuthService,
   ) {
-    console.log('super', configService.get<string>('API_BASE_URL'));
     super({
       clientID:
         configService.get<string>('GOOGLE_CLIENT_ID') || 'dummy-client-id',
       clientSecret:
         configService.get<string>('GOOGLE_CLIENT_SECRET') ||
         'dummy-client-secret',
-      // callbackURL: '/auth/google/redirect',
       callbackURL: `${configService.get<string>('API_BASE_URL')}/auth/google/redirect`,
       scope: ['email', 'profile'],
     });

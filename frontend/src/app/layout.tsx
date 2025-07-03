@@ -5,29 +5,28 @@ import {
   MantineProvider,
   ColorSchemeScript,
   mantineHtmlProps,
-} from "@mantine/core"; // NO importes ColorScheme aquí
-import { useAuthStore, ThemeMode } from "../store/auth.store"; // Ajusta la ruta, importa ThemeMode
+} from "@mantine/core";
+import { useAuthStore, ThemeMode } from "../store/auth.store";
 import "@mantine/core/styles.css";
 import { MainLayout } from "project/components/layout/MainLayout";
 import { Notifications } from "@mantine/notifications";
-import "./globals.scss"; // Tu SCSS global con variables de tema
+import "./globals.scss";
 import "@mantine/notifications/styles.css";
 
 const mantineTheme = {
-  fontFamily: "Montserrat, sans-serif", // Ejemplo
-  primaryColor: "blue", // Ejemplo
+  fontFamily: "Montserrat, sans-serif",
+  primaryColor: "blue",
 };
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const currentThemePreference = useAuthStore((state) => state.theme); // Esto es ThemeMode
+  const currentThemePreference = useAuthStore((state) => state.theme);
   const [effectiveColorScheme, setEffectiveColorScheme] = useState<
     "light" | "dark"
   >("light");
 
-  // Determina el esquema de color efectivo (light/dark) basado en la preferencia y el sistema
   useEffect(() => {
     let themeValue: "light" | "dark";
     if (currentThemePreference === "auto") {

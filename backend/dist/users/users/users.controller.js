@@ -70,17 +70,6 @@ let UsersController = class UsersController {
             throw new common_1.BadRequestException('Failed to update user');
         }
     }
-    async remove(id) {
-        try {
-            await this.usersService.remove(id);
-        }
-        catch (error) {
-            if (error instanceof common_1.NotFoundException) {
-                throw error;
-            }
-            throw new common_1.BadRequestException('Failed to remove user');
-        }
-    }
     async getProfile(user) {
         try {
             return await this.usersService.findById(user.id);
@@ -89,9 +78,9 @@ let UsersController = class UsersController {
             throw new common_1.BadRequestException('Failed to retrieve user profile');
         }
     }
-    async updateProfile(user, updateProfileDto) {
+    async updateProfileByUserStandar(user, updateProfileDto) {
         try {
-            return await this.usersService.updateProfile(user.id, updateProfileDto);
+            return await this.usersService.updateProfileByUserStandar(user.id, updateProfileDto);
         }
         catch (error) {
             if (error instanceof common_1.BadRequestException) {
@@ -110,6 +99,17 @@ let UsersController = class UsersController {
                 throw error;
             }
             throw new common_1.BadRequestException('Failed to update user email');
+        }
+    }
+    async remove(id) {
+        try {
+            return await this.usersService.remove(id);
+        }
+        catch (error) {
+            if (error instanceof common_1.NotFoundException) {
+                throw error;
+            }
+            throw new common_1.BadRequestException('Failed to remove user');
         }
     }
 };
@@ -153,16 +153,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "updateByAdmin", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
-    (0, common_1.HttpCode)(common_1.HttpStatus.NO_CONTENT),
-    (0, throttler_1.Throttle)({ short: { ttl: 1000, limit: 3 } }),
-    __param(0, (0, common_1.Param)('id', common_1.ParseIntPipe)),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", Promise)
-], UsersController.prototype, "remove", null);
-__decorate([
     (0, common_1.Get)('profile'),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
     (0, throttler_1.Throttle)({ medium: { ttl: 10000, limit: 10 } }),
@@ -180,7 +170,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, update_user_pwa_profile_dto_1.UpdateUserPwaProfileDto]),
     __metadata("design:returntype", Promise)
-], UsersController.prototype, "updateProfile", null);
+], UsersController.prototype, "updateProfileByUserStandar", null);
 __decorate([
     (0, common_1.Patch)(':id/email'),
     (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
@@ -191,6 +181,16 @@ __decorate([
     __metadata("design:paramtypes", [Number, String]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "updateEmail", null);
+__decorate([
+    (0, common_1.Delete)(':id'),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, admin_guard_1.AdminGuard),
+    (0, common_1.HttpCode)(common_1.HttpStatus.NO_CONTENT),
+    (0, throttler_1.Throttle)({ short: { ttl: 1000, limit: 3 } }),
+    __param(0, (0, common_1.Param)('id', common_1.ParseIntPipe)),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], UsersController.prototype, "remove", null);
 exports.UsersController = UsersController = __decorate([
     (0, common_1.Controller)('users'),
     (0, common_1.UsePipes)(new common_1.ValidationPipe({

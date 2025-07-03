@@ -21,7 +21,6 @@ export class CreditPackageController {
 
   @Post()
   create(@Body() createCreditPackageDto: CreateCreditPackageDto) {
-    console.log('createCreditPackageDto', createCreditPackageDto);
     return this.creditPackageService.create(createCreditPackageDto);
   }
 

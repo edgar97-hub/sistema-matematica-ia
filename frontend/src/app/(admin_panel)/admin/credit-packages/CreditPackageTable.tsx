@@ -17,18 +17,8 @@ import {
   IconCircleCheck,
   IconCircleX,
 } from "@tabler/icons-react";
-import { CreditPackageFE } from "../../../../types/credit-package.types"; // Crea este archivo o usa el del servicio
+import { CreditPackageFE } from "../../../../types/credit-package.types";
 import classes from "./CreditPackageTable.module.css";
-
-// Si CreditPackageFE no está en types, defínelo aquí o importa del servicio
-// export interface CreditPackageFE {
-//   id: string;
-//   name: string;
-//   description?: string | null;
-//   creditAmount: number;
-//   price: number;
-//   isActive: boolean;
-// }
 
 export interface CreditPackageTableProps {
   packages: CreditPackageFE[];
@@ -49,7 +39,7 @@ export function CreditPackageTable({
       <Table.Td className={classes.descriptionCell}>
         {pkg.description || "-"}
       </Table.Td>
-      <Table.Td style={{ textAlign: "center" }}>{pkg.credit_amount}</Table.Td>
+      <Table.Td style={{ textAlign: "center" }}>{pkg.creditAmount}</Table.Td>
       <Table.Td style={{ textAlign: "right" }}>
         {pkg.price?.toLocaleString("es-PE", {
           style: "currency",

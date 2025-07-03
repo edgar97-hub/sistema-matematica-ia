@@ -1,4 +1,3 @@
-// src/app/(admin_panel)/admin/educational-content/countries/create/page.tsx
 "use client";
 
 import { Box, Title, Button, Group } from "@mantine/core";
@@ -14,15 +13,13 @@ import { notifications } from "@mantine/notifications";
 import {
   CountryFormComponent,
   CountryFormData,
-} from "../../../../../../components/admin/countries/CountryFormComponent"; // Ajusta ruta
+} from "../../../../../../components/admin/countries/CountryFormComponent";
 
 import {
   CountryFE,
   CreateCountryData,
 } from "../../../../../../types/country.types";
-import { countryService } from "../../../../../../lib/services/country.service"; // Ajusta ruta
-
-// QueryClientProvider ya debería estar en (admin_panel)/layout.tsx
+import { countryService } from "../../../../../../lib/services/country.service";
 
 export default function CreateCountryPage() {
   const router = useRouter();
@@ -63,7 +60,7 @@ export default function CreateCountryPage() {
       const dataToSubmit: CreateCountryData = {
         name: formData.name,
         code: formData.code,
-        flagUrl: flagUrlToSave, // Esta URL vendría de la subida del archivo
+        flagUrl: flagUrlToSave,
         isActive: formData.isActive,
         displayOrder: formData.displayOrder,
       };

@@ -86,10 +86,12 @@ const pwaUserService = {
         return response.data;
     },
     async deactivateUser (id) {
-        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        return await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
     },
     async activateUser (id) {
-        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$apiClient$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiClient"].delete(`/users/${id}`);
+        console.log(`PWAUSER_SERVICE: Data received for ${id}:`, response.data);
+        return response.data;
     },
     async getUserById (id) {
         console.log(`PWAUSER_SERVICE: Attempting to fetch user with ID: ${id}`); // LOG AQUÍ

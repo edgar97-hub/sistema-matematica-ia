@@ -355,12 +355,12 @@ function SetCountryPage() {
             router.replace("/login");
             return;
         }
+        console.log("user.countryOfOrigin", user.countryOfOrigin);
         if (user.countryOfOrigin) {
-            // LEER LA URL DE REDIRECCIÓN GUARDADA O EL QUERY PARAM
             const redirectUrlFromQuery = searchParams.get("redirect"); // De /auth/google/callback
             const intendedUrlFromStorage = sessionStorage.getItem(INTENDED_URL_KEY); // Si se guardó antes de /set-country
             sessionStorage.removeItem(INTENDED_URL_KEY); // Limpiar
-            const finalRedirectUrl = redirectUrlFromQuery || intendedUrlFromStorage || "/dashboard";
+            const finalRedirectUrl = redirectUrlFromQuery || intendedUrlFromStorage || "/orders";
             console.log("SetCountryPage: Redirecting to:", finalRedirectUrl);
             router.push(finalRedirectUrl); // USAR PUSH para que el usuario pueda volver si quiere
         // router.replace("/dashboard"); // Ya tiene país, ir al dashboard
@@ -369,7 +369,6 @@ function SetCountryPage() {
         user,
         router
     ]);
-    // Cargar la lista de países activos con contenido educativo
     const { data: countries, isLoading: isLoadingCountries, isError: isCountriesError } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "active-countries-for-set-country"
@@ -379,20 +378,16 @@ function SetCountryPage() {
     const countryOptions = countries?.map((c)=>({
             value: c.name,
             label: c.name
-        })) || []; // Usar el nombre del país como valor y etiqueta
-    // Formulario
+        })) || [];
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$form$2f$esm$2f$use$2d$form$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useForm"])({
         initialValues: {
             countryOfOrigin: null
         },
         validate: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$form$2f$esm$2f$resolvers$2f$zod$2d$resolver$2f$zod$2d$resolver$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["zodResolver"])(setCountrySchema)
     });
-    // Mutación para guardar el país de origen
     const { mutateAsync: saveCountryMutation, isPending } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMutation"])({
         mutationFn: async (selectedCountry)=>{
-            if (!token) throw new Error("No autenticado"); // No debería pasar si está en esta página
-            // Asume que pwaUserService.updateProfile espera un objeto parcial
-            // y tu backend /api/users/profile (PATCH) maneja la actualización de countryOfOrigin
+            if (!token) throw new Error("No autenticado");
             return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$services$2f$pwa$2d$user$2e$service$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["pwaUserService"].updatePwaUserProfile({
                 countryOfOrigin: selectedCountry
             }, token);
@@ -406,18 +401,18 @@ function SetCountryPage() {
                     size: 18
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 104,
+                    lineNumber: 99,
                     columnNumber: 15
                 }, this)
             });
-            setCountryInStore(updatedUser.countryOfOrigin); // Actualiza el país en el store de Zustand
+            setCountryInStore(updatedUser.countryOfOrigin);
             queryClient.invalidateQueries({
                 queryKey: [
                     "pwa-user-profile",
                     user?.id
                 ]
-            }); // Si tienes una query para el perfil
-            router.push("/dashboard"); // Redirigir al dashboard
+            });
+        // router.push("/orders");
         },
         onError: (error)=>{
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$notifications$2f$esm$2f$notifications$2e$store$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["notifications"].show({
@@ -428,7 +423,7 @@ function SetCountryPage() {
                     size: 18
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 119,
+                    lineNumber: 114,
                     columnNumber: 15
                 }, this)
             });
@@ -447,7 +442,7 @@ function SetCountryPage() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Loader$2f$Loader$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Loader"], {}, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 133,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this),
                 " ",
@@ -456,13 +451,13 @@ function SetCountryPage() {
                     children: "Cargando países..."
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 133,
+                    lineNumber: 128,
                     columnNumber: 20
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-            lineNumber: 132,
+            lineNumber: 127,
             columnNumber: 7
         }, this);
     }
@@ -479,7 +474,7 @@ function SetCountryPage() {
                     size: "1rem"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 145,
+                    lineNumber: 140,
                     columnNumber: 17
                 }, void 0),
                 title: "Error o Sin Países",
@@ -488,12 +483,12 @@ function SetCountryPage() {
                 children: "No se pudieron cargar los países disponibles o no hay países configurados con contenido educativo. Por favor, contacta al administrador."
             }, void 0, false, {
                 fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                lineNumber: 144,
+                lineNumber: 139,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-            lineNumber: 140,
+            lineNumber: 135,
             columnNumber: 7
         }, this);
     }
@@ -521,7 +516,7 @@ function SetCountryPage() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 167,
+                    lineNumber: 162,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Text$2f$Text$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Text"], {
@@ -532,7 +527,7 @@ function SetCountryPage() {
                     children: "Para personalizar tu experiencia, por favor selecciona tu país de origen."
                 }, void 0, false, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 170,
+                    lineNumber: 165,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -552,12 +547,12 @@ function SetCountryPage() {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                                lineNumber: 186,
+                                lineNumber: 181,
                                 columnNumber: 26
                             }, void 0)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                            lineNumber: 176,
+                            lineNumber: 171,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mantine$2f$core$2f$esm$2f$components$2f$Group$2f$Group$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Group"], {
@@ -572,35 +567,35 @@ function SetCountryPage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                                    lineNumber: 195,
+                                    lineNumber: 190,
                                     columnNumber: 28
                                 }, void 0),
                                 children: "Guardar y Continuar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                                lineNumber: 190,
+                                lineNumber: 185,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                            lineNumber: 189,
+                            lineNumber: 184,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-                    lineNumber: 175,
+                    lineNumber: 170,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-            lineNumber: 160,
+            lineNumber: 155,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(public_or_onboarding)/set-country/page.tsx",
-        lineNumber: 159,
+        lineNumber: 154,
         columnNumber: 5
     }, this);
 }

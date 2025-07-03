@@ -40,7 +40,7 @@ const packageSchema = z.object({
   // price: z.number().refine((val) => !Number.isNaN(parseInt(val, 10)), {
   //   message: "Precio debe ser mayor a 0",
   // }),
-  isActive: z.boolean(),
+  // isActive: z.boolean(),
 });
 
 export function CreditPackageFormComponent({

@@ -22,10 +22,6 @@ export declare class CreditTransactionController {
     private readonly configService;
     private readonly logger;
     constructor(creditService: CreditService, stripeService: StripeService, configService: ConfigService, logger: CustomLoggerService);
-    getUserCreditHistory(userId: string, page?: number, limit?: number): Promise<{
-        data: import("../entities/credit-transaction.entity").CreditTransactionEntity[];
-        total: number;
-    }>;
     getAllCreditTransactions(queryDto: GetAllCreditTransactionsDto): Promise<{
         data: import("../entities/credit-transaction.entity").CreditTransactionEntity[];
         total: number;

@@ -30,4 +30,10 @@ export const orderService = {
     );
     return response.data;
   },
+  async getOrderByIdPwa(orderId: string, token: string): Promise<OrderFE> {
+    const response = await apiClient.get<OrderFE>(`/orders/${orderId}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return response.data;
+  },
 };

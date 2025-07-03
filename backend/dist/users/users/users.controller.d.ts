@@ -13,8 +13,8 @@ export declare class UsersController {
     }>;
     findOne(id: number): Promise<any>;
     updateByAdmin(id: number, updateUserByAdminDto: UpdateUserByAdminDto): Promise<import("../entities/user.entity").UserEntity>;
-    remove(id: number): Promise<void>;
     getProfile(user: any): Promise<any>;
-    updateProfile(user: any, updateProfileDto: UpdateUserPwaProfileDto): Promise<import("../entities/user.entity").UserEntity>;
+    updateProfileByUserStandar(user: any, updateProfileDto: UpdateUserPwaProfileDto): Promise<import("../entities/user.entity").UserEntity>;
     updateEmail(id: number, email: string): Promise<import("../entities/user.entity").UserEntity>;
+    remove(id: number): Promise<import("../entities/user.entity").UserEntity>;
 }

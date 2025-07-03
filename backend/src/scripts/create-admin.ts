@@ -18,7 +18,7 @@ async function createAdminUser() {
     // Create admin user
     const adminUser = await adminUsersService.create({
       username: 'admin',
-      password: 'admin123', // This will be hashed automatically
+      password: 'admin123',
       email: 'admin@sistema-matematica.com',
       name: 'Administrator',
       role: AdminRole.ADMINISTRATOR,

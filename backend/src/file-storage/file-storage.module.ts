@@ -3,9 +3,7 @@ import { FileStorageService } from './file-storage/file-storage.service';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [
-    ConfigModule, // Importar ConfigModule si FileStorageService lo necesita
-  ],
+  imports: [ConfigModule],
   providers: [FileStorageService],
   exports: [FileStorageService],
 })

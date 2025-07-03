@@ -43,6 +43,46 @@ export class EducationalStageService {
     return { data, total };
   }
 
+  async findActiveStagesByCountry(
+    countryId: number,
+  ): Promise<EducationalStageEntity[]> {
+    let test = await this.educationalStageRepository
+      .createQueryBuilder('stage')
+      .leftJoinAndSelect('stage.country', 'country') // 'stage.country' es la propiedad de relación en EducationalStageEntity
+      // .leftJoinAndSelect('stage.educational_subdivisions', 'subdivision')
+      .where('stage.country_id = :countryId', { countryId })
+      // .andWhere('stage.is_active = :isActive', { isActive: true })
+      // .andWhere('subdivision.is_active = :isActive', { isActive: true })
+      // .select([
+      //   'stage.id',
+      //   'stage.name',
+      //   'country.name AS countryName', // Selecciona el nombre del país usando el alias 'country'
+      // ])
+      .getMany();
+
+    return test;
+  }
+
+  async findActiveStagesByCountryName(
+    countryName: string,
+  ): Promise<EducationalStageEntity[]> {
+    let test = await this.educationalStageRepository
+      .createQueryBuilder('stage')
+      .leftJoinAndSelect('stage.country', 'country') // 'stage.country' es la propiedad de relación en EducationalStageEntity
+      // .leftJoinAndSelect('stage.educational_subdivisions', 'subdivision')
+      .where('country.name = :countryName', { countryName })
+      // .andWhere('stage.is_active = :isActive', { isActive: true })
+      // .andWhere('subdivision.is_active = :isActive', { isActive: true })
+      // .select([
+      //   'stage.id',
+      //   'stage.name',
+      //   'country.name AS countryName', // Selecciona el nombre del país usando el alias 'country'
+      // ])
+      .getMany();
+
+    return test;
+  }
+
   async findOne(id: number): Promise<EducationalStageEntity> {
     const stage = await this.educationalStageRepository.findOne({
       where: { id },
@@ -87,45 +127,5 @@ export class EducationalStageService {
         `Educational Stage with ID "${id}" not found`,
       );
     }
-  }
-
-  async findActiveStagesByCountry(
-    countryId: number,
-  ): Promise<EducationalStageEntity[]> {
-    let test = await this.educationalStageRepository
-      .createQueryBuilder('stage')
-      .leftJoinAndSelect('stage.country', 'country') // 'stage.country' es la propiedad de relación en EducationalStageEntity
-      // .leftJoinAndSelect('stage.educational_subdivisions', 'subdivision')
-      .where('stage.country_id = :countryId', { countryId })
-      // .andWhere('stage.is_active = :isActive', { isActive: true })
-      // .andWhere('subdivision.is_active = :isActive', { isActive: true })
-      // .select([
-      //   'stage.id',
-      //   'stage.name',
-      //   'country.name AS countryName', // Selecciona el nombre del país usando el alias 'country'
-      // ])
-      .getMany();
-
-    return test;
-  }
-
-  async findActiveStagesByCountryName(
-    countryName: string,
-  ): Promise<EducationalStageEntity[]> {
-    let test = await this.educationalStageRepository
-      .createQueryBuilder('stage')
-      .leftJoinAndSelect('stage.country', 'country') // 'stage.country' es la propiedad de relación en EducationalStageEntity
-      // .leftJoinAndSelect('stage.educational_subdivisions', 'subdivision')
-      .where('country.name = :countryName', { countryName })
-      // .andWhere('stage.is_active = :isActive', { isActive: true })
-      // .andWhere('subdivision.is_active = :isActive', { isActive: true })
-      // .select([
-      //   'stage.id',
-      //   'stage.name',
-      //   'country.name AS countryName', // Selecciona el nombre del país usando el alias 'country'
-      // ])
-      .getMany();
-
-    return test;
   }
 }

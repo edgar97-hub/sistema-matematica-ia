@@ -36,7 +36,9 @@ let CreditPackageService = class CreditPackageService {
     }
     async findAllActives() {
         try {
-            return await this.creditPackageRepository.find();
+            return await this.creditPackageRepository.find({
+                where: { isActive: true },
+            });
         }
         catch (error) {
             this.logger.error(`Error fetching all credit packages: ${error.message}`, error.stack, 'CreditPackageService');
@@ -72,17 +74,7 @@ let CreditPackageService = class CreditPackageService {
     }
     async update(id, creditPackageData) {
         try {
-            function camelToSnake(str) {
-                return str.replace(/([A-Z])/g, '_$1').toLowerCase();
-            }
-            function convertKeys(obj) {
-                return Object.keys(obj).reduce((acc, key) => {
-                    acc[camelToSnake(key)] = obj[key];
-                    return acc;
-                }, {});
-            }
-            let test = convertKeys(creditPackageData);
-            await this.creditPackageRepository.update(id, test);
+            await this.creditPackageRepository.update(id, creditPackageData);
             const updatedCreditPackage = await this.creditPackageRepository.findOne({
                 where: { id },
             });

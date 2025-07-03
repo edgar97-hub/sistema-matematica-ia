@@ -15,7 +15,7 @@ import {
   IconDeviceFloppy,
   IconAlertCircle,
 } from "@tabler/icons-react";
-import { useRouter } from "next/navigation"; // De 'next/navigation' para App Router
+import { useRouter } from "next/navigation";
 import {
   useMutation,
   useQuery,
@@ -28,13 +28,12 @@ import { notifications } from "@mantine/notifications";
 import {
   EducationalStageFormComponent,
   EducationalStageFormData,
-} from "../../../../../../components/admin/stages/EducationalStageFormComponent"; // Ajusta ruta
-import { educationalStageService } from "../../../../../../lib/services/educational-stage.service"; // Ajusta ruta
-import { countryService } from "../../../../../../lib/services/country.service"; // Ajusta ruta
-import { CountryFE } from "../../../../../../types/educational-content.types"; // Ajusta ruta
+} from "../../../../../../components/admin/stages/EducationalStageFormComponent";
+import { educationalStageService } from "../../../../../../lib/services/educational-stage.service";
+import { countryService } from "../../../../../../lib/services/country.service";
+import { CountryFE } from "../../../../../../types/educational-content.types";
 
 export default function CreateEducationalStagePage() {
-  // Exportar directamente si QueryClientProvider está en un layout padre
   const router = useRouter();
   const queryClientHook = useQueryClient();
 
@@ -43,8 +42,8 @@ export default function CreateEducationalStagePage() {
     isLoading: isLoadingCountries,
     isError: isCountriesError,
   } = useQuery<CountryFE[], Error>({
-    queryKey: ["active-countries-for-form"], // Key más específica
-    queryFn: () => countryService.getActiveCountriesForPwa(), // Asume que este método devuelve CountryFE[] con solo activos
+    queryKey: ["active-countries-for-form"],
+    queryFn: () => countryService.getActiveCountriesForPwa(),
   });
 
   const { mutateAsync: createStageMutation, isPending } = useMutation({

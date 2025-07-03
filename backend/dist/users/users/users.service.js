@@ -27,6 +27,19 @@ let UsersService = class UsersService {
         this.userRepository = userRepository;
         this.countryService = countryService;
     }
+    async create(createUserDto) {
+        const existingUser = await this.findByEmail(createUserDto.email);
+        if (existingUser) {
+            throw new common_1.BadRequestException('User with this email already exists');
+        }
+        const user = this.userRepository.create({
+            ...createUserDto,
+            role: user_pwa_role_enum_1.UserPwaRole.CLIENT,
+            isActive: true,
+            creditBalance: 0,
+        });
+        return this.userRepository.save(user);
+    }
     async findAll(queryDto) {
         const { page = 1, limit = 10, sortField, sortDirection, name, email, isActive, countryOfOrigin, } = queryDto;
         const skip = (page - 1) * limit;
@@ -75,33 +88,11 @@ let UsersService = class UsersService {
         return this.userRepository.findOne(options);
     }
     async findByGoogleId(googleId) {
-        const options = { where: { googleId } };
+        const options = {
+            where: { googleId },
+            relations: ['creditTransactions'],
+        };
         return this.userRepository.findOne(options);
-    }
-    async create(createUserDto) {
-        const existingUser = await this.findByEmail(createUserDto.email);
-        if (existingUser) {
-            throw new common_1.BadRequestException('User with this email already exists');
-        }
-        const user = this.userRepository.create({
-            ...createUserDto,
-            role: user_pwa_role_enum_1.UserPwaRole.CLIENT,
-            isActive: true,
-            creditBalance: 0,
-        });
-        return this.userRepository.save(user);
-    }
-    async updateProfile(userId, updateProfileDto) {
-        const user = await this.findById(userId);
-        if (user.countryOfOrigin) {
-            throw new common_1.BadRequestException('Country of origin can only be set once');
-        }
-        const isValidCountry = await this.countryService.isValidCountry(updateProfileDto.countryOfOrigin);
-        if (!isValidCountry) {
-            throw new common_1.BadRequestException('Invalid country of origin');
-        }
-        user.countryOfOrigin = updateProfileDto.countryOfOrigin;
-        return this.userRepository.save(user);
     }
     async updateByAdmin(userId, updateUserDto) {
         const user = await this.findById(userId);
@@ -118,15 +109,32 @@ let UsersService = class UsersService {
         }
         return this.userRepository.save(user);
     }
-    async updateUserCredits(userId, newCreditBalance) {
+    async updateProfileByUserStandar(userId, updateProfileDto) {
         const user = await this.findById(userId);
-        user.creditBalance = newCreditBalance;
+        if (user.countryOfOrigin) {
+            throw new common_1.BadRequestException('Country of origin can only be set once');
+        }
+        const isValidCountry = await this.countryService.isValidCountry(updateProfileDto.countryOfOrigin);
+        if (!isValidCountry) {
+            throw new common_1.BadRequestException('Invalid country of origin');
+        }
+        user.countryOfOrigin = updateProfileDto.countryOfOrigin;
+        return this.userRepository.save(user);
+    }
+    async updateEmail(userId, newEmail) {
+        const user = await this.findById(userId);
+        const existingUser = await this.findByEmail(newEmail);
+        if (existingUser && existingUser.id !== userId) {
+            throw new common_1.BadRequestException('Email is already in use');
+        }
+        user.email = newEmail;
         return this.userRepository.save(user);
     }
     async remove(id) {
         const user = await this.findById(id);
         user.isActive = !user.isActive;
         await this.userRepository.save(user);
+        return user;
     }
     async findOrCreateFromGoogle(profile) {
         let user = await this.findByGoogleId(profile.googleId);
@@ -140,40 +148,6 @@ let UsersService = class UsersService {
             return user;
         }
         return this.create(profile);
-    }
-    async updateEmail(userId, newEmail) {
-        const user = await this.findById(userId);
-        const existingUser = await this.findByEmail(newEmail);
-        if (existingUser && existingUser.id !== userId) {
-            throw new common_1.BadRequestException('Email is already in use');
-        }
-        user.email = newEmail;
-        return this.userRepository.save(user);
-    }
-    async deductCredits(userId, amountToDeduct, reason, transactionalEntityManager) {
-        const user = await transactionalEntityManager.findOne(user_entity_1.UserEntity, {
-            where: { id: userId },
-        });
-        if (!user) {
-            throw new common_1.NotFoundException(`Usuario con ID "${userId}" no encontrado para deducir créditos.`);
-        }
-        if (user.creditBalance < amountToDeduct) {
-            throw new common_1.BadRequestException('Créditos insuficientes para realizar esta operación.');
-        }
-        const balanceBefore = user.creditBalance;
-        user.creditBalance -= amountToDeduct;
-        const balanceAfter = user.creditBalance;
-        await transactionalEntityManager.save(user_entity_1.UserEntity, user);
-        await this.internalRecordTransaction({
-            targetUserId: userId,
-            action: credit_transaction_entity_1.CreditTransactionAction.USAGE_RESOLUTION,
-            amount: -Math.abs(amountToDeduct),
-            balanceBefore,
-            balanceAfter,
-            reason,
-        }, transactionalEntityManager);
-        console.log(`Credits deducted: ${amountToDeduct} from user ${userId}. Reason: ${reason}`);
-        return user;
     }
     async internalRecordTransaction(data, manager) {
         const transactionRepo = manager.getRepository(credit_transaction_entity_1.CreditTransactionEntity);

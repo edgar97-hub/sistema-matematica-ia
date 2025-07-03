@@ -50,6 +50,17 @@ export class EducationalSubdivisionService {
     return { data, total };
   }
 
+  async findActiveSubdivisionsByStage(
+    stageId: number,
+  ): Promise<EducationalSubdivisionEntity[]> {
+    return this.educationalSubdivisionRepository.find({
+      where: {
+        educationalStageId: stageId,
+        isActive: true,
+      },
+    });
+  }
+
   async findOne(id: number): Promise<EducationalSubdivisionEntity> {
     const subdivision = await this.educationalSubdivisionRepository.findOne({
       where: { id },
@@ -102,16 +113,5 @@ export class EducationalSubdivisionService {
         `Educational Subdivision with ID "${id}" not found`,
       );
     }
-  }
-
-  async findActiveSubdivisionsByStage(
-    stageId: number,
-  ): Promise<EducationalSubdivisionEntity[]> {
-    return this.educationalSubdivisionRepository.find({
-      where: {
-        educationalStageId: stageId,
-        isActive: true,
-      },
-    });
   }
 }
