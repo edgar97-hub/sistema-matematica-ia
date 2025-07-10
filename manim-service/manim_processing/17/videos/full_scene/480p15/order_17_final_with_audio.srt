@@ -1,36 +1,40 @@
 1
-00:00:00,000 --> 00:00:03,089
-<speak>Presentamos el problema matemático original
+00:00:00,000 --> 00:00:04,268
+Presentamos el problema matemático original que vamos a resolver.
 
 2
-00:00:03,189 --> 00:00:04,940
-que vamos a resolver.</speak>
+00:00:04,333 --> 00:00:07,852
+Reordenamos los términos para agruparlos por potencias
 
 3
-00:00:05,533 --> 00:00:08,108
-<speak>Observamos que todas las fracciones
+00:00:07,952 --> 00:00:09,393
+de a, de mayor a menor.
 
 4
-00:00:08,208 --> 00:00:10,401
-tienen el mismo denominador.</speak>
+00:00:09,466 --> 00:00:12,606
+Sumamos los coeficientes de a al cuadrado.
 
 5
-00:00:11,266 --> 00:00:14,277
-<speak>Sumamos los numeradores de las fracciones
+00:00:12,733 --> 00:00:15,179
+Realizamos la suma de los coeficientes
 
 6
-00:00:14,377 --> 00:00:16,998
-y mantenemos el denominador común.</speak>
+00:00:15,279 --> 00:00:17,793
+de a al cuadrado, obteniendo cincuenta.
 
 7
-00:00:17,866 --> 00:00:21,054
-<speak>Realizamos la suma de los numeradores.</speak>
+00:00:17,866 --> 00:00:20,478
+Sumamos los coeficientes de a.
 
 8
-00:00:21,933 --> 00:00:24,414
-<speak>La respuesta final a la operación
+00:00:20,600 --> 00:00:23,125
+Realizamos la suma de los coeficientes
 
 9
-00:00:24,514 --> 00:00:26,609
-es ochenta y tres octavos.</speak>
+00:00:23,225 --> 00:00:25,612
+de a, obteniendo menos veinticuatro.
+
+10
+00:00:25,733 --> 00:00:29,113
+Concluimos con la expresión final simplificada.
 

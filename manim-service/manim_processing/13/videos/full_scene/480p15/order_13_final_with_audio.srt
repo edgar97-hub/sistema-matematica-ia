@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:04,268
+Presentamos el problema matemático original que vamos a resolver.
+
+2
+00:00:04,333 --> 00:00:08,409
+Reordenamos los términos para agruparlos por potencias de 'a'.
+
+3
+00:00:08,533 --> 00:00:12,465
+Sumamos los coeficientes de los términos con 'a al cuadrado'.
+
+4
+00:00:12,533 --> 00:00:14,915
+Realizamos la suma de los coeficientes
+
+5
+00:00:15,015 --> 00:00:17,593
+de 'a al cuadrado', obteniendo cincuenta.
+
+6
+00:00:17,666 --> 00:00:21,070
+Sumamos los coeficientes de los términos con 'a'.
+
+7
+00:00:21,200 --> 00:00:23,632
+Realizamos la suma de los coeficientes
+
+8
+00:00:23,732 --> 00:00:26,164
+de 'a', obteniendo menos veinticuatro.
+
+9
+00:00:26,200 --> 00:00:29,017
+La expresión simplificada final es dieciséis a a la
+
+10
+00:00:29,117 --> 00:00:31,305
+cuarta menos sesenta y dos a al cubo más
+
+11
+00:00:31,405 --> 00:00:34,452
+cincuenta a al cuadrado menos veinticuatro a más cinco.
+

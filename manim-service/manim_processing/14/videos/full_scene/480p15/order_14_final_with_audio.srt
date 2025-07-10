@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:03,716
+El problema a resolver es la suma de dos fracciones.
+
+2
+00:00:03,800 --> 00:00:07,972
+Identificamos que ambas fracciones tienen el mismo denominador.
+
+3
+00:00:08,066 --> 00:00:10,666
+Por lo tanto, podemos sumar directamente los
+
+4
+00:00:10,766 --> 00:00:13,366
+numeradores y mantener el denominador común.
+
+5
+00:00:13,466 --> 00:00:17,998
+Realizamos la suma de los numeradores, obteniendo setenta y seis.
+
+6
+00:00:18,066 --> 00:00:21,626
+Ahora, simplificamos la fracción dividiendo el numerador y el
+
+7
+00:00:21,726 --> 00:00:24,926
+denominador por su máximo común divisor, que es cuatro.
+
+8
+00:00:25,000 --> 00:00:29,244
+Realizamos las divisiones para obtener la fracción simplificada.
+
+9
+00:00:29,333 --> 00:00:33,193
+La respuesta final a la operación es diecinueve medios.
+

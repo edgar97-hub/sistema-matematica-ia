@@ -26,6 +26,8 @@ interface ManimMicroserviceResponse {
 export class ManimService {
   private readonly manimServiceUrl: string;
   private readonly openaiApiKey: string;
+  private readonly azureSpeechKey: string;
+  private readonly azureSpeechRegion: string;
 
   private readonly logger = new Logger(ManimService.name);
 
@@ -39,6 +41,10 @@ export class ManimService {
       'http://localhost:3002';
 
     this.openaiApiKey = this.configService.get<string>('OPENAI_API_KEY') || '';
+    this.azureSpeechKey =
+      this.configService.get<string>('AZURE_SPEECH_KEY') || '';
+    this.azureSpeechRegion =
+      this.configService.get<string>('AZURE_SPEECH_REGION') || '';
   }
 
   // // Añadir un nuevo método para renderizar segmentos
@@ -123,7 +129,12 @@ export class ManimService {
       const response = await firstValueFrom(
         this.httpService.post<ManimMicroserviceResponse>(
           renderEndpoint,
-          { ...payload, openaiApiKey: this.openaiApiKey },
+          {
+            ...payload,
+            openaiApiKey: this.openaiApiKey,
+            azureSpeechKey: this.azureSpeechKey,
+            azureSpeechRegion: this.azureSpeechRegion,
+          },
           {
             timeout: 600000, // Timeout de 10 minutos, ya que el renderizado puede ser largo
           },

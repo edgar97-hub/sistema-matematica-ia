@@ -8,8 +8,6 @@ services:
       - "3002:3002"
     volumes:
       - ./manim_processing:/app/manim_processing
-      # Opcional: Montar el código fuente para desarrollo en vivo
-      # - .:/app
     environment:
       # Variables para Flask
       - FLASK_APP=app.py

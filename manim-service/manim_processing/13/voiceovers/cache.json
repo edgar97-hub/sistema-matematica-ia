@@ -1,0 +1,935 @@
+[
+  {
+    "input_text": "Presentamos el problema matem\u00e1tico original que vamos a resolver.",
+    "input_data": {
+      "input_text": "Presentamos el problema matem\u00e1tico original que vamos a resolver.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Presentamos el problema matem\u00e1tico original que vamos a resolver.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Presentamos el problema matem\u00e1tico original que vamos a resolver.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 687,
+        "text_offset": 0,
+        "word_length": 11,
+        "text": "Presentamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7375000,
+        "duration_milliseconds": 75,
+        "text_offset": 12,
+        "word_length": 2,
+        "text": "el",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 8125000,
+        "duration_milliseconds": 412,
+        "text_offset": 15,
+        "word_length": 8,
+        "text": "problema",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12250000,
+        "duration_milliseconds": 637,
+        "text_offset": 24,
+        "word_length": 10,
+        "text": "matem\u00e1tico",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 18625000,
+        "duration_milliseconds": 512,
+        "text_offset": 35,
+        "word_length": 8,
+        "text": "original",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23750000,
+        "duration_milliseconds": 137,
+        "text_offset": 44,
+        "word_length": 3,
+        "text": "que",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 25125000,
+        "duration_milliseconds": 337,
+        "text_offset": 48,
+        "word_length": 5,
+        "text": "vamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 28500000,
+        "duration_milliseconds": 62,
+        "text_offset": 54,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 29125000,
+        "duration_milliseconds": 512,
+        "text_offset": 56,
+        "word_length": 8,
+        "text": "resolver",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 34750000,
+        "duration_milliseconds": 50,
+        "text_offset": 64,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "presentamos-el-problema-matematico-original-que-bb4fda10.mp3",
+    "final_audio": "presentamos-el-problema-matematico-original-que-bb4fda10.mp3"
+  },
+  {
+    "input_text": "Reordenamos los t\u00e9rminos para agruparlos por potencias de 'a'.",
+    "input_data": {
+      "input_text": "Reordenamos los t\u00e9rminos para agruparlos por potencias de 'a'.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Reordenamos los t\u00e9rminos para agruparlos por potencias de 'a'.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Reordenamos los t\u00e9rminos para agruparlos por potencias de 'a'.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 712,
+        "text_offset": 0,
+        "word_length": 11,
+        "text": "Reordenamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7625000,
+        "duration_milliseconds": 162,
+        "text_offset": 12,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 9250000,
+        "duration_milliseconds": 487,
+        "text_offset": 16,
+        "word_length": 8,
+        "text": "t\u00e9rminos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14125000,
+        "duration_milliseconds": 212,
+        "text_offset": 25,
+        "word_length": 4,
+        "text": "para",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 16250000,
+        "duration_milliseconds": 600,
+        "text_offset": 30,
+        "word_length": 10,
+        "text": "agruparlos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22250000,
+        "duration_milliseconds": 150,
+        "text_offset": 41,
+        "word_length": 3,
+        "text": "por",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23750000,
+        "duration_milliseconds": 525,
+        "text_offset": 45,
+        "word_length": 9,
+        "text": "potencias",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 29000000,
+        "duration_milliseconds": 137,
+        "text_offset": 55,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 30375000,
+        "duration_milliseconds": 50,
+        "text_offset": 58,
+        "word_length": 1,
+        "text": "'",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 30875000,
+        "duration_milliseconds": 100,
+        "text_offset": 59,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 32500000,
+        "duration_milliseconds": 75,
+        "text_offset": 60,
+        "word_length": 2,
+        "text": "'.",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "reordenamos-los-terminos-para-agruparlos-por-0c052904.mp3",
+    "final_audio": "reordenamos-los-terminos-para-agruparlos-por-0c052904.mp3"
+  },
+  {
+    "input_text": "Sumamos los coeficientes de los t\u00e9rminos con 'a al cuadrado'.",
+    "input_data": {
+      "input_text": "Sumamos los coeficientes de los t\u00e9rminos con 'a al cuadrado'.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Sumamos los coeficientes de los t\u00e9rminos con 'a al cuadrado'.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Sumamos los coeficientes de los t\u00e9rminos con 'a al cuadrado'.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 500,
+        "text_offset": 0,
+        "word_length": 7,
+        "text": "Sumamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 5500000,
+        "duration_milliseconds": 162,
+        "text_offset": 8,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7125000,
+        "duration_milliseconds": 700,
+        "text_offset": 12,
+        "word_length": 12,
+        "text": "coeficientes",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14125000,
+        "duration_milliseconds": 87,
+        "text_offset": 25,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 15000000,
+        "duration_milliseconds": 150,
+        "text_offset": 28,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 16625000,
+        "duration_milliseconds": 500,
+        "text_offset": 32,
+        "word_length": 8,
+        "text": "t\u00e9rminos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21625000,
+        "duration_milliseconds": 200,
+        "text_offset": 41,
+        "word_length": 3,
+        "text": "con",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23750000,
+        "duration_milliseconds": 25,
+        "text_offset": 45,
+        "word_length": 1,
+        "text": "'",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 24000000,
+        "duration_milliseconds": 62,
+        "text_offset": 46,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 24625000,
+        "duration_milliseconds": 137,
+        "text_offset": 48,
+        "word_length": 2,
+        "text": "al",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 26000000,
+        "duration_milliseconds": 487,
+        "text_offset": 51,
+        "word_length": 8,
+        "text": "cuadrado",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 31625000,
+        "duration_milliseconds": 37,
+        "text_offset": 59,
+        "word_length": 2,
+        "text": "'.",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "sumamos-los-coeficientes-de-los-terminos-con-a-al-400d77c5.mp3",
+    "final_audio": "sumamos-los-coeficientes-de-los-terminos-con-a-al-400d77c5.mp3"
+  },
+  {
+    "input_text": "Realizamos la suma de los coeficientes de 'a al cuadrado', obteniendo cincuenta.",
+    "input_data": {
+      "input_text": "Realizamos la suma de los coeficientes de 'a al cuadrado', obteniendo cincuenta.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los coeficientes de 'a al cuadrado', obteniendo cincuenta.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los coeficientes de 'a al cuadrado', obteniendo cincuenta.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 687,
+        "text_offset": 0,
+        "word_length": 10,
+        "text": "Realizamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7375000,
+        "duration_milliseconds": 125,
+        "text_offset": 11,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 8625000,
+        "duration_milliseconds": 262,
+        "text_offset": 14,
+        "word_length": 4,
+        "text": "suma",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11250000,
+        "duration_milliseconds": 100,
+        "text_offset": 19,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12250000,
+        "duration_milliseconds": 162,
+        "text_offset": 22,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 13875000,
+        "duration_milliseconds": 675,
+        "text_offset": 26,
+        "word_length": 12,
+        "text": "coeficientes",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 20625000,
+        "duration_milliseconds": 125,
+        "text_offset": 39,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21875000,
+        "duration_milliseconds": 12,
+        "text_offset": 42,
+        "word_length": 1,
+        "text": "'",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 22000000,
+        "duration_milliseconds": 62,
+        "text_offset": 43,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22625000,
+        "duration_milliseconds": 137,
+        "text_offset": 45,
+        "word_length": 2,
+        "text": "al",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 24000000,
+        "duration_milliseconds": 512,
+        "text_offset": 48,
+        "word_length": 8,
+        "text": "cuadrado",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 30125000,
+        "duration_milliseconds": 25,
+        "text_offset": 56,
+        "word_length": 2,
+        "text": "',",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 30625000,
+        "duration_milliseconds": 600,
+        "text_offset": 59,
+        "word_length": 10,
+        "text": "obteniendo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 36625000,
+        "duration_milliseconds": 537,
+        "text_offset": 70,
+        "word_length": 9,
+        "text": "cincuenta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 42625000,
+        "duration_milliseconds": 50,
+        "text_offset": 79,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "realizamos-la-suma-de-los-coeficientes-de-a-al-7e50bad7.mp3",
+    "final_audio": "realizamos-la-suma-de-los-coeficientes-de-a-al-7e50bad7.mp3"
+  },
+  {
+    "input_text": "Sumamos los coeficientes de los t\u00e9rminos con 'a'.",
+    "input_data": {
+      "input_text": "Sumamos los coeficientes de los t\u00e9rminos con 'a'.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Sumamos los coeficientes de los t\u00e9rminos con 'a'.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Sumamos los coeficientes de los t\u00e9rminos con 'a'.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 500,
+        "text_offset": 0,
+        "word_length": 7,
+        "text": "Sumamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 5500000,
+        "duration_milliseconds": 162,
+        "text_offset": 8,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7125000,
+        "duration_milliseconds": 700,
+        "text_offset": 12,
+        "word_length": 12,
+        "text": "coeficientes",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14125000,
+        "duration_milliseconds": 87,
+        "text_offset": 25,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 15000000,
+        "duration_milliseconds": 162,
+        "text_offset": 28,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 16750000,
+        "duration_milliseconds": 512,
+        "text_offset": 32,
+        "word_length": 8,
+        "text": "t\u00e9rminos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21875000,
+        "duration_milliseconds": 200,
+        "text_offset": 41,
+        "word_length": 3,
+        "text": "con",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 24000000,
+        "duration_milliseconds": 25,
+        "text_offset": 45,
+        "word_length": 1,
+        "text": "'",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 24250000,
+        "duration_milliseconds": 100,
+        "text_offset": 46,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 25750000,
+        "duration_milliseconds": 75,
+        "text_offset": 47,
+        "word_length": 2,
+        "text": "'.",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "sumamos-los-coeficientes-de-los-terminos-con-a-5804323b.mp3",
+    "final_audio": "sumamos-los-coeficientes-de-los-terminos-con-a-5804323b.mp3"
+  },
+  {
+    "input_text": "Realizamos la suma de los coeficientes de 'a', obteniendo menos veinticuatro.",
+    "input_data": {
+      "input_text": "Realizamos la suma de los coeficientes de 'a', obteniendo menos veinticuatro.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los coeficientes de 'a', obteniendo menos veinticuatro.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los coeficientes de 'a', obteniendo menos veinticuatro.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 700,
+        "text_offset": 0,
+        "word_length": 10,
+        "text": "Realizamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7500000,
+        "duration_milliseconds": 125,
+        "text_offset": 11,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 8750000,
+        "duration_milliseconds": 262,
+        "text_offset": 14,
+        "word_length": 4,
+        "text": "suma",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11375000,
+        "duration_milliseconds": 100,
+        "text_offset": 19,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12375000,
+        "duration_milliseconds": 162,
+        "text_offset": 22,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14000000,
+        "duration_milliseconds": 675,
+        "text_offset": 26,
+        "word_length": 12,
+        "text": "coeficientes",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 20750000,
+        "duration_milliseconds": 150,
+        "text_offset": 39,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22375000,
+        "duration_milliseconds": 12,
+        "text_offset": 42,
+        "word_length": 1,
+        "text": "'",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 22750000,
+        "duration_milliseconds": 125,
+        "text_offset": 43,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 24625000,
+        "duration_milliseconds": 12,
+        "text_offset": 44,
+        "word_length": 2,
+        "text": "',",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 25125000,
+        "duration_milliseconds": 625,
+        "text_offset": 47,
+        "word_length": 10,
+        "text": "obteniendo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 31375000,
+        "duration_milliseconds": 287,
+        "text_offset": 58,
+        "word_length": 5,
+        "text": "menos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 34250000,
+        "duration_milliseconds": 700,
+        "text_offset": 64,
+        "word_length": 12,
+        "text": "veinticuatro",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 41875000,
+        "duration_milliseconds": 37,
+        "text_offset": 76,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "realizamos-la-suma-de-los-coeficientes-de-a-01f6c721.mp3",
+    "final_audio": "realizamos-la-suma-de-los-coeficientes-de-a-01f6c721.mp3"
+  },
+  {
+    "input_text": "La expresi\u00f3n simplificada final es diecis\u00e9is a a la cuarta menos sesenta y dos a al cubo m\u00e1s cincuenta a al cuadrado menos veinticuatro a m\u00e1s cinco.",
+    "input_data": {
+      "input_text": "La expresi\u00f3n simplificada final es diecis\u00e9is a a la cuarta menos sesenta y dos a al cubo m\u00e1s cincuenta a al cuadrado menos veinticuatro a m\u00e1s cinco.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        La expresi\u00f3n simplificada final es diecis\u00e9is a a la cuarta menos sesenta y dos a al cubo m\u00e1s cincuenta a al cuadrado menos veinticuatro a m\u00e1s cinco.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        La expresi\u00f3n simplificada final es diecis\u00e9is a a la cuarta menos sesenta y dos a al cubo m\u00e1s cincuenta a al cuadrado menos veinticuatro a m\u00e1s cinco.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 150,
+        "text_offset": 0,
+        "word_length": 2,
+        "text": "La",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 2000000,
+        "duration_milliseconds": 587,
+        "text_offset": 3,
+        "word_length": 9,
+        "text": "expresi\u00f3n",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7875000,
+        "duration_milliseconds": 675,
+        "text_offset": 13,
+        "word_length": 12,
+        "text": "simplificada",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14625000,
+        "duration_milliseconds": 375,
+        "text_offset": 26,
+        "word_length": 5,
+        "text": "final",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 18375000,
+        "duration_milliseconds": 125,
+        "text_offset": 32,
+        "word_length": 2,
+        "text": "es",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 19625000,
+        "duration_milliseconds": 600,
+        "text_offset": 35,
+        "word_length": 9,
+        "text": "diecis\u00e9is",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 25625000,
+        "duration_milliseconds": 50,
+        "text_offset": 45,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 26125000,
+        "duration_milliseconds": 100,
+        "text_offset": 47,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 27125000,
+        "duration_milliseconds": 100,
+        "text_offset": 49,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 28125000,
+        "duration_milliseconds": 375,
+        "text_offset": 52,
+        "word_length": 6,
+        "text": "cuarta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 31875000,
+        "duration_milliseconds": 275,
+        "text_offset": 59,
+        "word_length": 5,
+        "text": "menos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 34625000,
+        "duration_milliseconds": 412,
+        "text_offset": 65,
+        "word_length": 7,
+        "text": "sesenta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 38750000,
+        "duration_milliseconds": 50,
+        "text_offset": 73,
+        "word_length": 1,
+        "text": "y",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 39375000,
+        "duration_milliseconds": 262,
+        "text_offset": 75,
+        "word_length": 3,
+        "text": "dos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 42000000,
+        "duration_milliseconds": 50,
+        "text_offset": 79,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 42500000,
+        "duration_milliseconds": 112,
+        "text_offset": 81,
+        "word_length": 2,
+        "text": "al",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 43625000,
+        "duration_milliseconds": 262,
+        "text_offset": 84,
+        "word_length": 4,
+        "text": "cubo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 46250000,
+        "duration_milliseconds": 187,
+        "text_offset": 89,
+        "word_length": 3,
+        "text": "m\u00e1s",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 48125000,
+        "duration_milliseconds": 487,
+        "text_offset": 93,
+        "word_length": 9,
+        "text": "cincuenta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 53000000,
+        "duration_milliseconds": 75,
+        "text_offset": 103,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 53750000,
+        "duration_milliseconds": 112,
+        "text_offset": 105,
+        "word_length": 2,
+        "text": "al",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 54875000,
+        "duration_milliseconds": 400,
+        "text_offset": 108,
+        "word_length": 8,
+        "text": "cuadrado",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 58875000,
+        "duration_milliseconds": 287,
+        "text_offset": 117,
+        "word_length": 5,
+        "text": "menos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 61750000,
+        "duration_milliseconds": 625,
+        "text_offset": 123,
+        "word_length": 12,
+        "text": "veinticuatro",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 68000000,
+        "duration_milliseconds": 50,
+        "text_offset": 136,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 68500000,
+        "duration_milliseconds": 175,
+        "text_offset": 138,
+        "word_length": 3,
+        "text": "m\u00e1s",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 70250000,
+        "duration_milliseconds": 375,
+        "text_offset": 142,
+        "word_length": 5,
+        "text": "cinco",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 74625000,
+        "duration_milliseconds": 37,
+        "text_offset": 147,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "la-expresion-simplificada-final-es-dieciseis-a-a-c85a7839.mp3",
+    "final_audio": "la-expresion-simplificada-final-es-dieciseis-a-a-c85a7839.mp3"
+  }
+]

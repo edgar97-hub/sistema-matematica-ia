@@ -11,6 +11,9 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     private configService: ConfigService,
     private authService: AuthService,
   ) {
+    console.log(
+      `${configService.get<string>('API_BASE_URL')}/auth/google/redirect`,
+    );
     super({
       clientID:
         configService.get<string>('GOOGLE_CLIENT_ID') || 'dummy-client-id',

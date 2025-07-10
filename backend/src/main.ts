@@ -10,17 +10,15 @@ import * as path from 'path';
 
 async function bootstrap() {
   const certPath = './cert';
-  // const key = fs.readFileSync("./cert/private.key");
-  // const cert = fs.readFileSync("./cert/certificate.crt");
   const httpsOptions = {
     key: fs.readFileSync(path.resolve(certPath, 'private.key')),
     cert: fs.readFileSync(path.resolve(certPath, 'certificate.crt')),
   };
-  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
-    httpsOptions,
-  });
+  // const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+  //   httpsOptions,
+  // });
 
-  // const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.use(
     '/api/credit-transactions/stripe-webhook',
     bodyParser.raw({ type: 'application/json' }),

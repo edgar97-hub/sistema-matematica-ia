@@ -63,6 +63,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install "numpy<2" typing-extensions
 
 RUN pip install --no-cache-dir --timeout 1200 -r requirements.txt
+
+RUN pip install --no-cache-dir google-cloud-texttospeech "manim-voiceover[google-cloud]==0.3.7"
+
 COPY . .
 
 # Paso 6: Exponer el puerto que usará Flask.

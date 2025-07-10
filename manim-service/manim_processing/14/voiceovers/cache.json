@@ -1,0 +1,831 @@
+[
+  {
+    "input_text": "El problema a resolver es la suma de dos fracciones.",
+    "input_data": {
+      "input_text": "El problema a resolver es la suma de dos fracciones.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        El problema a resolver es la suma de dos fracciones.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        El problema a resolver es la suma de dos fracciones.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 125,
+        "text_offset": 0,
+        "word_length": 2,
+        "text": "El",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 1750000,
+        "duration_milliseconds": 500,
+        "text_offset": 3,
+        "word_length": 8,
+        "text": "problema",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 6750000,
+        "duration_milliseconds": 112,
+        "text_offset": 12,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7875000,
+        "duration_milliseconds": 500,
+        "text_offset": 14,
+        "word_length": 8,
+        "text": "resolver",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12875000,
+        "duration_milliseconds": 125,
+        "text_offset": 23,
+        "word_length": 2,
+        "text": "es",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14125000,
+        "duration_milliseconds": 137,
+        "text_offset": 26,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 15500000,
+        "duration_milliseconds": 300,
+        "text_offset": 29,
+        "word_length": 4,
+        "text": "suma",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 18500000,
+        "duration_milliseconds": 125,
+        "text_offset": 34,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 19750000,
+        "duration_milliseconds": 212,
+        "text_offset": 37,
+        "word_length": 3,
+        "text": "dos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21875000,
+        "duration_milliseconds": 650,
+        "text_offset": 41,
+        "word_length": 10,
+        "text": "fracciones",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 29000000,
+        "duration_milliseconds": 75,
+        "text_offset": 51,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "el-problema-a-resolver-es-la-suma-de-dos-85ce6364.mp3",
+    "final_audio": "el-problema-a-resolver-es-la-suma-de-dos-85ce6364.mp3"
+  },
+  {
+    "input_text": "Identificamos que ambas fracciones tienen el mismo denominador.",
+    "input_data": {
+      "input_text": "Identificamos que ambas fracciones tienen el mismo denominador.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Identificamos que ambas fracciones tienen el mismo denominador.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Identificamos que ambas fracciones tienen el mismo denominador.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 850,
+        "text_offset": 0,
+        "word_length": 13,
+        "text": "Identificamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 9000000,
+        "duration_milliseconds": 137,
+        "text_offset": 14,
+        "word_length": 3,
+        "text": "que",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 10375000,
+        "duration_milliseconds": 287,
+        "text_offset": 18,
+        "word_length": 5,
+        "text": "ambas",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 13250000,
+        "duration_milliseconds": 587,
+        "text_offset": 24,
+        "word_length": 10,
+        "text": "fracciones",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 19125000,
+        "duration_milliseconds": 350,
+        "text_offset": 35,
+        "word_length": 6,
+        "text": "tienen",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22625000,
+        "duration_milliseconds": 112,
+        "text_offset": 42,
+        "word_length": 2,
+        "text": "el",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23750000,
+        "duration_milliseconds": 337,
+        "text_offset": 45,
+        "word_length": 5,
+        "text": "mismo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 27125000,
+        "duration_milliseconds": 600,
+        "text_offset": 51,
+        "word_length": 11,
+        "text": "denominador",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 33875000,
+        "duration_milliseconds": 37,
+        "text_offset": 62,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "identificamos-que-ambas-fracciones-tienen-el-mismo-2e1bade3.mp3",
+    "final_audio": "identificamos-que-ambas-fracciones-tienen-el-mismo-2e1bade3.mp3"
+  },
+  {
+    "input_text": "Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.",
+    "input_data": {
+      "input_text": "Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Por lo tanto, podemos sumar directamente los numeradores y mantener el denominador com\u00fan.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 137,
+        "text_offset": 0,
+        "word_length": 3,
+        "text": "Por",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 1875000,
+        "duration_milliseconds": 137,
+        "text_offset": 4,
+        "word_length": 2,
+        "text": "lo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 3250000,
+        "duration_milliseconds": 362,
+        "text_offset": 7,
+        "word_length": 5,
+        "text": "tanto",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 6875000,
+        "duration_milliseconds": 0,
+        "text_offset": 12,
+        "word_length": 1,
+        "text": ",",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 6875000,
+        "duration_milliseconds": 412,
+        "text_offset": 14,
+        "word_length": 7,
+        "text": "podemos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11000000,
+        "duration_milliseconds": 312,
+        "text_offset": 22,
+        "word_length": 5,
+        "text": "sumar",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14125000,
+        "duration_milliseconds": 662,
+        "text_offset": 28,
+        "word_length": 12,
+        "text": "directamente",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 20750000,
+        "duration_milliseconds": 150,
+        "text_offset": 41,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22250000,
+        "duration_milliseconds": 650,
+        "text_offset": 45,
+        "word_length": 11,
+        "text": "numeradores",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 28750000,
+        "duration_milliseconds": 75,
+        "text_offset": 57,
+        "word_length": 1,
+        "text": "y",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 29500000,
+        "duration_milliseconds": 462,
+        "text_offset": 59,
+        "word_length": 8,
+        "text": "mantener",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 34125000,
+        "duration_milliseconds": 125,
+        "text_offset": 68,
+        "word_length": 2,
+        "text": "el",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 35375000,
+        "duration_milliseconds": 575,
+        "text_offset": 71,
+        "word_length": 11,
+        "text": "denominador",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 41125000,
+        "duration_milliseconds": 387,
+        "text_offset": 83,
+        "word_length": 5,
+        "text": "com\u00fan",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 45250000,
+        "duration_milliseconds": 37,
+        "text_offset": 88,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "por-lo-tanto-podemos-sumar-directamente-los-d3062852.mp3",
+    "final_audio": "por-lo-tanto-podemos-sumar-directamente-los-d3062852.mp3"
+  },
+  {
+    "input_text": "Realizamos la suma de los numeradores, obteniendo setenta y seis.",
+    "input_data": {
+      "input_text": "Realizamos la suma de los numeradores, obteniendo setenta y seis.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los numeradores, obteniendo setenta y seis.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos la suma de los numeradores, obteniendo setenta y seis.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 700,
+        "text_offset": 0,
+        "word_length": 10,
+        "text": "Realizamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7500000,
+        "duration_milliseconds": 125,
+        "text_offset": 11,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 8750000,
+        "duration_milliseconds": 262,
+        "text_offset": 14,
+        "word_length": 4,
+        "text": "suma",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11375000,
+        "duration_milliseconds": 100,
+        "text_offset": 19,
+        "word_length": 2,
+        "text": "de",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12375000,
+        "duration_milliseconds": 162,
+        "text_offset": 22,
+        "word_length": 3,
+        "text": "los",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14000000,
+        "duration_milliseconds": 700,
+        "text_offset": 26,
+        "word_length": 11,
+        "text": "numeradores",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21750000,
+        "duration_milliseconds": 37,
+        "text_offset": 37,
+        "word_length": 1,
+        "text": ",",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 22625000,
+        "duration_milliseconds": 600,
+        "text_offset": 39,
+        "word_length": 10,
+        "text": "obteniendo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 28625000,
+        "duration_milliseconds": 400,
+        "text_offset": 50,
+        "word_length": 7,
+        "text": "setenta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 32625000,
+        "duration_milliseconds": 50,
+        "text_offset": 58,
+        "word_length": 1,
+        "text": "y",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 33125000,
+        "duration_milliseconds": 375,
+        "text_offset": 60,
+        "word_length": 4,
+        "text": "seis",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 37125000,
+        "duration_milliseconds": 75,
+        "text_offset": 64,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "realizamos-la-suma-de-los-numeradores-obteniendo-0a878334.mp3",
+    "final_audio": "realizamos-la-suma-de-los-numeradores-obteniendo-0a878334.mp3"
+  },
+  {
+    "input_text": "Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es cuatro.",
+    "input_data": {
+      "input_text": "Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es cuatro.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es cuatro.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Ahora, simplificamos la fracci\u00f3n dividiendo el numerador y el denominador por su m\u00e1ximo com\u00fan divisor, que es cuatro.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 350,
+        "text_offset": 0,
+        "word_length": 5,
+        "text": "Ahora",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 4250000,
+        "duration_milliseconds": 0,
+        "text_offset": 5,
+        "word_length": 1,
+        "text": ",",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 4375000,
+        "duration_milliseconds": 775,
+        "text_offset": 7,
+        "word_length": 13,
+        "text": "simplificamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12125000,
+        "duration_milliseconds": 112,
+        "text_offset": 21,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 13250000,
+        "duration_milliseconds": 462,
+        "text_offset": 24,
+        "word_length": 8,
+        "text": "fracci\u00f3n",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 17875000,
+        "duration_milliseconds": 512,
+        "text_offset": 33,
+        "word_length": 10,
+        "text": "dividiendo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23000000,
+        "duration_milliseconds": 75,
+        "text_offset": 44,
+        "word_length": 2,
+        "text": "el",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 23750000,
+        "duration_milliseconds": 550,
+        "text_offset": 47,
+        "word_length": 9,
+        "text": "numerador",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 29375000,
+        "duration_milliseconds": 87,
+        "text_offset": 57,
+        "word_length": 1,
+        "text": "y",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 30375000,
+        "duration_milliseconds": 112,
+        "text_offset": 59,
+        "word_length": 2,
+        "text": "el",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 31500000,
+        "duration_milliseconds": 575,
+        "text_offset": 62,
+        "word_length": 11,
+        "text": "denominador",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 37250000,
+        "duration_milliseconds": 162,
+        "text_offset": 74,
+        "word_length": 3,
+        "text": "por",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 38875000,
+        "duration_milliseconds": 150,
+        "text_offset": 78,
+        "word_length": 2,
+        "text": "su",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 40375000,
+        "duration_milliseconds": 450,
+        "text_offset": 81,
+        "word_length": 6,
+        "text": "m\u00e1ximo",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 44875000,
+        "duration_milliseconds": 325,
+        "text_offset": 88,
+        "word_length": 5,
+        "text": "com\u00fan",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 48125000,
+        "duration_milliseconds": 462,
+        "text_offset": 94,
+        "word_length": 7,
+        "text": "divisor",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 53500000,
+        "duration_milliseconds": 12,
+        "text_offset": 101,
+        "word_length": 1,
+        "text": ",",
+        "boundary_type": "Punctuation"
+      },
+      {
+        "audio_offset": 53750000,
+        "duration_milliseconds": 100,
+        "text_offset": 103,
+        "word_length": 3,
+        "text": "que",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 54875000,
+        "duration_milliseconds": 150,
+        "text_offset": 107,
+        "word_length": 2,
+        "text": "es",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 56375000,
+        "duration_milliseconds": 387,
+        "text_offset": 110,
+        "word_length": 6,
+        "text": "cuatro",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 60875000,
+        "duration_milliseconds": 37,
+        "text_offset": 116,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "ahora-simplificamos-la-fraccion-dividiendo-el-88de1028.mp3",
+    "final_audio": "ahora-simplificamos-la-fraccion-dividiendo-el-88de1028.mp3"
+  },
+  {
+    "input_text": "Realizamos las divisiones para obtener la fracci\u00f3n simplificada.",
+    "input_data": {
+      "input_text": "Realizamos las divisiones para obtener la fracci\u00f3n simplificada.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos las divisiones para obtener la fracci\u00f3n simplificada.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        Realizamos las divisiones para obtener la fracci\u00f3n simplificada.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 687,
+        "text_offset": 0,
+        "word_length": 10,
+        "text": "Realizamos",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7375000,
+        "duration_milliseconds": 162,
+        "text_offset": 11,
+        "word_length": 3,
+        "text": "las",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 9000000,
+        "duration_milliseconds": 575,
+        "text_offset": 15,
+        "word_length": 10,
+        "text": "divisiones",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 14750000,
+        "duration_milliseconds": 212,
+        "text_offset": 26,
+        "word_length": 4,
+        "text": "para",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 16875000,
+        "duration_milliseconds": 412,
+        "text_offset": 31,
+        "word_length": 7,
+        "text": "obtener",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 21000000,
+        "duration_milliseconds": 125,
+        "text_offset": 39,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 22250000,
+        "duration_milliseconds": 450,
+        "text_offset": 42,
+        "word_length": 8,
+        "text": "fracci\u00f3n",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 26750000,
+        "duration_milliseconds": 725,
+        "text_offset": 51,
+        "word_length": 12,
+        "text": "simplificada",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 34375000,
+        "duration_milliseconds": 62,
+        "text_offset": 63,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "realizamos-las-divisiones-para-obtener-la-fraccion-334d69bf.mp3",
+    "final_audio": "realizamos-las-divisiones-para-obtener-la-fraccion-334d69bf.mp3"
+  },
+  {
+    "input_text": "La respuesta final a la operaci\u00f3n es diecinueve medios.",
+    "input_data": {
+      "input_text": "La respuesta final a la operaci\u00f3n es diecinueve medios.",
+      "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        La respuesta final a la operaci\u00f3n es diecinueve medios.\n    </voice>\n</speak>\n        ",
+      "service": "azure",
+      "config": {
+        "voice": "es-ES-ElviraNeural",
+        "style": null,
+        "output_format": "Audio48Khz192KBitRateMonoMp3",
+        "prosody": null
+      }
+    },
+    "ssml": "<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\"\n    xmlns:mstts=\"https://www.w3.org/2001/mstts\" xml:lang=\"en-US\">\n    <voice name=\"es-ES-ElviraNeural\">\n        La respuesta final a la operaci\u00f3n es diecinueve medios.\n    </voice>\n</speak>\n        ",
+    "word_boundaries": [
+      {
+        "audio_offset": 500000,
+        "duration_milliseconds": 162,
+        "text_offset": 0,
+        "word_length": 2,
+        "text": "La",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 2125000,
+        "duration_milliseconds": 525,
+        "text_offset": 3,
+        "word_length": 9,
+        "text": "respuesta",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 7375000,
+        "duration_milliseconds": 362,
+        "text_offset": 13,
+        "word_length": 5,
+        "text": "final",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11000000,
+        "duration_milliseconds": 50,
+        "text_offset": 19,
+        "word_length": 1,
+        "text": "a",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 11500000,
+        "duration_milliseconds": 112,
+        "text_offset": 21,
+        "word_length": 2,
+        "text": "la",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 12625000,
+        "duration_milliseconds": 575,
+        "text_offset": 24,
+        "word_length": 9,
+        "text": "operaci\u00f3n",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 18375000,
+        "duration_milliseconds": 125,
+        "text_offset": 34,
+        "word_length": 2,
+        "text": "es",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 19625000,
+        "duration_milliseconds": 550,
+        "text_offset": 37,
+        "word_length": 10,
+        "text": "diecinueve",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 25125000,
+        "duration_milliseconds": 450,
+        "text_offset": 48,
+        "word_length": 6,
+        "text": "medios",
+        "boundary_type": "Word"
+      },
+      {
+        "audio_offset": 30375000,
+        "duration_milliseconds": 50,
+        "text_offset": 54,
+        "word_length": 1,
+        "text": ".",
+        "boundary_type": "Punctuation"
+      }
+    ],
+    "original_audio": "la-respuesta-final-a-la-operacion-es-diecinueve-b57f6a5b.mp3",
+    "final_audio": "la-respuesta-final-a-la-operacion-es-diecinueve-b57f6a5b.mp3"
+  }
+]
